@@ -20,11 +20,11 @@ namespace Investing
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var kosSymbol = "KOS";
-            var securities = await Yahoo.Symbols(kosSymbol).Fields(Field.Symbol).QueryAsync();
+            //var kosSymbol = "KOS";
+            //var securities = await Yahoo.Symbols(kosSymbol).Fields(Field.Symbol).QueryAsync();
 
-            var security = securities[kosSymbol];
-            var securitySymbol = security[Field.Symbol];
+            //var security = securities[kosSymbol];
+            //var securitySymbol = security[Field.Symbol];
 
             Application.Run(new Form1());
 
