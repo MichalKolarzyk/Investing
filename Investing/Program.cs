@@ -27,6 +27,7 @@ namespace Investing
             //var securitySymbol = security[Field.Symbol];
 
             //Sync test
+            //Changes from GitHub
 
             Application.Run(new Form1());
 
