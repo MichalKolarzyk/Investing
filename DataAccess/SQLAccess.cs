@@ -44,12 +44,13 @@ namespace DataAccess
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(this.connectionString))
             {
-                List<Price> output = connection.Query<Price>("dbo.Prices_GetByCompanyId @CompanyID", new { CompanyID = companyId }).ToList();
+                var sqlInput = new { CompanyID = companyId, TableName = "Prices_Test" };
+                List<Price> output = connection.Query<Price>("dbo.Prices_GetByCompanyId @CompanyID, @TableName", sqlInput).ToList();
                 return output;
             }
         }
 
-        public void RemovePrices(Price price)
+        public void RemovePrices(List<Price> prices)
         {
             throw new NotImplementedException();
         }

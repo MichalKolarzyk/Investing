@@ -15,7 +15,7 @@ namespace Investing
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
         [STAThread]
-        static async Task Main()
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
