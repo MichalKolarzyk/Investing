@@ -11,7 +11,8 @@ namespace DataAccessTest
         [TestMethod]
         public void GetPrices()
         {
-            SQLAccess sqlAccess = new SQLAccess(Helper.GetConnectionString());
+            SQLAccess sqlAccess = new SQLAccess(Helper.GetTestConfig());
+
             List<Price> prices = sqlAccess.GetPrices("KOS");
 
             Assert.IsNotNull(prices);
@@ -20,8 +21,9 @@ namespace DataAccessTest
         [TestMethod]
         public void InsertPrices()
         {
-            SQLAccess sqlAccess = new SQLAccess(Helper.GetConnectionString());
+            SQLAccess sqlAccess = new SQLAccess(Helper.GetTestConfig());
             List<Price> prices = new List<Price>();
+
             prices.Add(new Price() { CompanyId = "ASD", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
             prices.Add(new Price() { CompanyId = "ASO", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 21.52f });
             prices.Add(new Price() { CompanyId = "ASE", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 11.12f });

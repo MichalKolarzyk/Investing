@@ -10,11 +10,11 @@ namespace DataAccess
 {
     public class SQLAccess
     {
-        private string connectionString;
+        private SQLConfig sqlConfig;
 
-        public SQLAccess(string connectionString)
+        public SQLAccess(SQLConfig sqlConfig)
         {
-            this.connectionString = connectionString;
+            this.sqlConfig = sqlConfig;
         }
 
         public void InsertCompany(Company company)
@@ -34,18 +34,19 @@ namespace DataAccess
 
         public void InsertPrices(List<Price> prices)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(this.connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
             {
-                connection.Execute("dbo.Prices_Insert @CompanyID, @Value, @Date, @TimeScale", prices);
+                string storedProcedure = $"dbo.Prices_Insert @CompanyID, @Value, @Date, @TimeScale, {sqlConfig.PricesTable}";
+                connection.Execute(storedProcedure, prices);
             }
         }
 
         public List<Price> GetPrices(string companyId)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(this.connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
             {
                 string storedProcedure = "dbo.Prices_GetByCompanyId @CompanyId, @TableName";
-                var storedProcedureArgs = new { CompanyId = companyId, TableName = "Prices_Test" };
+                var storedProcedureArgs = new { CompanyId = companyId, TableName = sqlConfig.PricesTable };
                 List<Price> output = connection.Query<Price>(storedProcedure, storedProcedureArgs).ToList();
                 return output;
             }
