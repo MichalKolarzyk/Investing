@@ -44,8 +44,9 @@ namespace DataAccess
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(this.connectionString))
             {
-                var sqlInput = new { CompanyID = companyId, TableName = "Prices_Test" };
-                List<Price> output = connection.Query<Price>("dbo.Prices_GetByCompanyId @CompanyID, @TableName", sqlInput).ToList();
+                string storedProcedure = "dbo.Prices_GetByCompanyId @CompanyId, @TableName";
+                var storedProcedureArgs = new { CompanyId = companyId, TableName = "Prices_Test" };
+                List<Price> output = connection.Query<Price>(storedProcedure, storedProcedureArgs).ToList();
                 return output;
             }
         }
