@@ -32,5 +32,21 @@ namespace DataAccessTest
             sqlAccess.InsertPrices(prices);
             Assert.IsNotNull(sqlAccess.GetPrices("ASW"));
         }
+        [TestMethod]
+        public void RemovePrices()
+        {
+            SQLAccess sqlAccess = new SQLAccess(Helper.GetTestConfig());
+
+            List<Price> pricesToInsert = new List<Price>();
+            pricesToInsert.Add(new Price() { CompanyId = "KOS", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
+            pricesToInsert.Add(new Price() { CompanyId = "KOS", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
+            sqlAccess.InsertPrices(pricesToInsert);
+
+            List<Price> pricesToDelete = new List<Price>();
+            pricesToDelete = sqlAccess.GetPrices("KOS");
+            sqlAccess.RemovePrices(pricesToDelete);
+
+            Assert.IsTrue(sqlAccess.GetPrices("KOS").Count == 0);
+        }
     }
 }

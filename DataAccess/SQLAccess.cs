@@ -45,8 +45,8 @@ namespace DataAccess
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
             {
-                string storedProcedure = "dbo.Prices_GetByCompanyId @CompanyId, @TableName";
-                var storedProcedureArgs = new { CompanyId = companyId, TableName = sqlConfig.PricesTable };
+                string storedProcedure = $"dbo.Prices_GetByCompanyId @CompanyId, {sqlConfig.PricesTable}";
+                var storedProcedureArgs = new { CompanyId = companyId};
                 List<Price> output = connection.Query<Price>(storedProcedure, storedProcedureArgs).ToList();
                 return output;
             }
@@ -54,7 +54,10 @@ namespace DataAccess
 
         public void RemovePrices(List<Price> prices)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            {
+                connection.Execute($"dbo.Prices_Remove @CompanyId, @Date, {sqlConfig.PricesTable}", prices);
+            }
         }
     }
 }

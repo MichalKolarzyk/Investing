@@ -17,5 +17,6 @@ namespace DataAccess
             this.PricesTable = "Prices";
         }
 
+
     }
 }
