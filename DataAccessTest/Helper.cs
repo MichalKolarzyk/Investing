@@ -18,7 +18,13 @@ namespace DataAccessTest
         {
             SQLConfig sqlConfig = new SQLConfig(GetConnectionString());
             sqlConfig.PricesTable = "Prices_Test";
+            sqlConfig.CompaniesTable = "Companies_Test";
             return sqlConfig;
+        }
+
+        public static SQLAccess GetTestSqlAccess()
+        {
+            return new SQLAccess(GetTestConfig());
         }
     }
 }

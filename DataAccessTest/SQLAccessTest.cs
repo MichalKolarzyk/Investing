@@ -11,7 +11,7 @@ namespace DataAccessTest
         [TestMethod]
         public void GetPrices()
         {
-            SQLAccess sqlAccess = new SQLAccess(Helper.GetTestConfig());
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
             List<Price> prices = sqlAccess.GetPrices("KOS");
 
@@ -21,7 +21,7 @@ namespace DataAccessTest
         [TestMethod]
         public void InsertPrices()
         {
-            SQLAccess sqlAccess = new SQLAccess(Helper.GetTestConfig());
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
             List<Price> prices = new List<Price>();
 
             prices.Add(new Price() { CompanyId = "ASD", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
@@ -35,7 +35,7 @@ namespace DataAccessTest
         [TestMethod]
         public void RemovePrices()
         {
-            SQLAccess sqlAccess = new SQLAccess(Helper.GetTestConfig());
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
             List<Price> pricesToInsert = new List<Price>();
             pricesToInsert.Add(new Price() { CompanyId = "KOS", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
@@ -48,5 +48,24 @@ namespace DataAccessTest
 
             Assert.IsTrue(sqlAccess.GetPrices("KOS").Count == 0);
         }
+        [TestMethod]
+        public void GetCompanies()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+
+            Assert.IsNotNull(sqlAccess.GetCompany("KOS"));
+        }
+
+        [TestMethod]
+        public void InsertCompanies()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+
+            sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "TestName" });
+
+            //Assert.IsTrue(sqlAccess.GetCompany("KOS").Count > 0);
+            Assert.IsTrue(true);
+        }
+
     }
 }

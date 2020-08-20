@@ -11,10 +11,13 @@ namespace DataAccess
         public string ConnectionString { get; set; }
         public string PricesTable { get; set; }
 
+        public string CompaniesTable { get; set; }
+
         public SQLConfig(string connectionString)
         {
             this.ConnectionString = connectionString;
             this.PricesTable = "Prices";
+            this.CompaniesTable = "Companies";
         }
 
 

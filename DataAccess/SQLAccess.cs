@@ -19,17 +19,30 @@ namespace DataAccess
 
         public void InsertCompany(Company company)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            {
+                string storedProcedure = $"dbo.Companies_Insert @ID, @FullName, {sqlConfig.CompaniesTable}";
+                connection.Execute(storedProcedure, company);
+            }
         }
 
-        public Company GetCompany(string companyId)
+        public List<Company> GetCompany(string companyId)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            {
+                string storedProcedure = $"dbo.Companies_Get @ID, {sqlConfig.CompaniesTable}";
+                var storedProcedureArgs = new { ID = companyId };
+                List<Company> output = connection.Query<Company>(storedProcedure, storedProcedureArgs).ToList();
+                return output;
+            }
         }
 
         public void RemoveCompany(Company company)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            {
+                connection.Execute($"dbo.Comapnies_Remove @CompanyId, {sqlConfig.CompaniesTable}", company);
+            }
         }
 
         public void InsertPrices(List<Price> prices)
