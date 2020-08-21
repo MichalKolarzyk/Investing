@@ -10,27 +10,27 @@ namespace DataAccess
 {
     public class SQLAccess
     {
-        private SQLConfig sqlConfig;
+        private string connectionString;
 
-        public SQLAccess(SQLConfig sqlConfig)
+        public SQLAccess(string connectionString)
         {
-            this.sqlConfig = sqlConfig;
+            this.connectionString = connectionString;
         }
 
         public void InsertCompany(Company company)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                string storedProcedure = $"dbo.Companies_Insert @ID, @FullName, {sqlConfig.CompaniesTable}";
+                string storedProcedure = $"dbo.Companies_Insert @ID, @FullName";
                 connection.Execute(storedProcedure, company);
             }
         }
 
         public List<Company> GetCompany(string companyId)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                string storedProcedure = $"dbo.Companies_Get @ID, {sqlConfig.CompaniesTable}";
+                string storedProcedure = $"dbo.Companies_Get @ID";
                 var storedProcedureArgs = new { ID = companyId };
                 List<Company> output = connection.Query<Company>(storedProcedure, storedProcedureArgs).ToList();
                 return output;
@@ -39,26 +39,26 @@ namespace DataAccess
 
         public void RemoveCompany(Company company)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                connection.Execute($"dbo.Comapnies_Remove @CompanyId, {sqlConfig.CompaniesTable}", company);
+                connection.Execute($"dbo.Comapnies_Remove @CompanyId", company);
             }
         }
 
         public void InsertPrices(List<Price> prices)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                string storedProcedure = $"dbo.Prices_Insert @CompanyID, @Value, @Date, @TimeScale, {sqlConfig.PricesTable}";
+                string storedProcedure = $"dbo.Prices_Insert @CompanyID, @Value, @Date, @TimeScale";
                 connection.Execute(storedProcedure, prices);
             }
         }
 
         public List<Price> GetPrices(string companyId)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                string storedProcedure = $"dbo.Prices_GetByCompanyId @CompanyId, {sqlConfig.PricesTable}";
+                string storedProcedure = $"dbo.Prices_GetByCompanyId @CompanyId";
                 var storedProcedureArgs = new { CompanyId = companyId};
                 List<Price> output = connection.Query<Price>(storedProcedure, storedProcedureArgs).ToList();
                 return output;
@@ -67,9 +67,9 @@ namespace DataAccess
 
         public void RemovePrices(List<Price> prices)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(sqlConfig.ConnectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                connection.Execute($"dbo.Prices_Remove @CompanyId, @Date, {sqlConfig.PricesTable}", prices);
+                connection.Execute($"dbo.Prices_Remove @CompanyId, @Date", prices);
             }
         }
     }

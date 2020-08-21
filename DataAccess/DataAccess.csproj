@@ -48,7 +48,6 @@
     <Compile Include="Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLAccess.cs" />
-    <Compile Include="SQLConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

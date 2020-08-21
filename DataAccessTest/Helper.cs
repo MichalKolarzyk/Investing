@@ -11,20 +11,12 @@ namespace DataAccessTest
     {
         public static string GetConnectionString()
         {
-            return @"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;";
-        }
-
-        public static SQLConfig GetTestConfig()
-        {
-            SQLConfig sqlConfig = new SQLConfig(GetConnectionString());
-            sqlConfig.PricesTable = "Prices_Test";
-            sqlConfig.CompaniesTable = "Companies_Test";
-            return sqlConfig;
+            return @"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True;";
         }
 
         public static SQLAccess GetTestSqlAccess()
         {
-            return new SQLAccess(GetTestConfig());
+            return new SQLAccess(GetConnectionString());
         }
     }
 }
