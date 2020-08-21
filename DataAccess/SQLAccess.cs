@@ -41,7 +41,8 @@ namespace DataAccess
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                connection.Execute($"dbo.Comapnies_Remove @CompanyId", company);
+                string storedProcedure = $"dbo.Companies_Remove @ID";
+                connection.Execute(storedProcedure, company);
             }
         }
 
@@ -69,7 +70,8 @@ namespace DataAccess
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                connection.Execute($"dbo.Prices_Remove @CompanyId, @Date", prices);
+                string storedProcedure = $"dbo.Prices_Remove @CompanyId, @Date";
+                connection.Execute(storedProcedure, prices);
             }
         }
     }

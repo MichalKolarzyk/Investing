@@ -57,15 +57,27 @@ namespace DataAccessTest
         }
 
         [TestMethod]
+        public void RemoveCompanies()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+
+            sqlAccess.RemoveCompany(new Company() { ID = "KOS" });
+
+            Assert.IsTrue(sqlAccess.GetCompany("KOS").Count == 0);
+        }
+
+        [TestMethod]
         public void InsertCompanies()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
+            sqlAccess.RemoveCompany(new Company() { ID = "KOS" });
             sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "TestName" });
 
-            //Assert.IsTrue(sqlAccess.GetCompany("KOS").Count > 0);
-            Assert.IsTrue(true);
+            Assert.IsTrue(sqlAccess.GetCompany("KOS").Count == 1);
         }
+
+        
 
     }
 }
