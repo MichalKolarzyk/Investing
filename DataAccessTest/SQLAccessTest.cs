@@ -42,8 +42,7 @@ namespace DataAccessTest
             pricesToInsert.Add(new Price() { CompanyId = "KOS", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
             sqlAccess.InsertPrices(pricesToInsert);
 
-            List<Price> pricesToDelete = new List<Price>();
-            pricesToDelete = sqlAccess.GetPrices("KOS");
+            List<Price> pricesToDelete = sqlAccess.GetPrices("KOS");
             sqlAccess.RemovePrices(pricesToDelete);
 
             Assert.IsTrue(sqlAccess.GetPrices("KOS").Count == 0);
@@ -67,7 +66,7 @@ namespace DataAccessTest
         }
 
         [TestMethod]
-        public void InsertCompanies()
+        public void InsertCompany()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
@@ -75,6 +74,16 @@ namespace DataAccessTest
             sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "TestName" });
 
             Assert.IsTrue(sqlAccess.GetCompany("KOS").Count == 1);
+        }
+        [TestMethod]
+        public void InsertCompany_AddTwoSameID()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+
+            sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "TestName" });
+            sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "SECONDNAME" });
+
+            Assert.IsTrue(true);
         }
 
         
