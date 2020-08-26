@@ -22,5 +22,15 @@ namespace DataAccess
         public DateTimeOffset Date { get; set; }
         public TimeScale TimeScale { get; set; }
 
+        public Price() { }
+
+        public Price(Company company, float value)
+        {
+            CompanyId = company.ID;
+            Value = value;
+            Date = DateTimeOffset.Now;
+            TimeScale = TimeScale.OneMinute;
+        }
+
     }
 }

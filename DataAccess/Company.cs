@@ -13,5 +13,14 @@ namespace DataAccess
         public string FullName { get; set; }
 
         public Company() { }
+        public Company(string id)
+        {
+            ID = id;
+        }
+        public Company(string id, string fullName)
+        {
+            ID = id;
+            FullName = fullName;
+        }
     }
 }
