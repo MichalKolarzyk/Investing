@@ -17,16 +17,16 @@ namespace DataAccess
             this.connectionString = connectionString;
         }
 
-        public void InsertCompany(Company company)
+        public void InsertCompanies(List<Company> companies)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Insert @ID, @FullName";
-                connection.Execute(storedProcedure, company);
+                connection.Execute(storedProcedure, companies);
             }
         }
 
-        public List<Company> GetCompany(string companyId)
+        public List<Company> GetCompanies(string companyId)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
@@ -37,7 +37,7 @@ namespace DataAccess
             }
         }
 
-        public void RemoveCompany(Company company)
+        public void RemoveCompany(List<Company> company)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {

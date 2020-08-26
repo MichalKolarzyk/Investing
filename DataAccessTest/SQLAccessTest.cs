@@ -52,36 +52,42 @@ namespace DataAccessTest
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
-            Assert.IsNotNull(sqlAccess.GetCompany("KOS"));
+            Assert.IsNotNull(sqlAccess.GetCompanies("KOS"));
         }
 
         [TestMethod]
         public void RemoveCompanies()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            List<Company> companies = new List<Company>();
+            companies.Add(new Company() { ID = "KOS" });
 
-            sqlAccess.RemoveCompany(new Company() { ID = "KOS" });
+            sqlAccess.RemoveCompany(companies);
 
-            Assert.IsTrue(sqlAccess.GetCompany("KOS").Count == 0);
+            Assert.IsTrue(sqlAccess.GetCompanies("KOS").Count == 0);
         }
 
         [TestMethod]
-        public void InsertCompany()
+        public void InsertCompanies()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            List<Company> companies = new List<Company>();
+            companies.Add(new Company() { ID = "WAS" });
+            companies.Add(new Company() { ID = "KOS", FullName = "TestName" });
 
-            sqlAccess.RemoveCompany(new Company() { ID = "KOS" });
-            sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "TestName" });
+            sqlAccess.InsertCompanies(companies);
 
-            Assert.IsTrue(sqlAccess.GetCompany("KOS").Count == 1);
+            Assert.IsTrue(sqlAccess.GetCompanies("KOS").Count == 1);
         }
         [TestMethod]
         public void InsertCompany_AddTwoSameID()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            List<Company> companies = new List<Company>();
+            companies.Add(new Company() { ID = "KOS", FullName = "TestName" });
+            companies.Add(new Company() { ID = "KOS", FullName = "SECONDNAME" });
 
-            sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "TestName" });
-            sqlAccess.InsertCompany(new Company() { ID = "KOS", FullName = "SECONDNAME" });
+            sqlAccess.InsertCompanies(companies);
 
             Assert.IsTrue(true);
         }
