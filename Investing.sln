@@ -13,6 +13,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Databa
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseTest", "DatabaseTest\DatabaseTest.sqlproj", "{288AD857-A0A1-49A6-B02A-F71954041193}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9D3540BB-A7C2-4E17-BF97-7B059EE70992}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D539439B-7020-4BB0-8960-8776D7EBB32D} = {9D3540BB-A7C2-4E17-BF97-7B059EE70992}
+		{288AD857-A0A1-49A6-B02A-F71954041193} = {9D3540BB-A7C2-4E17-BF97-7B059EE70992}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEF61292-7DC0-405C-962C-F1C13BDBC05B}
