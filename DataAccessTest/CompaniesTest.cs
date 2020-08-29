@@ -26,7 +26,7 @@ namespace DataAccessTest
             companies.Add(new Company("AWW"));
 
             string[] ids = {"KOS", "AWF", "AWW" };
-            CollectionAssert.AreEqual(ids, companies.ConvertIdsToArray());
+            CollectionAssert.AreEqual(ids, companies.GetIds());
         }
     }
 }

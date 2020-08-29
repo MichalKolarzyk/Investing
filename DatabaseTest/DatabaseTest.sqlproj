@@ -74,6 +74,7 @@
     <Build Include="dbo\Stored Procedures\Companies_Insert.sql" />
     <Build Include="dbo\Stored Procedures\Companies_Get.sql" />
     <Build Include="dbo\Stored Procedures\Companies_Remove.sql" />
+    <Build Include="Companies_GetAll.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dbo\PublishLocations\DatabaseTest.publish.xml" />

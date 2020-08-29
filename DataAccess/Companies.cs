@@ -27,7 +27,7 @@ namespace DataAccess
 
         public int Count => CompanyList.Count;
 
-        public string[] ConvertIdsToArray()
+        public string[] GetIds()
         {
             List<string> ids = new List<string>();
             foreach(Company company in CompanyList)

@@ -13,7 +13,7 @@ namespace DataAccessTest
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
-            List<Price> prices = sqlAccess.GetPrices("KOS");
+            List<Price> prices = sqlAccess.GetPrices(new Company("KOS"));
 
             Assert.IsNotNull(prices);
         }
@@ -30,7 +30,7 @@ namespace DataAccessTest
             prices.Add(new Price() { CompanyId = "ASW", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 132.42f });
 
             sqlAccess.InsertPrices(prices);
-            Assert.IsNotNull(sqlAccess.GetPrices("ASW"));
+            Assert.IsNotNull(sqlAccess.GetPrices(new Company("ASW")));
         }
         [TestMethod]
         public void RemovePrices()
@@ -42,10 +42,10 @@ namespace DataAccessTest
             pricesToInsert.Add(new Price() { CompanyId = "KOS", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
             sqlAccess.InsertPrices(pricesToInsert);
 
-            List<Price> pricesToDelete = sqlAccess.GetPrices("KOS");
+            List<Price> pricesToDelete = sqlAccess.GetPrices(new Company("KOS"));
             sqlAccess.RemovePrices(pricesToDelete);
 
-            Assert.IsTrue(sqlAccess.GetPrices("KOS").Count == 0);
+            Assert.IsTrue(sqlAccess.GetPrices(new Company("KOS")).Count == 0);
         }
         [TestMethod]
         public void GetCompanies()
@@ -92,6 +92,35 @@ namespace DataAccessTest
             Assert.IsTrue(true);
         }
 
+        [TestMethod]
+        public void GetAllCompanies()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            List<Company> companies = new List<Company>();
+
+            companies.Add(new Company("WA1"));
+            companies.Add(new Company("WA2"));
+            companies.Add(new Company("WA3"));
+            companies.Add(new Company("WA4"));
+
+            sqlAccess.InsertCompanies(companies);
+            List<Company> returnedCompanies = new List<Company>();
+            returnedCompanies = sqlAccess.GetCompanies();
+
+            Assert.IsTrue(returnedCompanies.Count >= 4);
+        }
+
+        [TestMethod]
+        public void GetAllCompanies_RemoveAllCompanies()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+
+            List<Company> companies = sqlAccess.GetCompanies();
+            sqlAccess.RemoveCompany(companies);
+
+            List<Company> returnedCompanies = sqlAccess.GetCompanies();
+            Assert.AreEqual(returnedCompanies.Count, 0);
+        }
         
 
     }
