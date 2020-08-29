@@ -17,42 +17,42 @@ namespace DataAccess
             this.connectionString = connectionString;
         }
 
-        public void InsertCompanies(List<Company> companies)
+        public void InsertCompanies(Companies companies)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Insert @ID, @FullName";
-                connection.Execute(storedProcedure, companies);
+                connection.Execute(storedProcedure, companies.GetList());
             }
         }
 
-
-
-        public List<Company> GetCompanies()
+        public Companies GetCompanies()
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
-                List<Company> output = connection.Query<Company>("dbo.Companies_GetAll", "").ToList();
-                return output;
+                List<Company> companiesList = connection.Query<Company>("dbo.Companies_GetAll", "").ToList();
+                Companies companies = new Companies(companiesList);
+                return companies;
             }
         }
-        public List<Company> GetCompanies(string companyId)
+        public Companies GetCompanies(string companyId)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Get @ID";
                 var storedProcedureArgs = new { ID = companyId };
-                List<Company> output = connection.Query<Company>(storedProcedure, storedProcedureArgs).ToList();
-                return output;
+                List<Company> companiesList = connection.Query<Company>(storedProcedure, storedProcedureArgs).ToList();
+                Companies companies = new Companies(companiesList);
+                return companies;
             }
         }
 
-        public void RemoveCompany(List<Company> company)
+        public void RemoveCompanies(Companies companies)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Remove @ID";
-                connection.Execute(storedProcedure, company);
+                connection.Execute(storedProcedure, companies.GetList());
             }
         }
 

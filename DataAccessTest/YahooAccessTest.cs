@@ -21,7 +21,7 @@ namespace DataAccessTest
             companies.Add(new Company("PFE"));
             companies.Add(new Company("ANF"));
 
-            List<Price> prices = YahooAccess.GetPrices(companies).Result;
+            List<Price> prices = YahooAccess.GetPrices(companies);
             sqlAccess.InsertPrices(prices);
 
             Assert.IsTrue(true);
