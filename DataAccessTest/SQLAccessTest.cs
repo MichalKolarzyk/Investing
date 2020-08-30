@@ -42,10 +42,10 @@ namespace DataAccessTest
             pricesToInsert.Add(new Price() { CompanyId = "KOS", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
             sqlAccess.InsertPrices(pricesToInsert);
 
-            List<Price> pricesToDelete = sqlAccess.GetPrices(new Company("KOS"));
-            sqlAccess.RemovePrices(pricesToDelete);
+            Company company = new Company("KOS");
+            sqlAccess.RemovePrices(company);
 
-            Assert.IsTrue(sqlAccess.GetPrices(new Company("KOS")).Count == 0);
+            Assert.IsTrue(sqlAccess.GetPrices(company).Count == 0);
         }
         [TestMethod]
         public void GetCompanies()
@@ -119,7 +119,34 @@ namespace DataAccessTest
             Companies returnedCompanies = sqlAccess.GetCompanies();
             Assert.AreEqual(returnedCompanies.Count, 0);
         }
-        
+
+        [TestMethod]
+        public void RemovePrices_ByIDAndDate()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+
+            Company company = new Company("ASD");
+            List<Price> pricesToInsert = new List<Price>();
+
+            pricesToInsert.Add(new Price(company, 2.19f));
+            sqlAccess.InsertPrices(pricesToInsert);
+
+            sqlAccess.RemovePrices(company, DateTimeOffset.Now);
+
+            List<Price> prices = sqlAccess.GetPrices(company);
+
+            Assert.IsTrue(prices.Count == 0);
+        }
+
+        [TestMethod]
+        public void RemovePrices_ByDate()
+        {
+            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+
+            sqlAccess.RemovePrices(DateTimeOffset.Now);
+
+            Assert.IsTrue(true);
+        }
 
     }
 }

@@ -75,12 +75,32 @@ namespace DataAccess
             }
         }
 
-        public void RemovePrices(List<Price> prices)
+        public void RemovePrices(Company company)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
-                string storedProcedure = $"dbo.Prices_Remove @CompanyId, @Date";
-                connection.Execute(storedProcedure, prices);
+                string storedProcedure = $"dbo.Prices_Remove @ID";
+                connection.Execute(storedProcedure, company);
+            }
+        }
+
+        public void RemovePrices(DateTimeOffset dateTimeOffset)
+        {
+            using (IDbConnection connection = GetConnection(connectionString))
+            {
+                string storedProcedure = $"dbo.Prices_RemoveByDate @Date";
+                var storedProcedureArgs = new { Date = dateTimeOffset };
+                connection.Execute(storedProcedure, storedProcedureArgs);
+            }
+        }
+
+        public void RemovePrices(Company company, DateTimeOffset dateTimeOffset)
+        {
+            using (IDbConnection connection = GetConnection(connectionString))
+            {
+                string storedProcedure = $"dbo.Prices_RemoveByIdAndDate @ID, @Date";
+                var storedProcedureArgs = new { ID = company.ID, Date = dateTimeOffset };
+                connection.Execute(storedProcedure, storedProcedureArgs);
             }
         }
 
