@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace AutoUser
 {
-    public class Timer
+    class Schedule
     {
-
+        public List<SingleTask> Tasks { get; set; } = new List<SingleTask>();
+        public Schedule() { }
 
     }
 }
