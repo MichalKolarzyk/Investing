@@ -8,37 +8,33 @@ namespace DataAccess
 {
     public class Companies
     {
-        private List<Company> companyList { get; set; } = new List<Company>();
+        public List<Company> List { get; set; } = new List<Company>();
         public Companies() { }
         public Companies(List<Company> companies)
         {
-            companyList = companies;
+            List = companies;
         }
 
         public void Add(Company company)
         {
-            companyList.Add(company);
+            List.Add(company);
         }
 
         public void Remove(Company company)
         {
-            companyList.Remove(company);
+            List.Remove(company);
         }
 
-        public int Count => companyList.Count;
+        public int Count => List.Count;
 
         public string[] GetIds()
         {
             List<string> ids = new List<string>();
-            foreach(Company company in companyList)
+            foreach(Company company in List)
             {
                 ids.Add(company.ID);
             }
             return ids.ToArray();
-        }
-        public List<Company> GetList()
-        {
-            return companyList;
         }
     }
 }

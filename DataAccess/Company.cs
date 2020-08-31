@@ -8,7 +8,7 @@ namespace DataAccess
 {
     public class Company
     {
-        public List<Price> Prices { get; set; }
+        public Prices Prices { get; set; }
         public string ID { get; set; }
         public string FullName { get; set; }
 

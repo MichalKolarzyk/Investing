@@ -11,14 +11,14 @@ namespace DataAccess
 {
     public static class YahooAccess
     {
-        public static List<Price> GetPrices(Companies companies)
+        public static Prices GetPrices(Companies companies)
         {
             return getPrices(companies).Result;
         }
 
-        private async static Task<List<Price>> getPrices(Companies companies)
+        private async static Task<Prices> getPrices(Companies companies)
         {
-            List<Price> prices = new List<Price>();
+            Prices prices = new Prices();
             var securities = await Yahoo.Symbols(companies.GetIds()).Fields(Field.RegularMarketPrice).QueryAsync();
             foreach(Security security in securities.Values)
             {
