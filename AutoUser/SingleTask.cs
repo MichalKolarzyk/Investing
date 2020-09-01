@@ -30,9 +30,10 @@ namespace AutoUser
             timer.Stop();
         }
 
-        public void Clear()
+        public void Dispose()
         {
             timer.Elapsed -= timerTick;
+            timer.Dispose();
         }
 
         private void timerTick(object sender, EventArgs e)

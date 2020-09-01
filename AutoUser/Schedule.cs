@@ -6,10 +6,39 @@ using System.Threading.Tasks;
 
 namespace AutoUser
 {
-    class Schedule
+    public class Schedule
     {
         public List<SingleTask> Tasks { get; set; } = new List<SingleTask>();
-        public Schedule() { }
+        public Schedule() { } 
+
+        public void Start()
+        {
+            foreach(SingleTask task in Tasks)
+            {
+                task.Start();
+            }
+        }
+
+        public void Stop()
+        {
+            foreach(SingleTask task in Tasks)
+            {
+                task.Stop();
+            }
+        }
+
+        public void Dispose()
+        {
+            foreach (SingleTask task in Tasks)
+            {
+                task.Dispose();
+            }
+        }
+
+        public void Add(SingleTask task)
+        {
+            Tasks.Add(task);
+        }
 
     }
 }
