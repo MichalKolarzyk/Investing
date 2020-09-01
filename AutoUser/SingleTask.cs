@@ -4,23 +4,20 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Timers;
 
 namespace AutoUser
 {
     public class SingleTask
     {
-        private Timer timer;
-        public int Interval { get; set; }
-
+        private Timer timer = new Timer();
         public Action Action { get; set; }
 
-        public SingleTask(Action action, int interval)
+        public SingleTask(Action action, int intervalInMilisec)
         {
             Action = action;
-            Interval = interval;
-            timer.Tick += new EventHandler(timerTick);
-            timer.Start();
+            timer.Interval = intervalInMilisec;
+            timer.Elapsed += timerTick;
         }
 
         public void Start()
@@ -31,6 +28,11 @@ namespace AutoUser
         public void Stop()
         {
             timer.Stop();
+        }
+
+        public void Clear()
+        {
+            timer.Elapsed -= timerTick;
         }
 
         private void timerTick(object sender, EventArgs e)
