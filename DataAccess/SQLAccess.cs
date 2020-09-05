@@ -26,6 +26,13 @@ namespace DataAccess
             }
         }
 
+        public void Insert(Company company)
+        {
+            Companies companies = new Companies();
+            companies.Add(company);
+            Insert(companies);
+        }
+
         public Companies Get()
         {
             using (IDbConnection connection = GetConnection(connectionString))
@@ -52,6 +59,13 @@ namespace DataAccess
                 string storedProcedure = $"dbo.Companies_Remove @ID";
                 connection.Execute(storedProcedure, companies.List);
             }
+        }
+
+        public void Remove(Company company)
+        {
+            Companies companies = new Companies();
+            companies.Add(company);
+            Remove(companies);
         }
 
 

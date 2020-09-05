@@ -3,42 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Quartz;
+using Quartz.Impl;
 
 namespace AutoUser
 {
     public class Schedule
     {
-        public List<SingleTask> Tasks { get; set; } = new List<SingleTask>();
-        public Schedule() { } 
+        private IScheduler scheduler;
+
+        public Schedule()
+        {
+            StdSchedulerFactory factory = new StdSchedulerFactory();
+            scheduler = factory.GetScheduler().Result;
+        }
+
+        public void Add(IJobDetail singleTask, ITaskTrigger taskTrigger)
+        {
+            Task.WaitAll(scheduler.ScheduleJob(singleTask, taskTrigger));
+        }
 
         public void Start()
         {
-            foreach(SingleTask task in Tasks)
-            {
-                task.Start();
-            }
+            scheduler.Start();
         }
 
         public void Stop()
         {
-            foreach(SingleTask task in Tasks)
-            {
-                task.Stop();
-            }
+            scheduler.Standby();
         }
 
-        public void Dispose()
+        public void ShutDown()
         {
-            foreach (SingleTask task in Tasks)
-            {
-                task.Dispose();
-            }
+            scheduler.Shutdown();
         }
 
-        public void Add(SingleTask task)
-        {
-            Tasks.Add(task);
-        }
 
     }
 }
