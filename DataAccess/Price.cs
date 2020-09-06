@@ -6,16 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public enum TimeScale
-    {
-        OneMinute = 10,
-        OneHour = 20,
-        OneWeek = 30,
-        OneMonth = 40,
-        OneYear = 50
-    }
 
-    public class Price
+    public class Price : IPrice
     {
         public string CompanyId { get; set; }
         public float Value { get; set; }

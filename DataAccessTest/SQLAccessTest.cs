@@ -13,7 +13,7 @@ namespace DataAccessTest
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
-            Prices prices = sqlAccess.Get(new Company("KOS"));
+            IPrices prices = sqlAccess.Get<Price>(new Company("KOS"));
 
             Assert.IsNotNull(prices);
         }
@@ -22,7 +22,7 @@ namespace DataAccessTest
         public void InsertPrices()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
-            Prices prices = new Prices();
+            IPrices prices = new Prices();
 
             prices.Add(new Price() { CompanyId = "ASD", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
             prices.Add(new Price() { CompanyId = "ASO", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 21.52f });
@@ -30,7 +30,7 @@ namespace DataAccessTest
             prices.Add(new Price() { CompanyId = "ASW", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 132.42f });
             sqlAccess.Insert(prices);
 
-            Prices returnedPrices = sqlAccess.Get(new Company("ASW"));
+            IPrices returnedPrices = sqlAccess.Get<Price>(new Company("ASW"));
 
             sqlAccess.RemovePrices(DateTimeOffset.Now);
             Assert.IsNotNull(returnedPrices);
@@ -48,7 +48,7 @@ namespace DataAccessTest
             Company company = new Company("KOS");
             sqlAccess.RemovePrices(company);
 
-            Assert.IsTrue(sqlAccess.Get(company).Count == 0);
+            Assert.IsTrue(sqlAccess.Get<Price>(company).Count == 0);
         }
         [TestMethod]
         public void GetCompanies()
@@ -74,12 +74,12 @@ namespace DataAccessTest
         public void InsertCompanies()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
-            Companies companies = new Companies();
+            ICompanies companies = new Companies();
             companies.Add(new Company() { ID = "WAS" });
             companies.Add(new Company() { ID = "KOS", FullName = "TestName" });
 
             sqlAccess.Insert(companies);
-            Companies returnedCompanies = sqlAccess.Get("KOS");
+            ICompanies returnedCompanies = sqlAccess.Get("KOS");
 
             sqlAccess.RemovePrices(DateTimeOffset.Now);
 
@@ -103,7 +103,7 @@ namespace DataAccessTest
         public void GetAllCompanies()
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
-            Companies companies = new Companies();
+            ICompanies companies = new Companies();
 
             companies.Add(new Company("WA1"));
             companies.Add(new Company("WA2"));
@@ -111,7 +111,7 @@ namespace DataAccessTest
             companies.Add(new Company("WA4"));
 
             sqlAccess.Insert(companies);
-            Companies returnedCompanies = sqlAccess.Get();
+            ICompanies returnedCompanies = sqlAccess.Get();
             Assert.IsTrue(returnedCompanies.Count >= 4);
         }
 
@@ -120,10 +120,10 @@ namespace DataAccessTest
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
-            Companies companies = sqlAccess.Get();
+            ICompanies companies = sqlAccess.Get();
             sqlAccess.Remove(companies);
 
-            Companies returnedCompanies = sqlAccess.Get();
+            ICompanies returnedCompanies = sqlAccess.Get();
             Assert.AreEqual(returnedCompanies.Count, 0);
         }
 
@@ -140,7 +140,7 @@ namespace DataAccessTest
 
             sqlAccess.RemovePrices(company, DateTimeOffset.Now);
 
-            Prices prices = sqlAccess.Get(company);
+            IPrices prices = sqlAccess.Get<Price>(company);
 
             Assert.IsTrue(prices.Count == 0);
         }

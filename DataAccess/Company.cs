@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class Company
+    public class Company : ICompany
     {
         public Prices Prices { get; set; }
         public string ID { get; set; }

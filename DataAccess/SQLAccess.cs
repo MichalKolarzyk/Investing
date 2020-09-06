@@ -17,51 +17,51 @@ namespace DataAccess
             this.connectionString = connectionString;
         }
 
-        public void Insert(Companies companies)
+        public void Insert(ICompanies companies)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Insert @ID, @FullName";
-                connection.Execute(storedProcedure, companies.List);
+                connection.Execute(storedProcedure, companies);
             }
         }
 
         public void Insert(Company company)
         {
-            Companies companies = new Companies();
+            ICompanies companies = new Companies();
             companies.Add(company);
             Insert(companies);
         }
 
-        public Companies Get()
+        public ICompanies Get()
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
-                Companies companies = new Companies(connection.Query<Company>("dbo.Companies_GetAll", "").ToList());
+                ICompanies companies = new Companies(connection.Query<ICompany>("dbo.Companies_GetAll", "").ToList());
                 return companies;
             }
         }
-        public Companies Get(string companyId)
+        public ICompanies Get(string companyId)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Get @ID";
                 var storedProcedureArgs = new { ID = companyId };
-                Companies companies = new Companies(connection.Query<Company>(storedProcedure, storedProcedureArgs).ToList());
+                ICompanies companies = new Companies(connection.Query<ICompany>(storedProcedure, storedProcedureArgs).ToList());
                 return companies;
             }
         }
 
-        public void Remove(Companies companies)
+        public void Remove(ICompanies companies)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Remove @ID";
-                connection.Execute(storedProcedure, companies.List);
+                connection.Execute(storedProcedure, companies);
             }
         }
 
-        public void Remove(Company company)
+        public void Remove(ICompany company)
         {
             Companies companies = new Companies();
             companies.Add(company);
@@ -69,26 +69,30 @@ namespace DataAccess
         }
 
 
-        public void Insert(Prices prices)
+        public void Insert(IPrices prices)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Prices_Insert @CompanyID, @Value, @Date, @TimeScale";
-                connection.Execute(storedProcedure, prices.List);
+                connection.Execute(storedProcedure, prices);
             }
         }
 
-        public Prices Get(Company company)
+        public IPrices Get<T>(ICompany company) where T : IPrice, new()
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Prices_GetByCompanyId @ID";
-                Prices prices = new Prices(connection.Query<Price>(storedProcedure, company).ToList());
-                return prices;
+                IEnumerable<IPrice> prices = (IEnumerable<IPrice>)connection.Query<T>(storedProcedure, company);
+                IPrices pricesList = PricesBuilder.Create<Prices>()
+                    .AddEnumeratorList(prices)
+                    .Build();
+
+                return pricesList;
             }
         }
 
-        public void RemovePrices(Company company)
+        public void RemovePrices(ICompany company)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
@@ -107,7 +111,7 @@ namespace DataAccess
             }
         }
 
-        public void RemovePrices(Company company, DateTimeOffset dateTimeOffset)
+        public void RemovePrices(ICompany company, DateTimeOffset dateTimeOffset)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
