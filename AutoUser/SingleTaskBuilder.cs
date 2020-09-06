@@ -10,9 +10,9 @@ namespace AutoUser
 {
     public static class SingleTaskBuilder
     {
-        public static ISimpleTaskDetail Build<T>() where T: ISingleTask
+        public static ISimpleTaskDetail Build()
         {
-            return (ISimpleTaskDetail) JobBuilder.Create<T>().Build();
+            return (ISimpleTaskDetail) JobBuilder.Create<SimpleTask>().Build();
         }
     }
 
