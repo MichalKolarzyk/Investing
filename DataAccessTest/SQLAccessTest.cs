@@ -55,7 +55,7 @@ namespace DataAccessTest
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
-            Assert.IsNotNull(sqlAccess.Get("KOS"));
+            Assert.IsNotNull(sqlAccess.Get<Company>("KOS"));
         }
 
         [TestMethod]
@@ -67,7 +67,7 @@ namespace DataAccessTest
 
             sqlAccess.Remove(companies);
 
-            Assert.IsTrue(sqlAccess.Get("KOS").Count == 0);
+            Assert.IsTrue(sqlAccess.Get<Company>("KOS").Count == 0);
         }
 
         [TestMethod]
@@ -79,7 +79,7 @@ namespace DataAccessTest
             companies.Add(new Company() { ID = "KOS", FullName = "TestName" });
 
             sqlAccess.Insert(companies);
-            ICompanies returnedCompanies = sqlAccess.Get("KOS");
+            ICompanies returnedCompanies = sqlAccess.Get<Company>("KOS");
 
             sqlAccess.RemovePrices(DateTimeOffset.Now);
 
@@ -111,7 +111,7 @@ namespace DataAccessTest
             companies.Add(new Company("WA4"));
 
             sqlAccess.Insert(companies);
-            ICompanies returnedCompanies = sqlAccess.Get();
+            ICompanies returnedCompanies = sqlAccess.Get<Company>();
             Assert.IsTrue(returnedCompanies.Count >= 4);
         }
 
@@ -120,10 +120,10 @@ namespace DataAccessTest
         {
             SQLAccess sqlAccess = Helper.GetTestSqlAccess();
 
-            ICompanies companies = sqlAccess.Get();
+            ICompanies companies = sqlAccess.Get<Company>();
             sqlAccess.Remove(companies);
 
-            ICompanies returnedCompanies = sqlAccess.Get();
+            ICompanies returnedCompanies = sqlAccess.Get<Company>();
             Assert.AreEqual(returnedCompanies.Count, 0);
         }
 

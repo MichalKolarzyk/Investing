@@ -33,22 +33,29 @@ namespace DataAccess
             Insert(companies);
         }
 
-        public ICompanies Get()
+        public ICompanies Get<T>() where T : ICompany, new()
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
-                ICompanies companies = new Companies(connection.Query<ICompany>("dbo.Companies_GetAll", "").ToList());
-                return companies;
+                IEnumerable<ICompany> companies = (IEnumerable<ICompany>)connection.Query<T>("dbo.Companies_GetAll", "");
+                ICompanies companyList = CompaniesBuilder.Create<Companies>()
+                    .AddEnumeratorList(companies)
+                    .Build();
+
+                return companyList;
             }
         }
-        public ICompanies Get(string companyId)
+        public ICompanies Get<T>(string companyId) where T : ICompany, new()
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Get @ID";
                 var storedProcedureArgs = new { ID = companyId };
-                ICompanies companies = new Companies(connection.Query<ICompany>(storedProcedure, storedProcedureArgs).ToList());
-                return companies;
+                IEnumerable<ICompany> companies = (IEnumerable<ICompany>)connection.Query<T>(storedProcedure, storedProcedureArgs);
+                ICompanies companyList = CompaniesBuilder.Create<Companies>()
+                    .AddEnumeratorList(companies)
+                    .Build();
+                return companyList;
             }
         }
 

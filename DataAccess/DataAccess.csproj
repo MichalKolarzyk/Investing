@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Companies.cs" />
+    <Compile Include="CompaniesBuilder.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="DataAccessManager.cs" />
     <Compile Include="Enums.cs" />
