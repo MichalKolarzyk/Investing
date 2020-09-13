@@ -11,8 +11,8 @@ namespace DataAccess
         public static void GetData(string connectionString)
         {
             SQLAccess sqlAccess = new SQLAccess(connectionString);
-            ICompanies companies = sqlAccess.Get<Company>();
-            IPrices prices = YahooAccess.GetPrices(companies);
+            Companies companies = sqlAccess.Get<Company>();
+            Prices prices = YahooAccess.GetPrices(companies);
             sqlAccess.Insert(prices);
         }
         public static void Add(Companies companies, string connectionString)

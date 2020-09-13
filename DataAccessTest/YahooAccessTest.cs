@@ -21,7 +21,7 @@ namespace DataAccessTest
             companies.Add(new Company("PFE"));
             companies.Add(new Company("ANF"));
 
-            IPrices prices = YahooAccess.GetPrices(companies);
+            Prices prices = YahooAccess.GetPrices(companies);
             sqlAccess.Insert(prices);
             sqlAccess.RemovePrices(DateTimeOffset.Now);
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class Prices : IPrices
+    public class Prices : IList<IPrice>
     {
         List<IPrice> listOfPrices { get; set; } = new List<IPrice>();
 
@@ -21,6 +21,13 @@ namespace DataAccess
         public Prices(List<IPrice> prices)
         {
             listOfPrices = prices;
+        }
+        public Prices(IEnumerable prices)
+        {
+            foreach(IPrice price in prices)
+            {
+                listOfPrices.Add(price);
+            }
         }
 
         public void Add(IPrice price)

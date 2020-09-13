@@ -17,7 +17,7 @@ namespace DataAccess
             this.connectionString = connectionString;
         }
 
-        public void Insert(ICompanies companies)
+        public void Insert(Companies companies)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
@@ -26,40 +26,35 @@ namespace DataAccess
             }
         }
 
-        public void Insert(Company company)
+        public void Insert(ICompany company)
         {
-            ICompanies companies = new Companies();
+            Companies companies = new Companies();
             companies.Add(company);
             Insert(companies);
         }
 
-        public ICompanies Get<T>() where T : ICompany, new()
+        public Companies Get<ICompanyClass>() where ICompanyClass : ICompany, new()
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
-                IEnumerable<ICompany> companies = (IEnumerable<ICompany>)connection.Query<T>("dbo.Companies_GetAll", "");
-                ICompanies companyList = CompaniesBuilder.Create<Companies>()
-                    .AddEnumeratorList(companies)
-                    .Build();
-
+                IEnumerable<ICompany> companies = (IEnumerable<ICompany>)connection.Query<ICompanyClass>("dbo.Companies_GetAll", "");
+                Companies companyList = new Companies(companies);
                 return companyList;
             }
         }
-        public ICompanies Get<T>(string companyId) where T : ICompany, new()
+        public Companies Get<T>(string companyId) where T : ICompany, new()
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Companies_Get @ID";
                 var storedProcedureArgs = new { ID = companyId };
                 IEnumerable<ICompany> companies = (IEnumerable<ICompany>)connection.Query<T>(storedProcedure, storedProcedureArgs);
-                ICompanies companyList = CompaniesBuilder.Create<Companies>()
-                    .AddEnumeratorList(companies)
-                    .Build();
+                Companies companyList = new Companies(companies);
                 return companyList;
             }
         }
 
-        public void Remove(ICompanies companies)
+        public void Remove(Companies companies)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
@@ -76,7 +71,7 @@ namespace DataAccess
         }
 
 
-        public void Insert(IPrices prices)
+        public void Insert(Prices prices)
         {
             using (IDbConnection connection = GetConnection(connectionString))
             {
@@ -85,16 +80,13 @@ namespace DataAccess
             }
         }
 
-        public IPrices Get<T>(ICompany company) where T : IPrice, new()
+        public Prices Get<ICompanyClass>(ICompany company) where ICompanyClass : IPrice, new()
         {
-            using (IDbConnection connection = GetConnection(connectionString))
+            using(IDbConnection connection = GetConnection(connectionString))
             {
                 string storedProcedure = $"dbo.Prices_GetByCompanyId @ID";
-                IEnumerable<IPrice> prices = (IEnumerable<IPrice>)connection.Query<T>(storedProcedure, company);
-                IPrices pricesList = PricesBuilder.Create<Prices>()
-                    .AddEnumeratorList(prices)
-                    .Build();
-
+                IEnumerable<IPrice> prices = (IEnumerable<IPrice>)connection.Query<ICompanyClass>(storedProcedure, company);
+                Prices pricesList = new Prices(prices);
                 return pricesList;
             }
         }

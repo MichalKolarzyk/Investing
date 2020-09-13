@@ -15,8 +15,4 @@ namespace AutoUser
             return (ISimpleTaskDetail) JobBuilder.Create<SimpleTask>().Build();
         }
     }
-
-
-
-
 }

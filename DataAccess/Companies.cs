@@ -7,13 +7,21 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class Companies : ICompanies
+    public class Companies : IList<ICompany>
     {
         public List<ICompany> ListOfCompanies { get; set; } = new List<ICompany>();
         public Companies() { }
         public Companies(List<ICompany> companies)
         {
             ListOfCompanies = companies;
+        }
+
+        public Companies(IEnumerable companies)
+        {
+            foreach(ICompany company in companies)
+            {
+                ListOfCompanies.Add(company);
+            }
         }
 
         public int Count => ListOfCompanies.Count;
