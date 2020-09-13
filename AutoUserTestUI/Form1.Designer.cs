@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.priceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.priceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -45,11 +50,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.form1BindingSource, "LabelText", true));
             this.label1.Location = new System.Drawing.Point(26, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // priceBindingSource
+            // 
+            this.priceBindingSource.DataSource = typeof(DataAccess.Price);
+            // 
+            // form1BindingSource
+            // 
+            this.form1BindingSource.DataSource = typeof(AutoUserTestUI.Form1);
             // 
             // Form1
             // 
@@ -60,6 +75,8 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.priceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,7 +85,9 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource priceBindingSource;
+        private System.Windows.Forms.BindingSource form1BindingSource;
+        public System.Windows.Forms.Label label1;
     }
 }
 

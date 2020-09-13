@@ -97,14 +97,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISimpleTaskDetail.cs" />
-    <Compile Include="ISingleTask.cs" />
-    <Compile Include="ITaskTrigger.cs" />
-    <Compile Include="Schedule.cs" />
+    <Compile Include="ApplicationJob.cs" />
+    <Compile Include="JobHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleTask.cs" />
-    <Compile Include="SingleTaskBuilder.cs" />
-    <Compile Include="TaskTriggerBuilder.cs" />
+    <Compile Include="Scheduler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

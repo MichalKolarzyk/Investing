@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObjectWithData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -66,6 +67,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\AutoUserTestUI.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\AutoUserTestUI.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\DataAccess.Companies.datasource" />
+    <None Include="Properties\DataSources\DataAccess.Company.datasource" />
+    <None Include="Properties\DataSources\DataAccess.DataAccessManager.datasource" />
+    <None Include="Properties\DataSources\DataAccess.ICompany.datasource" />
+    <None Include="Properties\DataSources\DataAccess.IPrice.datasource" />
+    <None Include="Properties\DataSources\DataAccess.Price.datasource" />
+    <None Include="Properties\DataSources\DataAccess.Prices.datasource" />
+    <None Include="Properties\DataSources\DataAccess.SQLAccess.datasource" />
+    <None Include="Properties\DataSources\DataAccess.YahooAccess.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -83,6 +97,10 @@
     <ProjectReference Include="..\AutoUser\AutoUser.csproj">
       <Project>{729a3eca-9b63-403c-a043-a142fe479e06}</Project>
       <Name>AutoUser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{83852ca3-3cee-4125-9289-c4c5223b6bc5}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
