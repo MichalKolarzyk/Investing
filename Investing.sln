@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUserTest", "AutoUserTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUserTestUI", "AutoUserTestUI\AutoUserTestUI.csproj", "{9733005D-C829-40B8-A2A3-C2DF4FB0DC5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControls\UserControls.csproj", "{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicForms", "BasicForms\BasicForms.csproj", "{F94BE613-DD39-47FA-BAD1-CA3C56FDF72F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{9733005D-C829-40B8-A2A3-C2DF4FB0DC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9733005D-C829-40B8-A2A3-C2DF4FB0DC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9733005D-C829-40B8-A2A3-C2DF4FB0DC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94BE613-DD39-47FA-BAD1-CA3C56FDF72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94BE613-DD39-47FA-BAD1-CA3C56FDF72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94BE613-DD39-47FA-BAD1-CA3C56FDF72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94BE613-DD39-47FA-BAD1-CA3C56FDF72F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
