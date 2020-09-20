@@ -49,20 +49,47 @@
     <Compile Include="AddCompanyControl.Designer.cs">
       <DependentUpon>AddCompanyControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompanyIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompanyIcon.Designer.cs">
+      <DependentUpon>CompanyIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DetailInfoControl.Designer.cs">
+      <DependentUpon>DetailInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsControl.Designer.cs">
+      <DependentUpon>SettingsControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCompanyControl.resx">
       <DependentUpon>AddCompanyControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CompanyIcon.resx">
+      <DependentUpon>CompanyIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailInfoControl.resx">
+      <DependentUpon>DetailInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsControl.resx">
+      <DependentUpon>SettingsControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

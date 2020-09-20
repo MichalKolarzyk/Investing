@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BasicForms;
 
 namespace UserControls
 {
     public partial class AddCompanyControl : UserControl
     {
+        private List<CompanyIcon> companyIcons= new List<CompanyIcon>();
+
         public AddCompanyControl()
         {
             InitializeComponent();
@@ -21,5 +24,11 @@ namespace UserControls
         {
 
         }
+
+        private void ResizeUserControl(object sender, EventArgs e)
+        {
+            panel_CompanyList.Height = (int)(Height * 0.8f);
+        }
+
     }
 }
