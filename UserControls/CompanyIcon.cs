@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace UserControls
 {
@@ -17,5 +18,6 @@ namespace UserControls
             InitializeComponent();
             Dock = DockStyle.Top;
         }
+        
     }
 }

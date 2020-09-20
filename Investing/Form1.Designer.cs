@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.detailInfoControl1 = new UserControls.DetailInfoControl();
             this.addCompanyControl1 = new UserControls.AddCompanyControl();
             this.settingsControl1 = new UserControls.SettingsControl();
+            this.detailInfoControl1 = new UserControls.DetailInfoControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,15 +45,6 @@
             this.panel1.Size = new System.Drawing.Size(322, 652);
             this.panel1.TabIndex = 0;
             // 
-            // detailInfoControl1
-            // 
-            this.detailInfoControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.detailInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.detailInfoControl1.Location = new System.Drawing.Point(322, 0);
-            this.detailInfoControl1.Name = "detailInfoControl1";
-            this.detailInfoControl1.Size = new System.Drawing.Size(612, 652);
-            this.detailInfoControl1.TabIndex = 1;
-            // 
             // addCompanyControl1
             // 
             this.addCompanyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -65,12 +56,21 @@
             // 
             // settingsControl1
             // 
-            this.settingsControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.settingsControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.settingsControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.settingsControl1.Location = new System.Drawing.Point(0, 0);
             this.settingsControl1.Name = "settingsControl1";
             this.settingsControl1.Size = new System.Drawing.Size(322, 53);
             this.settingsControl1.TabIndex = 0;
+            // 
+            // detailInfoControl1
+            // 
+            this.detailInfoControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.detailInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailInfoControl1.Location = new System.Drawing.Point(322, 0);
+            this.detailInfoControl1.Name = "detailInfoControl1";
+            this.detailInfoControl1.Size = new System.Drawing.Size(612, 652);
+            this.detailInfoControl1.TabIndex = 1;
             // 
             // Form1
             // 

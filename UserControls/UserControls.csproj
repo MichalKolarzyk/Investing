@@ -87,6 +87,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsControl.resx">
       <DependentUpon>SettingsControl.cs</DependentUpon>
@@ -97,6 +98,15 @@
       <Project>{f94be613-dd39-47fa-bad1-ca3c56fdf72f}</Project>
       <Name>BasicForms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_settings_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_info_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_search_white_48dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
