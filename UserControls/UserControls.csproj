@@ -108,5 +108,17 @@
   <ItemGroup>
     <None Include="Icons\outline_search_white_48dp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_schedule_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_add_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_remove_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_calendar_today_white_48dp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
