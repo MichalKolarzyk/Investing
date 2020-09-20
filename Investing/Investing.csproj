@@ -100,6 +100,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{83852ca3-3cee-4125-9289-c4c5223b6bc5}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserControls\UserControls.csproj">
       <Project>{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}</Project>
       <Name>UserControls</Name>

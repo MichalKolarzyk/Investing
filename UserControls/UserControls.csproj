@@ -98,6 +98,10 @@
       <Project>{f94be613-dd39-47fa-bad1-ca3c56fdf72f}</Project>
       <Name>BasicForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{83852CA3-3CEE-4125-9289-C4C5223B6BC5}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\outline_settings_white_48dp.png" />
@@ -119,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\outline_calendar_today_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_search_white_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
