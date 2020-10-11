@@ -51,7 +51,10 @@
     <Compile Include="BasicControls\BasicDialog.Designer.cs">
       <DependentUpon>BasicDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="BasicControls\CustomButton.cs">
+    <Compile Include="BasicControls\BasicButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CompanyList_UserControl.cs">
@@ -124,10 +127,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BasicForms\BasicForms.csproj">
-      <Project>{f94be613-dd39-47fa-bad1-ca3c56fdf72f}</Project>
-      <Name>BasicForms</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{83852CA3-3CEE-4125-9289-C4C5223B6BC5}</Project>
       <Name>DataAccess</Name>

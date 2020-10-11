@@ -1,16 +1,16 @@
-﻿using BasicForms;
-using DataAccess;
+﻿using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserControls.BasicControls;
 using UserControls.View;
 
 namespace UserControls
 {
-    public class Company_Control : CustomButton, ICompanyView
+    public class Company_Control : BasicButton, ICompanyView
     {
         public Company Company {
             get

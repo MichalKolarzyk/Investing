@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.GroupBox_Companies = new BasicForms.CustomGroupBox();
+            this.GroupBox_Companies = new BasicControls.BasicGroupBox();
             this.Panel_CompaniesList = new System.Windows.Forms.Panel();
             this.panel_Buttons = new System.Windows.Forms.Panel();
-            this.customButton_RemoveCompany = new BasicForms.CustomButton();
-            this.customButton_AddCompany = new BasicForms.CustomButton();
+            this.customButton_RemoveCompany = new BasicControls.BasicButton();
+            this.customButton_AddCompany = new BasicControls.BasicButton();
             this.panel_CompanyList = new System.Windows.Forms.Panel();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GroupBox_Companies.SuspendLayout();
@@ -151,13 +151,13 @@
 
         #endregion
 
-        private BasicForms.CustomGroupBox GroupBox_Companies;
+        private BasicControls.BasicGroupBox GroupBox_Companies;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel_CompanyList;
         private System.Windows.Forms.Panel Panel_CompaniesList;
         private System.Windows.Forms.Panel panel_Buttons;
-        private BasicForms.CustomButton customButton_RemoveCompany;
-        private BasicForms.CustomButton customButton_AddCompany;
+        private BasicControls.BasicButton customButton_RemoveCompany;
+        private BasicControls.BasicButton customButton_AddCompany;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }

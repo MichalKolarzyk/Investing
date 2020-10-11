@@ -9,9 +9,9 @@ using UserControls.BasicControls.BasicComponents;
 
 namespace UserControls.BasicControls
 {
-    class CustomButton : Button
+    public class BasicButton : Button
     {
-        public CustomButton() : base()
+        public BasicButton() : base()
         {
             Text = "Custom Button";
             Font = Fonts.NewTimesRoman;
