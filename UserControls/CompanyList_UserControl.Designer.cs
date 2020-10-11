@@ -1,6 +1,6 @@
 ﻿namespace UserControls
 {
-    partial class AddCompanyControl
+    partial class CompanyList_UserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,9 +33,9 @@
             this.GroupBox_Companies = new BasicForms.CustomGroupBox();
             this.Panel_CompaniesList = new System.Windows.Forms.Panel();
             this.panel_Buttons = new System.Windows.Forms.Panel();
+            this.customButton_RemoveCompany = new BasicForms.CustomButton();
+            this.customButton_AddCompany = new BasicForms.CustomButton();
             this.panel_CompanyList = new System.Windows.Forms.Panel();
-            this.customButton2 = new BasicForms.CustomButton();
-            this.customButton1 = new BasicForms.CustomButton();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GroupBox_Companies.SuspendLayout();
             this.panel_Buttons.SuspendLayout();
@@ -76,13 +76,48 @@
             // 
             // panel_Buttons
             // 
-            this.panel_Buttons.Controls.Add(this.customButton2);
-            this.panel_Buttons.Controls.Add(this.customButton1);
+            this.panel_Buttons.Controls.Add(this.customButton_RemoveCompany);
+            this.panel_Buttons.Controls.Add(this.customButton_AddCompany);
             this.panel_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_Buttons.Location = new System.Drawing.Point(3, 534);
             this.panel_Buttons.Name = "panel_Buttons";
             this.panel_Buttons.Size = new System.Drawing.Size(295, 44);
             this.panel_Buttons.TabIndex = 5;
+            // 
+            // customButton_RemoveCompany
+            // 
+            this.customButton_RemoveCompany.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.customButton_RemoveCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.customButton_RemoveCompany.Dock = System.Windows.Forms.DockStyle.Right;
+            this.customButton_RemoveCompany.FlatAppearance.BorderSize = 0;
+            this.customButton_RemoveCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton_RemoveCompany.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.customButton_RemoveCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.customButton_RemoveCompany.Image = global::UserControls.Properties.Resources.outline_remove_white_48dp;
+            this.customButton_RemoveCompany.Location = new System.Drawing.Point(185, 0);
+            this.customButton_RemoveCompany.Name = "customButton_RemoveCompany";
+            this.customButton_RemoveCompany.Size = new System.Drawing.Size(55, 44);
+            this.customButton_RemoveCompany.TabIndex = 3;
+            this.customButton_RemoveCompany.Text = " ";
+            this.customButton_RemoveCompany.UseVisualStyleBackColor = false;
+            this.customButton_RemoveCompany.Click += new System.EventHandler(this.customButton_RemoveCompany_Click);
+            // 
+            // customButton_AddCompany
+            // 
+            this.customButton_AddCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.customButton_AddCompany.Dock = System.Windows.Forms.DockStyle.Right;
+            this.customButton_AddCompany.FlatAppearance.BorderSize = 0;
+            this.customButton_AddCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton_AddCompany.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.customButton_AddCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.customButton_AddCompany.Image = global::UserControls.Properties.Resources.outline_add_white_48dp;
+            this.customButton_AddCompany.Location = new System.Drawing.Point(240, 0);
+            this.customButton_AddCompany.Name = "customButton_AddCompany";
+            this.customButton_AddCompany.Size = new System.Drawing.Size(55, 44);
+            this.customButton_AddCompany.TabIndex = 1;
+            this.customButton_AddCompany.Text = " ";
+            this.customButton_AddCompany.UseVisualStyleBackColor = false;
+            this.customButton_AddCompany.Click += new System.EventHandler(this.customButton_AddCompany_Click);
             // 
             // panel_CompanyList
             // 
@@ -94,55 +129,19 @@
             this.panel_CompanyList.Size = new System.Drawing.Size(0, 0);
             this.panel_CompanyList.TabIndex = 4;
             // 
-            // customButton2
-            // 
-            this.customButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.customButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.customButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.customButton2.Image = global::UserControls.Properties.Resources.outline_remove_white_48dp;
-            this.customButton2.Location = new System.Drawing.Point(185, 0);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(55, 44);
-            this.customButton2.TabIndex = 3;
-            this.customButton2.Text = " ";
-            this.customButton2.UseVisualStyleBackColor = false;
-            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.customButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.customButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.customButton1.Image = global::UserControls.Properties.Resources.outline_add_white_48dp;
-            this.customButton1.Location = new System.Drawing.Point(240, 0);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(55, 44);
-            this.customButton1.TabIndex = 1;
-            this.customButton1.Text = " ";
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click_1);
-            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // AddCompanyControl
+            // CompanyList_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.GroupBox_Companies);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "AddCompanyControl";
+            this.Name = "CompanyList_UserControl";
             this.Size = new System.Drawing.Size(301, 581);
-            this.Resize += new System.EventHandler(this.ResizeUserControl);
             this.GroupBox_Companies.ResumeLayout(false);
             this.GroupBox_Companies.PerformLayout();
             this.panel_Buttons.ResumeLayout(false);
@@ -157,8 +156,8 @@
         private System.Windows.Forms.Panel panel_CompanyList;
         private System.Windows.Forms.Panel Panel_CompaniesList;
         private System.Windows.Forms.Panel panel_Buttons;
-        private BasicForms.CustomButton customButton2;
-        private BasicForms.CustomButton customButton1;
+        private BasicForms.CustomButton customButton_RemoveCompany;
+        private BasicForms.CustomButton customButton_AddCompany;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }

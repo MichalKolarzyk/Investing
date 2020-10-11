@@ -12,18 +12,16 @@ using DataAccess;
 
 namespace UserControls
 {
-    public partial class AddCompanyControl : UserControl
+    public partial class CompanyControl : UserControl
     {
         private List<CompanyIcon> companyIcons= new List<CompanyIcon>();
+        private AddCompanyDialog addCompanyDialog = new AddCompanyDialog();
 
-        public AddCompanyControl()
+        public CompanyControl()
         {
             InitializeComponent();
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-
+            Panel_CompaniesList.Controls.Add(addCompanyDialog);
+            addCompanyDialog.Hide();
         }
 
         private void ResizeUserControl(object sender, EventArgs e)
@@ -31,24 +29,7 @@ namespace UserControls
             panel_CompanyList.Height = (int)(Height * 0.8f);
         }
 
-        public void AddCompanyIcon(CompanyIcon companyIcon)
-        {
-            if(companyIcons.Contains(companyIcon) == false)
-            {
-                companyIcons.Add(companyIcon);
-            }
-            refreshCompanyIconsList();
-        }
 
-        private void refreshCompanyIconsList()
-        {
-            addAllIcons();
-        }
-
-        public void AddCompanyIcon()
-        {
-            Panel_CompaniesList.Controls.Add(new CompanyIcon());
-        }
 
         public void RemoveCompanyIcon()
         {
@@ -58,23 +39,35 @@ namespace UserControls
             }
         }
 
+        private void customButton_AddCompany(object sender, EventArgs e)
+        {
+            //AddCompanyIcon();
+            //refreshCompanyIconsList();
+            addCompanyDialog.Show();
+        }
+
+        public void AddCompanyIcon()
+        {
+            Panel_CompaniesList.Controls.Add(new CompanyIcon());
+        }
+
+        private void refreshCompanyIconsList()
+        {
+            addAllIcons();
+        }
+
         private void addAllIcons()
         {
-            foreach(CompanyIcon companyIcon in companyIcons)
+            foreach (CompanyIcon companyIcon in companyIcons)
             {
                 Panel_CompaniesList.Controls.Add(companyIcon);
             }
         }
 
-        private void customButton1_Click_1(object sender, EventArgs e)
-        {
-            AddCompanyIcon();
-            refreshCompanyIconsList();
-        }
-
         private void customButton2_Click(object sender, EventArgs e)
         {
-            RemoveCompanyIcon();
+            //RemoveCompanyIcon();
+            addCompanyDialog.Hide();
         }
     }
 }

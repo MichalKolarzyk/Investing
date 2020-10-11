@@ -43,17 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCompanyControl.cs">
+    <Compile Include="BasicControls\BasicComponents\Colors.cs" />
+    <Compile Include="BasicControls\BasicComponents\Fonts.cs" />
+    <Compile Include="BasicControls\BasicDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicDialog.Designer.cs">
+      <DependentUpon>BasicDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompanyList_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddCompanyControl.Designer.cs">
-      <DependentUpon>AddCompanyControl.cs</DependentUpon>
+    <Compile Include="CompanyList_UserControl.Designer.cs">
+      <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="CompanyIcon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CompanyIcon.Designer.cs">
-      <DependentUpon>CompanyIcon.cs</DependentUpon>
+    <Compile Include="Company_Control.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DetailInfoControl.cs">
       <SubType>UserControl</SubType>
@@ -61,6 +69,20 @@
     <Compile Include="DetailInfoControl.Designer.cs">
       <DependentUpon>DetailInfoControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddCompany_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCompany_Form.Designer.cs">
+      <DependentUpon>AddCompany_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RemoveCompany_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RemoveCompany_Form.Designer.cs">
+      <DependentUpon>RemoveCompany_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\CompanyListPresenter.cs" />
+    <Compile Include="Presenter\CompanyPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -73,16 +95,24 @@
     <Compile Include="SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ICompanyListView.cs" />
+    <Compile Include="View\ICompanyView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddCompanyControl.resx">
-      <DependentUpon>AddCompanyControl.cs</DependentUpon>
+    <EmbeddedResource Include="BasicControls\BasicDialog.resx">
+      <DependentUpon>BasicDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CompanyIcon.resx">
-      <DependentUpon>CompanyIcon.cs</DependentUpon>
+    <EmbeddedResource Include="CompanyList_UserControl.resx">
+      <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailInfoControl.resx">
       <DependentUpon>DetailInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCompany_Form.resx">
+      <DependentUpon>AddCompany_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoveCompany_Form.resx">
+      <DependentUpon>RemoveCompany_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\baseline_search_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addCompanyControl1 = new UserControls.AddCompanyControl();
+            this.addCompanyControl1 = new UserControls.CompanyList_UserControl();
             this.settingsControl1 = new UserControls.SettingsControl();
             this.detailInfoControl1 = new UserControls.DetailInfoControl();
             this.panel1.SuspendLayout();
@@ -91,7 +91,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private UserControls.DetailInfoControl detailInfoControl1;
-        private UserControls.AddCompanyControl addCompanyControl1;
+        private UserControls.CompanyList_UserControl addCompanyControl1;
         private UserControls.SettingsControl settingsControl1;
     }
 }
