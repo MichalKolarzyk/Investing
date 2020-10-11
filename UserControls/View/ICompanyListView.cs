@@ -13,5 +13,7 @@ namespace UserControls.View
         void Add(Company company);
         void Remove(Company company);
         Company GetSelectedCompany();
+
+        event EventHandler OnSelectedCompany;
     }
 }

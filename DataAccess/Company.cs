@@ -11,6 +11,14 @@ namespace DataAccess
         public Prices Prices { get; set; }
         public string ID { get; set; }
         public string FullName { get; set; }
+        public static bool operator ==(Company c1, Company c2)
+        {
+            return c1.ID == c2.ID;
+        }
+        public static bool operator !=(Company c1, Company c2)
+        {
+            return c1.ID != c2.ID;
+        }
 
         public Company() { }
         public Company(string id)
@@ -21,6 +29,26 @@ namespace DataAccess
         {
             ID = id;
             FullName = fullName;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(obj, null))
+            {
+                return false;
+            }
+
+            throw new NotImplementedException();
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -57,6 +57,15 @@
     <Compile Include="BasicControls\BasicGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BasicControls\BasicLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\Dialog_OkCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicControls\Dialog_OkCancel.Designer.cs">
+      <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompanyList_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +113,9 @@
   <ItemGroup>
     <EmbeddedResource Include="BasicControls\BasicDialog.resx">
       <DependentUpon>BasicDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicControls\Dialog_OkCancel.resx">
+      <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyList_UserControl.resx">
       <DependentUpon>CompanyList_UserControl.cs</DependentUpon>

@@ -16,7 +16,12 @@ namespace UserControls
 {
     public partial class CompanyList_UserControl : UserControl, ICompanyListView
     {
+        public event EventHandler OnSelectedCompany;
+
         AddCompany_Form addCompanyDialog = new AddCompany_Form();
+        RemoveCompany_Form removeCompanyDialog = new RemoveCompany_Form();
+        Company_Control selectecCompanyControl;
+
         public CompanyList_UserControl()
         {
             InitializeComponent();
@@ -34,12 +39,18 @@ namespace UserControls
 
         public Company GetSelectedCompany()
         {
-            throw new NotImplementedException();
+            return selectecCompanyControl.Company;
         }
 
         public void Remove(Company company)
         {
-            throw new NotImplementedException();
+            foreach(Company_Control control in Panel_CompaniesList.Controls.OfType<Company_Control>())
+            {
+                if(control.Company == company)
+                {
+                    Panel_CompaniesList.Controls.Remove(control);
+                }
+            }
         }
 
         private void customButton_AddCompany_Click(object sender, EventArgs e)
@@ -53,12 +64,17 @@ namespace UserControls
 
         private void customButton_RemoveCompany_Click(object sender, EventArgs e)
         {
-
+            removeCompanyDialog.ShowDialog();
+            if(removeCompanyDialog.DialogResult == DialogResult.OK)
+            {
+                Remove(removeCompanyDialog.GetCompany());
+            }
         }
 
         private void selectedCompanyUpdate_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Selected");
+            selectecCompanyControl = (Company_Control)sender;
+            OnSelectedCompany?.Invoke(sender, e);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace UserControls.BasicControls
         public BasicDialog()
         {
             InitializeComponent();
+            this.Size = new Size(315, 173);
         }
     }
 }

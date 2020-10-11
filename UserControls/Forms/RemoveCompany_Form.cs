@@ -8,11 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserControls.BasicControls;
 using UserControls.View;
 
 namespace UserControls.Forms
 {
-    public partial class RemoveCompany_Form : Form
+    public partial class RemoveCompany_Form : Dialog_OkCancel
     {
         public RemoveCompany_Form()
         {
@@ -24,18 +25,6 @@ namespace UserControls.Forms
             Company company = new Company();
             company.ID = textBox_CompanyID.Text;
             return company;
-        }
-
-        private void button_OK_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
-            Close();
-        }
-
-        private void button_Cancel_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            Close();
         }
     }
 }

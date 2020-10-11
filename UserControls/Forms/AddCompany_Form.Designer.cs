@@ -28,59 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new UserControls.BasicControls.BasicLabel();
             this.textBox_CompanyID = new System.Windows.Forms.TextBox();
-            this.button_OK = new System.Windows.Forms.Button();
-            this.button_Cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(85, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Company Id";
             // 
             // textBox_CompanyID
             // 
-            this.textBox_CompanyID.Location = new System.Drawing.Point(78, 6);
+            this.textBox_CompanyID.Location = new System.Drawing.Point(100, 9);
             this.textBox_CompanyID.Name = "textBox_CompanyID";
             this.textBox_CompanyID.Size = new System.Drawing.Size(139, 20);
             this.textBox_CompanyID.TabIndex = 1;
-            // 
-            // button_OK
-            // 
-            this.button_OK.Location = new System.Drawing.Point(152, 58);
-            this.button_OK.Name = "button_OK";
-            this.button_OK.Size = new System.Drawing.Size(75, 23);
-            this.button_OK.TabIndex = 2;
-            this.button_OK.Text = "OK";
-            this.button_OK.UseVisualStyleBackColor = true;
-            this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
-            // 
-            // button_Cancel
-            // 
-            this.button_Cancel.Location = new System.Drawing.Point(12, 58);
-            this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.button_Cancel.TabIndex = 3;
-            this.button_Cancel.Text = "Cancel";
-            this.button_Cancel.UseVisualStyleBackColor = true;
-            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // AddCompany_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 93);
-            this.Controls.Add(this.button_Cancel);
-            this.Controls.Add(this.button_OK);
+            this.ClientSize = new System.Drawing.Size(299, 134);
             this.Controls.Add(this.textBox_CompanyID);
             this.Controls.Add(this.label1);
             this.Name = "AddCompany_Form";
-            this.Text = "AddCompany_Form";
+            this.Text = "Add Company";
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.textBox_CompanyID, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,9 +70,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private BasicControls.BasicLabel label1;
         private System.Windows.Forms.TextBox textBox_CompanyID;
-        private System.Windows.Forms.Button button_OK;
-        private System.Windows.Forms.Button button_Cancel;
     }
 }

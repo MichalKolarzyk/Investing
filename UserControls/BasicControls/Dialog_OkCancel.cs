@@ -1,5 +1,4 @@
-﻿using DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,26 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UserControls.BasicControls;
-using UserControls.View;
 
-namespace UserControls.Forms
+namespace UserControls.BasicControls
 {
-    public partial class AddCompany_Form : Dialog_OkCancel
+    public partial class Dialog_OkCancel : BasicDialog
     {
-        public AddCompany_Form()
+        public Dialog_OkCancel()
         {
             InitializeComponent();
         }
 
-        public Company GetCompany()
-        {
-            Company company = new Company();
-            company.ID = textBox_CompanyID.Text;
-            return company;
-        }
-
-                private void basicButton_Ok_Click(object sender, EventArgs e)
+        private void basicButton_Ok_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             Close();

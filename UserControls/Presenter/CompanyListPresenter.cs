@@ -9,13 +9,15 @@ using UserControls.View;
 
 namespace UserControls.Presenter
 {
-    class CompanyListPresenter
+    public class CompanyListPresenter
     {
         ICompanyListView View;
+        public event EventHandler OnSelectedCompany;
 
         public CompanyListPresenter(ICompanyListView view)
         {
             View = view;
+            View.OnSelectedCompany += (s, args) => OnSelectedCompany?.Invoke(s, args);
         }
 
         public void Add(Company company)
@@ -26,6 +28,11 @@ namespace UserControls.Presenter
         public void Remove(Company company)
         {
             View.Remove(company);
+        }
+
+        public Company GetSelectedCompany()
+        {
+            return View.GetSelectedCompany();
         }
     }
 }
