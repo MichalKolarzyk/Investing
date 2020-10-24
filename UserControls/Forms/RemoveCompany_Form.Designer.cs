@@ -34,7 +34,7 @@
             // 
             // textBox_CompanyID
             // 
-            this.textBox_CompanyID.Location = new System.Drawing.Point(103, 12);
+            this.textBox_CompanyID.Location = new System.Drawing.Point(99, 10);
             this.textBox_CompanyID.Name = "textBox_CompanyID";
             this.textBox_CompanyID.Size = new System.Drawing.Size(139, 20);
             this.textBox_CompanyID.TabIndex = 5;
@@ -42,11 +42,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 19);
             this.label1.TabIndex = 4;

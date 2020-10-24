@@ -10,12 +10,11 @@ namespace DataAccess
     public class Prices : IList<IPrice>
     {
         List<IPrice> listOfPrices { get; set; } = new List<IPrice>();
-
         public bool IsReadOnly => throw new NotImplementedException();
 
         public int Count => listOfPrices.Count;
 
-        public IPrice this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IPrice this[int index] { get=>listOfPrices[index]; set => listOfPrices[index] = value; }
 
         public Prices() { }
         public Prices(List<IPrice> prices)
@@ -78,6 +77,16 @@ namespace DataAccess
         IEnumerator IEnumerable.GetEnumerator()
         {
             return listOfPrices.GetEnumerator();
+        }
+
+        public List<float> GetPricesValues()
+        {
+            List<float> pricesValues = new List<float>();
+            foreach(IPrice price in listOfPrices)
+            {
+                pricesValues.Add(price.Value);
+            }
+            return pricesValues;
         }
     }
 }

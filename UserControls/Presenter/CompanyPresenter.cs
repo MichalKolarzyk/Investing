@@ -16,7 +16,7 @@ namespace UserControls.Presenter
             View = view;
         }
 
-        public Company GetCompany()
+        public ICompany GetCompany()
         {
             return View.Company;
         }
@@ -24,6 +24,13 @@ namespace UserControls.Presenter
         public void SetCompany(Company company)
         {
             View.Company = company;
+            UpdateCompany();
+        }
+
+        public void UpdateCompany()
+        {
+            SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
+            View.Company.Prices = sqlAccess.Get<Price>(View.Company);
         }
     }
 }

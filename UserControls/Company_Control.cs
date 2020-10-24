@@ -12,16 +12,17 @@ namespace UserControls
 {
     public class Company_Control : BasicButton, ICompanyView
     {
+        private Company company;
         public Company Company {
             get
             {
-                Company company = new Company();
                 company.ID = Text;
                 return company;
             }
             set
             {
                 Text = value.ID;
+                company = value;
             }
         }
     }

@@ -11,7 +11,7 @@ namespace DataAccessTest
         [TestMethod]
         public void GetPrices()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
             Prices prices = sqlAccess.Get<Price>(new Company("KOS"));
 
@@ -21,7 +21,7 @@ namespace DataAccessTest
         [TestMethod]
         public void InsertPrices()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
             Prices prices = new Prices();
 
             prices.Add(new Price() { CompanyId = "ASD", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
@@ -38,7 +38,7 @@ namespace DataAccessTest
         [TestMethod]
         public void RemovePrices()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
             Prices pricesToInsert = new Prices();
             pricesToInsert.Add(new Price() { CompanyId = "KOS", Date = DateTimeOffset.Now, TimeScale = TimeScale.OneMinute, Value = 1.34f });
@@ -53,7 +53,7 @@ namespace DataAccessTest
         [TestMethod]
         public void GetCompanies()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
             Assert.IsNotNull(sqlAccess.Get<Company>("KOS"));
         }
@@ -61,7 +61,7 @@ namespace DataAccessTest
         [TestMethod]
         public void RemoveCompanies()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
             Companies companies = new Companies();
             companies.Add(new Company() { ID = "KOS" });
 
@@ -73,7 +73,7 @@ namespace DataAccessTest
         [TestMethod]
         public void InsertCompanies()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
             Companies companies = new Companies();
             companies.Add(new Company() { ID = "WAS" });
             companies.Add(new Company() { ID = "KOS", FullName = "TestName" });
@@ -88,7 +88,7 @@ namespace DataAccessTest
         [TestMethod]
         public void InsertCompany_AddTwoSameID()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
             Companies companies = new Companies();
             companies.Add(new Company() { ID = "KOS", FullName = "TestName" });
             companies.Add(new Company() { ID = "KOS", FullName = "SECONDNAME" });
@@ -102,7 +102,7 @@ namespace DataAccessTest
         [TestMethod]
         public void GetAllCompanies()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
             Companies companies = new Companies();
 
             companies.Add(new Company("WA1"));
@@ -118,7 +118,7 @@ namespace DataAccessTest
         [TestMethod]
         public void GetAllCompanies_RemoveAllCompanies()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
             Companies companies = sqlAccess.Get<Company>();
             sqlAccess.Remove(companies);
@@ -130,7 +130,7 @@ namespace DataAccessTest
         [TestMethod]
         public void RemovePrices_ByIDAndDate()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
             Company company = new Company("ASD");
             Prices pricesToInsert = new Prices();
@@ -148,7 +148,7 @@ namespace DataAccessTest
         [TestMethod]
         public void RemovePrices_ByDate()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
             sqlAccess.RemovePrices(DateTimeOffset.Now);
 

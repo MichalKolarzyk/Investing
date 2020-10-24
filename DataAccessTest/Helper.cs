@@ -14,9 +14,9 @@ namespace DataAccessTest
             return @"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True;";
         }
 
-        public static SQLAccess GetTestSqlAccess()
+        public static SqlAccess GetTestSqlAccess()
         {
-            return new SQLAccess(GetConnectionString());
+            return new SqlAccess(GetConnectionString());
         }
     }
 }

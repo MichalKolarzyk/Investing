@@ -53,6 +53,7 @@
             this.detailInfoControl1.Name = "detailInfoControl1";
             this.detailInfoControl1.Size = new System.Drawing.Size(612, 652);
             this.detailInfoControl1.TabIndex = 1;
+            this.detailInfoControl1.Visible = false;
             // 
             // addCompanyControl1
             // 
@@ -71,6 +72,7 @@
             this.settingsControl1.Name = "settingsControl1";
             this.settingsControl1.Size = new System.Drawing.Size(322, 53);
             this.settingsControl1.TabIndex = 0;
+            this.settingsControl1.Load += new System.EventHandler(this.settingsControl1_Load);
             // 
             // Form1
             // 

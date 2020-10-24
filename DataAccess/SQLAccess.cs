@@ -8,11 +8,11 @@ using Dapper;
 
 namespace DataAccess
 {
-    public class SQLAccess
+    public class SqlAccess
     {
         private string connectionString;
 
-        public SQLAccess(string connectionString)
+        public SqlAccess(string connectionString)
         {
             this.connectionString = connectionString;
         }
@@ -88,6 +88,15 @@ namespace DataAccess
                 IEnumerable<IPrice> prices = (IEnumerable<IPrice>)connection.Query<ICompanyClass>(storedProcedure, company);
                 Prices pricesList = new Prices(prices);
                 return pricesList;
+            }
+        }
+
+        public Prices GetPrices(ICompany company)
+        {
+            using (IDbConnection connection = GetConnection(connectionString))
+            {
+                string storedProcedure = $"dbo.Prices_GetByCompanyId @ID";
+                return (Prices)connection.Query<Company>(storedProcedure, company);
             }
         }
 

@@ -27,7 +27,7 @@ namespace UserControls.Forms
             return company;
         }
 
-                private void basicButton_Ok_Click(object sender, EventArgs e)
+        private void basicButton_Ok_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             Close();

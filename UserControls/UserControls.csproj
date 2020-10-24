@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicControls\BasicChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BasicControls\BasicComponents\Colors.cs" />
     <Compile Include="BasicControls\BasicComponents\Fonts.cs" />
     <Compile Include="BasicControls\BasicDialog.cs">

@@ -13,7 +13,7 @@ namespace DataAccessTest
         [TestMethod]
         public void GetPrices()
         {
-            SQLAccess sqlAccess = Helper.GetTestSqlAccess();
+            SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
             Companies companies = new Companies();
             companies.Add(new Company("KOS"));

@@ -30,5 +30,10 @@ namespace Investing
         {
             detailPresenter.SetCompany(companyListPresenter.GetSelectedCompany());
         }
+
+        private void settingsControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

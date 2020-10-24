@@ -8,7 +8,7 @@ namespace DataAccess
 {
     public class Company : ICompany
     {
-        public Prices Prices { get; set; }
+        public Prices Prices { get; set; } = new Prices();
         public string ID { get; set; }
         public string FullName { get; set; }
         public static bool operator ==(Company c1, Company c2)

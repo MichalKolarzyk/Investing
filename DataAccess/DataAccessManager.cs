@@ -10,14 +10,14 @@ namespace DataAccess
     {
         public static void GetData(string connectionString)
         {
-            SQLAccess sqlAccess = new SQLAccess(connectionString);
+            SqlAccess sqlAccess = new SqlAccess(connectionString);
             Companies companies = sqlAccess.Get<Company>();
             Prices prices = YahooAccess.GetPrices(companies);
             sqlAccess.Insert(prices);
         }
         public static void Add(Companies companies, string connectionString)
         {
-            SQLAccess sqlAccess = new SQLAccess(connectionString);
+            SqlAccess sqlAccess = new SqlAccess(connectionString);
             sqlAccess.Insert(companies);
         }
     }

@@ -18,7 +18,7 @@ namespace UserControls.BasicControls
             FlatStyle = FlatStyle.Flat;
             Size = new Size(130, 30);
             ForeColor = Colors.Clouds;
-            BackColor = Colors.WetAsphalt;
+            BackColor = Colors.MidnightBlue;
         }
     }
 }
