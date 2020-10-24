@@ -13,15 +13,12 @@ namespace UserControls.Presenter
     {
         ICompanyListView View;
         public event EventHandler OnSelectedCompany;
-        public event EventHandler OnInit;
+        public event EventHandler OnUpdate;
 
         public CompanyListPresenter(ICompanyListView view)
         {
             View = view;
             View.OnSelectedCompany += (s, args) => OnSelectedCompany?.Invoke(s, args);
-            SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
-            Companies companies = new Companies(sqlAccess.Get<Company>());
-            addCompanies(companies);
         }
 
         public void Add(Company company)
@@ -39,12 +36,9 @@ namespace UserControls.Presenter
             return View.GetSelectedCompany();
         }
 
-        private void addCompanies(Companies companies)
+        public void Update()
         {
-            foreach (Company company in companies)
-            {
-                Add(company);
-            }
+            OnUpdate?.Invoke(this, EventArgs.Empty);
         }
     }
 }

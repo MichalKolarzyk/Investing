@@ -14,7 +14,11 @@ namespace Investing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            SqlManager.Init();
+            MainForm mainForm = new MainForm();
+
+            Application.Run(mainForm);
         }
     }
 }

@@ -11,6 +11,8 @@ namespace UserControls.Presenter
     public class CompanyPresenter
     {
         public ICompanyView View { get; set; }
+        public event EventHandler OnUpdate;
+
         public CompanyPresenter(ICompanyView view)
         {
             View = view;
@@ -29,6 +31,7 @@ namespace UserControls.Presenter
 
         public void Update()
         {
+            OnUpdate?.Invoke(this, EventArgs.Empty);
             SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
             View.Company.Prices = sqlAccess.Get<Price>(View.Company);
         }

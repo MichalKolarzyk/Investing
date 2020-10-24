@@ -13,15 +13,19 @@ using UserControls.View;
 
 namespace Investing
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         CompanyPresenter detailPresenter;
         CompanyListPresenter companyListPresenter;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             detailPresenter = new CompanyPresenter(detailInfoControl1);
+
             companyListPresenter = new CompanyListPresenter(addCompanyControl1);
+            companyListPresenter.OnUpdate += SqlManager.OnCompanyListPresenterInit_Event;
+            companyListPresenter.Update();
+            
             companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
 
         }
