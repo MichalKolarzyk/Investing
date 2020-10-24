@@ -37,6 +37,7 @@ namespace UserControls
                 basicLabel_CompanyName.Text = value.FullName;
                 basicLabel_CurrentPrice.Text = value.Prices != null ? value.Prices[0].Value.ToString() : "0";
                 basicChart_Prices.Series[0].Points.DataBindY(company.Prices.GetPricesValues());
+                
                 Show();
             }
 

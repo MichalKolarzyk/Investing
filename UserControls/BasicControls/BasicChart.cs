@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Forms.VisualStyles;
+using UserControls.BasicControls.BasicComponents;
 
 namespace UserControls.BasicControls
 {

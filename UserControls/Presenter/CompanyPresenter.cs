@@ -24,10 +24,10 @@ namespace UserControls.Presenter
         public void SetCompany(Company company)
         {
             View.Company = company;
-            UpdateCompany();
+            Update();
         }
 
-        public void UpdateCompany()
+        public void Update()
         {
             SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
             View.Company.Prices = sqlAccess.Get<Price>(View.Company);

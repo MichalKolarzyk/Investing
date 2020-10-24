@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.basicChart_Prices = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.basicLabel_CurrentPrice = new UserControls.BasicControls.BasicLabel();
@@ -45,19 +44,37 @@
             // 
             this.basicChart_Prices.BackColor = System.Drawing.Color.Transparent;
             this.basicChart_Prices.BackSecondaryColor = System.Drawing.Color.Black;
+            this.basicChart_Prices.BorderlineColor = System.Drawing.Color.Black;
+            this.basicChart_Prices.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
+            this.basicChart_Prices.BorderSkin.PageColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             chartArea1.Name = "ChartArea1";
             this.basicChart_Prices.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.basicChart_Prices.Legends.Add(legend1);
-            this.basicChart_Prices.Location = new System.Drawing.Point(78, 199);
+            this.basicChart_Prices.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.basicChart_Prices.Location = new System.Drawing.Point(0, 225);
             this.basicChart_Prices.Name = "basicChart_Prices";
+            series1.BackSecondaryColor = System.Drawing.Color.Black;
+            series1.BorderWidth = 5;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
+            series1.Color = System.Drawing.Color.DodgerBlue;
+            series1.EmptyPointStyle.LabelForeColor = System.Drawing.Color.White;
+            series1.LabelBackColor = System.Drawing.Color.White;
+            series1.LabelBorderColor = System.Drawing.Color.White;
+            series1.MarkerBorderWidth = 4;
+            series1.MarkerColor = System.Drawing.Color.Blue;
+            series1.MarkerSize = 20;
             series1.Name = "Series1";
+            series1.ShadowColor = System.Drawing.Color.Black;
+            series1.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
             this.basicChart_Prices.Series.Add(series1);
-            this.basicChart_Prices.Size = new System.Drawing.Size(472, 300);
+            this.basicChart_Prices.Size = new System.Drawing.Size(707, 409);
             this.basicChart_Prices.TabIndex = 6;
             this.basicChart_Prices.Text = "chart1";
             // 

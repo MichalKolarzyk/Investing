@@ -58,7 +58,10 @@ namespace UserControls
             addCompanyDialog.ShowDialog();
             if(addCompanyDialog.DialogResult == DialogResult.OK)
             {
-                Add(addCompanyDialog.GetCompany());
+                Company newCompany = addCompanyDialog.GetCompany();
+                SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
+                sqlAccess.Insert(newCompany);
+                Add(newCompany);
             }
         }
 
