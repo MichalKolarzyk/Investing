@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UserControls.Forms;
+using UserControls.Model;
 using UserControls.View;
 
 namespace UserControls.Presenter
@@ -12,12 +13,15 @@ namespace UserControls.Presenter
     public class CompanyListPresenter
     {
         ICompanyListView View;
+        public ICompanyRepository Repository { get; private set; }
         public event EventHandler OnSelectedCompany;
-        public event EventHandler OnUpdate;
 
         public CompanyListPresenter(ICompanyListView view)
         {
+            Repository = new CompanySqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
             View = view;
+            View.Presenter = this;
+
             View.OnSelectedCompany += (s, args) => OnSelectedCompany?.Invoke(s, args);
         }
 
@@ -38,7 +42,11 @@ namespace UserControls.Presenter
 
         public void Update()
         {
-            OnUpdate?.Invoke(this, EventArgs.Empty);
+            Companies companies = Repository.GetCompanies();
+            foreach (Company company in companies)
+            {
+                Add(company);
+            }
         }
     }
 }

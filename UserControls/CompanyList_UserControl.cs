@@ -22,6 +22,8 @@ namespace UserControls
         RemoveCompany_Form removeCompanyDialog = new RemoveCompany_Form();
         Company_Control selectecCompanyControl;
 
+        public CompanyListPresenter Presenter { get; set; }
+
         public CompanyList_UserControl()
         {
             InitializeComponent();
@@ -59,8 +61,7 @@ namespace UserControls
             if(addCompanyDialog.DialogResult == DialogResult.OK)
             {
                 Company newCompany = addCompanyDialog.GetCompany();
-                SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
-                sqlAccess.Insert(newCompany);
+                Presenter.Repository.SetCompany(newCompany);
                 Add(newCompany);
             }
         }
@@ -70,7 +71,9 @@ namespace UserControls
             removeCompanyDialog.ShowDialog();
             if(removeCompanyDialog.DialogResult == DialogResult.OK)
             {
-                Remove(removeCompanyDialog.GetCompany());
+                Company comapnyToRemove = removeCompanyDialog.GetCompany();
+                Presenter.Repository.RemoveCompany(comapnyToRemove);
+                Remove(comapnyToRemove);
             }
         }
 

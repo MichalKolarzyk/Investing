@@ -8,5 +8,5 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-	SELECT * FROM Prices WHERE CompanyID = @CompanyId
+	SELECT * FROM Prices WHERE CompanyID = @CompanyId ORDER BY Date DESC
 END

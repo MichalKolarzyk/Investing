@@ -23,21 +23,14 @@ namespace Investing
             detailPresenter = new CompanyPresenter(detailInfoControl1);
 
             companyListPresenter = new CompanyListPresenter(addCompanyControl1);
-            companyListPresenter.OnUpdate += SqlManager.OnCompanyListPresenterInit_Event;
             companyListPresenter.Update();
-            
-            companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
 
+            companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
         }
 
         private void changeViewOndetailPresenter_Event(object sender, EventArgs e)
         {
             detailPresenter.SetCompany(companyListPresenter.GetSelectedCompany());
-        }
-
-        private void settingsControl1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

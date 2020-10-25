@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using YahooFinanceApi;
+using DataAccess;
 
 namespace Investing
 {
@@ -15,7 +15,10 @@ namespace Investing
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            SqlManager.Init();
+            //SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
+            //Prices prices = YahooAccess.GetPrices(sqlAccess.Get<Company>());
+            //sqlAccess.Insert(prices);
+
             MainForm mainForm = new MainForm();
 
             Application.Run(mainForm);

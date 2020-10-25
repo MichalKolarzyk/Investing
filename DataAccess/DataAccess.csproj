@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="Companies.cs" />
     <Compile Include="Company.cs" />
-    <Compile Include="DataAccessManager.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="ICompany.cs" />
     <Compile Include="IPrice.cs" />

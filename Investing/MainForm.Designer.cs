@@ -61,6 +61,7 @@
             this.addCompanyControl1.Location = new System.Drawing.Point(0, 53);
             this.addCompanyControl1.Margin = new System.Windows.Forms.Padding(0);
             this.addCompanyControl1.Name = "addCompanyControl1";
+            this.addCompanyControl1.Presenter = null;
             this.addCompanyControl1.Size = new System.Drawing.Size(322, 599);
             this.addCompanyControl1.TabIndex = 1;
             // 
@@ -72,9 +73,8 @@
             this.settingsControl1.Name = "settingsControl1";
             this.settingsControl1.Size = new System.Drawing.Size(322, 53);
             this.settingsControl1.TabIndex = 0;
-            this.settingsControl1.Load += new System.EventHandler(this.settingsControl1_Load);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,7 +82,7 @@
             this.ClientSize = new System.Drawing.Size(934, 652);
             this.Controls.Add(this.detailInfoControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

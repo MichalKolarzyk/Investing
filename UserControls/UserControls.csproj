@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoUserComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BasicControls\BasicChart.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -97,6 +100,12 @@
     <Compile Include="Forms\RemoveCompany_Form.Designer.cs">
       <DependentUpon>RemoveCompany_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CompanySqlRepository.cs" />
+    <Compile Include="Model\ICompanyRepository.cs" />
+    <Compile Include="Model\IPriceRepository.cs" />
+    <Compile Include="Model\IPricesOutSource.cs" />
+    <Compile Include="Model\PricesSqlRepository.cs" />
+    <Compile Include="Model\PriceYahooRepository.cs" />
     <Compile Include="Presenter\CompanyListPresenter.cs" />
     <Compile Include="Presenter\CompanyPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,8 +181,6 @@
   <ItemGroup>
     <None Include="Icons\baseline_search_white_24dp.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
