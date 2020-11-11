@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UserControls.Model
 {
-    class PricesSqlRepository : IPriceRepository
+    public class PricesSqlRepository : IPriceRepository
     {
         private SqlAccess sqlAccess { get; set; }
         public PricesSqlRepository(string connectionString)

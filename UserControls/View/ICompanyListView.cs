@@ -12,6 +12,7 @@ namespace UserControls.View
     {
         void Add(Company company);
         void Remove(Company company);
+        void Clear();
         Company GetSelectedCompany();
         Presenter.CompanyListPresenter Presenter { set; }
 

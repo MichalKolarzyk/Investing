@@ -55,6 +55,11 @@ namespace UserControls
             }
         }
 
+        public void Clear()
+        {
+            Panel_CompaniesList.Controls.Clear();
+        }
+
         private void customButton_AddCompany_Click(object sender, EventArgs e)
         {
             addCompanyDialog.ShowDialog();

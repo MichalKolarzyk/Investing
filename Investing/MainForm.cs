@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserControls;
 using UserControls.Presenter;
-using UserControls.View;
+
 
 namespace Investing
 {
@@ -17,7 +18,8 @@ namespace Investing
     {
         CompanyPresenter detailPresenter;
         CompanyListPresenter companyListPresenter;
-        AutoUserComponent autoUserComponent;
+        public AutoUserComponent AutoUserComponent { get; set; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -28,14 +30,15 @@ namespace Investing
             companyListPresenter.Update();
 
             companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
+            AutoUserComponent = new AutoUserComponent();
 
-            autoUserComponent = new AutoUserComponent();
-            //autoUserComponent.UpdatePriceRepository();
         }
 
         private void changeViewOndetailPresenter_Event(object sender, EventArgs e)
         {
             detailPresenter.SetCompany(companyListPresenter.GetSelectedCompany());
+            companyListPresenter.Update();
+            Task.Run(() => AutoUserComponent.UpdatePriceRepository());
         }
     }
 }

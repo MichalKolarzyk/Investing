@@ -43,6 +43,7 @@ namespace UserControls.Presenter
         public void Update()
         {
             Companies companies = Repository.GetCompanies();
+            View.Clear();
             foreach (Company company in companies)
             {
                 Add(company);

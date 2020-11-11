@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
+using UserControls;
 
 namespace Investing
 {
@@ -15,13 +16,16 @@ namespace Investing
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
-            Prices prices = YahooAccess.GetPrices(sqlAccess.Get<Company>());
-            sqlAccess.Insert(prices);
-
             MainForm mainForm = new MainForm();
 
             Application.Run(mainForm);
+        }
+
+        private static void Test()
+        {
+            SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
+            Prices prices = YahooAccess.GetPrices(sqlAccess.Get<Company>());
+            sqlAccess.Insert(prices);
         }
     }
 }

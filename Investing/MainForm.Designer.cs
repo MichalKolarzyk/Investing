@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.detailInfoControl1 = new UserControls.DetailInfoControl();
             this.addCompanyControl1 = new UserControls.CompanyList_UserControl();
             this.settingsControl1 = new UserControls.SettingsControl();
+            this.detailInfoControl1 = new UserControls.DetailInfoControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,16 +44,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 652);
             this.panel1.TabIndex = 0;
-            // 
-            // detailInfoControl1
-            // 
-            this.detailInfoControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.detailInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.detailInfoControl1.Location = new System.Drawing.Point(322, 0);
-            this.detailInfoControl1.Name = "detailInfoControl1";
-            this.detailInfoControl1.Size = new System.Drawing.Size(612, 652);
-            this.detailInfoControl1.TabIndex = 1;
-            this.detailInfoControl1.Visible = false;
             // 
             // addCompanyControl1
             // 
@@ -74,6 +64,16 @@
             this.settingsControl1.Size = new System.Drawing.Size(322, 53);
             this.settingsControl1.TabIndex = 0;
             // 
+            // detailInfoControl1
+            // 
+            this.detailInfoControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.detailInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailInfoControl1.Location = new System.Drawing.Point(322, 0);
+            this.detailInfoControl1.Name = "detailInfoControl1";
+            this.detailInfoControl1.Size = new System.Drawing.Size(612, 652);
+            this.detailInfoControl1.TabIndex = 1;
+            this.detailInfoControl1.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,6 +84,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
