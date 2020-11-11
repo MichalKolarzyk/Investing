@@ -17,15 +17,20 @@ namespace Investing
     {
         CompanyPresenter detailPresenter;
         CompanyListPresenter companyListPresenter;
+        AutoUserComponent autoUserComponent;
         public MainForm()
         {
             InitializeComponent();
+
             detailPresenter = new CompanyPresenter(detailInfoControl1);
 
             companyListPresenter = new CompanyListPresenter(addCompanyControl1);
             companyListPresenter.Update();
 
             companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
+
+            autoUserComponent = new AutoUserComponent();
+            //autoUserComponent.UpdatePriceRepository();
         }
 
         private void changeViewOndetailPresenter_Event(object sender, EventArgs e)

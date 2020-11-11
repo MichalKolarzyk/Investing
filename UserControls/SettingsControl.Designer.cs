@@ -28,69 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Search = new System.Windows.Forms.Button();
+            this.button_Calendar = new System.Windows.Forms.Button();
+            this.button_Informations = new System.Windows.Forms.Button();
+            this.button_Settings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button4
+            // button_Search
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::UserControls.Properties.Resources.outline_search_white_48dp;
-            this.button4.Location = new System.Drawing.Point(130, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 55);
-            this.button4.TabIndex = 5;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_Search.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.Image = global::UserControls.Properties.Resources.outline_search_white_48dp;
+            this.button_Search.Location = new System.Drawing.Point(130, 0);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(62, 55);
+            this.button_Search.TabIndex = 5;
+            this.button_Search.UseVisualStyleBackColor = true;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
-            // button3
+            // button_Calendar
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::UserControls.Properties.Resources.outline_calendar_today_white_48dp;
-            this.button3.Location = new System.Drawing.Point(192, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(62, 55);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_Calendar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_Calendar.FlatAppearance.BorderSize = 0;
+            this.button_Calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Calendar.Image = global::UserControls.Properties.Resources.outline_calendar_today_white_48dp;
+            this.button_Calendar.Location = new System.Drawing.Point(192, 0);
+            this.button_Calendar.Name = "button_Calendar";
+            this.button_Calendar.Size = new System.Drawing.Size(62, 55);
+            this.button_Calendar.TabIndex = 4;
+            this.button_Calendar.UseVisualStyleBackColor = true;
+            this.button_Calendar.Click += new System.EventHandler(this.button_Calendar_Click);
             // 
-            // button2
+            // button_Informations
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::UserControls.Properties.Resources.outline_info_white_48dp;
-            this.button2.Location = new System.Drawing.Point(254, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 55);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_Informations.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_Informations.FlatAppearance.BorderSize = 0;
+            this.button_Informations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Informations.Image = global::UserControls.Properties.Resources.outline_info_white_48dp;
+            this.button_Informations.Location = new System.Drawing.Point(254, 0);
+            this.button_Informations.Name = "button_Informations";
+            this.button_Informations.Size = new System.Drawing.Size(62, 55);
+            this.button_Informations.TabIndex = 3;
+            this.button_Informations.UseVisualStyleBackColor = true;
+            this.button_Informations.Click += new System.EventHandler(this.button_Informations_Click);
             // 
-            // button1
+            // button_Settings
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::UserControls.Properties.Resources.outline_settings_white_48dp;
-            this.button1.Location = new System.Drawing.Point(316, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 55);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Settings.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_Settings.FlatAppearance.BorderSize = 0;
+            this.button_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Settings.Image = global::UserControls.Properties.Resources.outline_settings_white_48dp;
+            this.button_Settings.Location = new System.Drawing.Point(316, 0);
+            this.button_Settings.Name = "button_Settings";
+            this.button_Settings.Size = new System.Drawing.Size(62, 55);
+            this.button_Settings.TabIndex = 2;
+            this.button_Settings.UseVisualStyleBackColor = true;
+            this.button_Settings.Click += new System.EventHandler(this.button_Settings_Click);
             // 
             // SettingsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Search);
+            this.Controls.Add(this.button_Calendar);
+            this.Controls.Add(this.button_Informations);
+            this.Controls.Add(this.button_Settings);
             this.Name = "SettingsControl";
             this.Size = new System.Drawing.Size(378, 55);
             this.ResumeLayout(false);
@@ -98,9 +102,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_Settings;
+        private System.Windows.Forms.Button button_Informations;
+        private System.Windows.Forms.Button button_Calendar;
+        private System.Windows.Forms.Button button_Search;
     }
 }

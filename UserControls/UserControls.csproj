@@ -94,11 +94,35 @@
     <Compile Include="Forms\AddCompany_Form.Designer.cs">
       <DependentUpon>AddCompany_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CalendarDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CalendarDialog.Designer.cs">
+      <DependentUpon>CalendarDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InfoDialog.Designer.cs">
+      <DependentUpon>InfoDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RemoveCompany_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\RemoveCompany_Form.Designer.cs">
       <DependentUpon>RemoveCompany_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchDialog.Designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CompanySqlRepository.cs" />
     <Compile Include="Model\ICompanyRepository.cs" />
@@ -122,6 +146,7 @@
     </Compile>
     <Compile Include="View\ICompanyListView.cs" />
     <Compile Include="View\ICompanyView.cs" />
+    <Compile Include="View\ISettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BasicControls\BasicDialog.resx">
@@ -138,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddCompany_Form.resx">
       <DependentUpon>AddCompany_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InfoDialog.resx">
+      <DependentUpon>InfoDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RemoveCompany_Form.resx">
       <DependentUpon>RemoveCompany_Form.cs</DependentUpon>
