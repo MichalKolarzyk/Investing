@@ -22,7 +22,12 @@ namespace UserControls
             set
             {
                 Text = value.ID;
-                Text += $": {value.Prices[value.Prices.Count-1].Value}";
+                if(value.Prices.Count > 0)
+                {
+                    IPrice lastPrice = value.Prices[value.Prices.Count - 1];
+                    Text += $": {lastPrice.Value}";
+                }
+
                 company = value;
             }
         }
