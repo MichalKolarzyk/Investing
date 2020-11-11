@@ -97,10 +97,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationJob.cs" />
-    <Compile Include="JobHandler.cs" />
+    <Compile Include="AdvancedJob.cs" />
+    <Compile Include="AutoJob.cs" />
+    <Compile Include="AutoUserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scheduler.cs" />
+    <Compile Include="Trigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

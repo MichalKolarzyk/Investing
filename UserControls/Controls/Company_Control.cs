@@ -16,12 +16,13 @@ namespace UserControls
         public Company Company {
             get
             {
-                company.ID = Text;
+                company.ID = Text.Split(':')[0];
                 return company;
             }
             set
             {
                 Text = value.ID;
+                Text += $": {value.Prices[value.Prices.Count-1].Value}";
                 company = value;
             }
         }

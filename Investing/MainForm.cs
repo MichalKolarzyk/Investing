@@ -16,8 +16,8 @@ namespace Investing
 {
     public partial class MainForm : Form
     {
-        CompanyPresenter detailPresenter;
-        CompanyListPresenter companyListPresenter;
+        CompanyPresenter detailPresenter { get; }
+        CompanyListPresenter companyListPresenter { get; }
         public AutoUserComponent AutoUserComponent { get; set; }
 
         public MainForm()
@@ -30,15 +30,20 @@ namespace Investing
             companyListPresenter.Update();
 
             companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
+
             AutoUserComponent = new AutoUserComponent();
+            AutoUserComponent.OnUpdate += (obj, args) => Invoke(new Action(delegate ()
+                {
+                    companyListPresenter.Update();
+                }));
 
         }
 
         private void changeViewOndetailPresenter_Event(object sender, EventArgs e)
         {
             detailPresenter.SetCompany(companyListPresenter.GetSelectedCompany());
-            companyListPresenter.Update();
-            Task.Run(() => AutoUserComponent.UpdatePriceRepository());
+            //companyListPresenter.Update();
+            //Task.Run(() => AutoUserComponent.UpdatePriceRepository());
         }
     }
 }

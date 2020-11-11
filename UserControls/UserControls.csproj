@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoUserComponent.cs">
+    <Compile Include="Components\AutoUserComponent.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BasicControls\BasicChart.cs">
@@ -73,19 +73,19 @@
     <Compile Include="BasicControls\Dialog_OkCancel.Designer.cs">
       <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
     </Compile>
-    <Compile Include="CompanyList_UserControl.cs">
+    <Compile Include="Controls\CompanyList_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CompanyList_UserControl.Designer.cs">
+    <Compile Include="Controls\CompanyList_UserControl.Designer.cs">
       <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company_Control.cs">
+    <Compile Include="Controls\Company_Control.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DetailInfoControl.cs">
+    <Compile Include="Controls\DetailInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DetailInfoControl.Designer.cs">
+    <Compile Include="Controls\DetailInfoControl.Designer.cs">
       <DependentUpon>DetailInfoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddCompany_Form.cs">
@@ -138,10 +138,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SettingsControl.cs">
+    <Compile Include="Controls\SettingsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SettingsControl.Designer.cs">
+    <Compile Include="Controls\SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ICompanyListView.cs" />
@@ -155,14 +155,17 @@
     <EmbeddedResource Include="BasicControls\Dialog_OkCancel.resx">
       <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CompanyList_UserControl.resx">
+    <EmbeddedResource Include="Controls\CompanyList_UserControl.resx">
       <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DetailInfoControl.resx">
+    <EmbeddedResource Include="Controls\DetailInfoControl.resx">
       <DependentUpon>DetailInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddCompany_Form.resx">
       <DependentUpon>AddCompany_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CalendarDialog.resx">
+      <DependentUpon>CalendarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InfoDialog.resx">
       <DependentUpon>InfoDialog.cs</DependentUpon>
@@ -175,11 +178,15 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsControl.resx">
+    <EmbeddedResource Include="Controls\SettingsControl.resx">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoUser\AutoUser.csproj">
+      <Project>{729a3eca-9b63-403c-a043-a142fe479e06}</Project>
+      <Name>AutoUser</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{83852CA3-3CEE-4125-9289-C4C5223B6BC5}</Project>
       <Name>DataAccess</Name>

@@ -18,8 +18,8 @@ namespace UserControls
     {
         public event EventHandler OnSelectedCompany;
 
-        AddCompany_Form addCompanyDialog = new AddCompany_Form();
-        RemoveCompany_Form removeCompanyDialog = new RemoveCompany_Form();
+        AddCompany_Form AddCompanyDialog { get; } = new AddCompany_Form();
+        RemoveCompany_Form RemoveCompanyDialog { get; } = new RemoveCompany_Form();
         Company_Control selectecCompanyControl;
 
         public CompanyListPresenter Presenter { get; set; }
@@ -62,10 +62,10 @@ namespace UserControls
 
         private void customButton_AddCompany_Click(object sender, EventArgs e)
         {
-            addCompanyDialog.ShowDialog();
-            if(addCompanyDialog.DialogResult == DialogResult.OK)
+            AddCompanyDialog.ShowDialog();
+            if(AddCompanyDialog.DialogResult == DialogResult.OK)
             {
-                Company newCompany = addCompanyDialog.GetCompany();
+                Company newCompany = AddCompanyDialog.GetCompany();
                 Presenter.Repository.SetCompany(newCompany);
                 Add(newCompany);
             }
@@ -73,10 +73,10 @@ namespace UserControls
 
         private void customButton_RemoveCompany_Click(object sender, EventArgs e)
         {
-            removeCompanyDialog.ShowDialog();
-            if(removeCompanyDialog.DialogResult == DialogResult.OK)
+            RemoveCompanyDialog.ShowDialog();
+            if(RemoveCompanyDialog.DialogResult == DialogResult.OK)
             {
-                Company comapnyToRemove = removeCompanyDialog.GetCompany();
+                Company comapnyToRemove = RemoveCompanyDialog.GetCompany();
                 Presenter.Repository.RemoveCompany(comapnyToRemove);
                 Remove(comapnyToRemove);
             }

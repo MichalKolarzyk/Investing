@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Quartz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Quartz;
 
 namespace AutoUser
 {
-    class JobHandler : IJob
+    class AdvancedJob : IJob
     {
         public async Task Execute(IJobExecutionContext context)
         {

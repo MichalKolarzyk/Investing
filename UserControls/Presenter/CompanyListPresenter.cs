@@ -12,7 +12,7 @@ namespace UserControls.Presenter
 {
     public class CompanyListPresenter
     {
-        ICompanyListView View;
+        ICompanyListView View { get; }
         public ICompanyRepository Repository { get; private set; }
         public event EventHandler OnSelectedCompany;
 

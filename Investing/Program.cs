@@ -20,12 +20,5 @@ namespace Investing
 
             Application.Run(mainForm);
         }
-
-        private static void Test()
-        {
-            SqlAccess sqlAccess = new SqlAccess(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
-            Prices prices = YahooAccess.GetPrices(sqlAccess.Get<Company>());
-            sqlAccess.Insert(prices);
-        }
     }
 }
