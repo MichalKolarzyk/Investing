@@ -101,6 +101,12 @@
     <Compile Include="Controls\DetailInfo_Control.Designer.cs">
       <DependentUpon>DetailInfo_Control.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\OkCancel_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OkCancel_Control.Designer.cs">
+      <DependentUpon>OkCancel_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddCompany_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,8 @@
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CronoExpression.cs" />
+    <Compile Include="Presenter\CronoPresenter.cs" />
+    <Compile Include="Presenter\OkCancelPresenter.cs" />
     <Compile Include="Repository\CompanySqlRepository.cs" />
     <Compile Include="Repository\CompanyYahooRepository.cs" />
     <Compile Include="Repository\ICompanyOutSource.cs" />
@@ -163,6 +171,7 @@
     <Compile Include="View\ICompanyListView.cs" />
     <Compile Include="View\ICompanyView.cs" />
     <Compile Include="View\ICronoExpressionView.cs" />
+    <Compile Include="View\IOkCancelView.cs" />
     <Compile Include="View\ISettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DetailInfo_Control.resx">
       <DependentUpon>DetailInfo_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OkCancel_Control.resx">
+      <DependentUpon>OkCancel_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddCompany_Form.resx">
       <DependentUpon>AddCompany_Form.cs</DependentUpon>

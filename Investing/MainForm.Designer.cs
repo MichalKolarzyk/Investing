@@ -82,6 +82,7 @@
             this.ClientSize = new System.Drawing.Size(934, 652);
             this.Controls.Add(this.detailInfoControl1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
