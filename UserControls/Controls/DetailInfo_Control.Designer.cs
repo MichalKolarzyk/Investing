@@ -156,7 +156,7 @@
             this.basicLabel1.TabIndex = 0;
             this.basicLabel1.Text = "Company ID:";
             // 
-            // DetailInfoControl
+            // DetailInfo_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +168,7 @@
             this.Controls.Add(this.basicLabel_CompanyName);
             this.Controls.Add(this.basicLabel2);
             this.Controls.Add(this.basicLabel1);
-            this.Name = "DetailInfoControl";
+            this.Name = "DetailInfo_Control";
             this.Size = new System.Drawing.Size(707, 634);
             ((System.ComponentModel.ISupportInitialize)(this.basicChart_Prices)).EndInit();
             this.ResumeLayout(false);

@@ -30,6 +30,7 @@
         {
             this.basicLabel1 = new UserControls.BasicControls.BasicLabel();
             this.basicLabel2 = new UserControls.BasicControls.BasicLabel();
+            this.ok_Control1 = new UserControls.Controls.Ok_Control();
             this.SuspendLayout();
             // 
             // basicLabel1
@@ -58,11 +59,21 @@
             this.basicLabel2.TabIndex = 1;
             this.basicLabel2.Text = "...";
             // 
+            // ok_Control1
+            // 
+            this.ok_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.ok_Control1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ok_Control1.Location = new System.Drawing.Point(0, 299);
+            this.ok_Control1.Name = "ok_Control1";
+            this.ok_Control1.Size = new System.Drawing.Size(800, 151);
+            this.ok_Control1.TabIndex = 2;
+            // 
             // InfoDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ok_Control1);
             this.Controls.Add(this.basicLabel2);
             this.Controls.Add(this.basicLabel1);
             this.Name = "InfoDialog";
@@ -76,5 +87,6 @@
 
         private BasicControls.BasicLabel basicLabel1;
         private BasicControls.BasicLabel basicLabel2;
+        private Controls.Ok_Control ok_Control1;
     }
 }

@@ -15,7 +15,8 @@ namespace UserControls.BasicControls
         public BasicDialog()
         {
             InitializeComponent();
-            this.Size = new Size(315, 173);
+            Size = new Size(315, 173);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
         }
     }
 }

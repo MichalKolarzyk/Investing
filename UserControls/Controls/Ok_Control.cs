@@ -12,24 +12,17 @@ using UserControls.View;
 
 namespace UserControls.Controls
 {
-    public partial class OkCancel_Control : BasicControl
+    public partial class Ok_Control : BasicControl
     {
-        public OkCancel_Control()
+        public Ok_Control()
         {
             InitializeComponent();
         }
 
-        private void basicButton_Ok_Click(object sender, EventArgs e)
+        private void basicButton1_Click(object sender, EventArgs e)
         {
             Form form = (Form)Parent;
             form.DialogResult = DialogResult.OK;
-            form.Close();
-        }
-
-        private void basicButton_Cancel_Click(object sender, EventArgs e)
-        {
-            Form form = (Form)Parent;
-            form.DialogResult = DialogResult.Cancel;
             form.Close();
         }
     }
