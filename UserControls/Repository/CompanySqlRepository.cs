@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserControls.Model
+namespace UserControls.Repository
 {
     public class CompanySqlRepository : ICompanyRepository
     {

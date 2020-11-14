@@ -9,6 +9,6 @@ namespace UserControls.View
 {
     public interface ICompanyView
     {
-        Company Company { get; set; }
+        ICompany Company { get; set; }
     }
 }

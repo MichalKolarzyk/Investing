@@ -44,6 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicControls\BasicComponents\DataLists.cs" />
+    <Compile Include="BasicControls\BasicControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\AutoUserComponent.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -82,11 +89,17 @@
     <Compile Include="Controls\Company_Control.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\DetailInfoControl.cs">
+    <Compile Include="Controls\Crono_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\DetailInfoControl.Designer.cs">
-      <DependentUpon>DetailInfoControl.cs</DependentUpon>
+    <Compile Include="Controls\Crono_Control.Designer.cs">
+      <DependentUpon>Crono_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DetailInfo_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DetailInfo_Control.Designer.cs">
+      <DependentUpon>DetailInfo_Control.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddCompany_Form.cs">
       <SubType>Form</SubType>
@@ -124,12 +137,15 @@
     <Compile Include="Forms\SettingsDialog.Designer.cs">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CompanySqlRepository.cs" />
-    <Compile Include="Model\ICompanyRepository.cs" />
-    <Compile Include="Model\IPriceRepository.cs" />
-    <Compile Include="Model\IPricesOutSource.cs" />
-    <Compile Include="Model\PricesSqlRepository.cs" />
-    <Compile Include="Model\PriceYahooRepository.cs" />
+    <Compile Include="Model\CronoExpression.cs" />
+    <Compile Include="Repository\CompanySqlRepository.cs" />
+    <Compile Include="Repository\CompanyYahooRepository.cs" />
+    <Compile Include="Repository\ICompanyOutSource.cs" />
+    <Compile Include="Repository\ICompanyRepository.cs" />
+    <Compile Include="Repository\IPriceRepository.cs" />
+    <Compile Include="Repository\IPricesOutSource.cs" />
+    <Compile Include="Repository\PricesSqlRepository.cs" />
+    <Compile Include="Repository\PriceYahooRepository.cs" />
     <Compile Include="Presenter\CompanyListPresenter.cs" />
     <Compile Include="Presenter\CompanyPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,14 +154,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\SettingsControl.cs">
+    <Compile Include="Controls\Settings_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\SettingsControl.Designer.cs">
-      <DependentUpon>SettingsControl.cs</DependentUpon>
+    <Compile Include="Controls\Settings_Control.Designer.cs">
+      <DependentUpon>Settings_Control.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ICompanyListView.cs" />
     <Compile Include="View\ICompanyView.cs" />
+    <Compile Include="View\ICronoExpressionView.cs" />
     <Compile Include="View\ISettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,8 +175,11 @@
     <EmbeddedResource Include="Controls\CompanyList_UserControl.resx">
       <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\DetailInfoControl.resx">
-      <DependentUpon>DetailInfoControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\Crono_Control.resx">
+      <DependentUpon>Crono_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DetailInfo_Control.resx">
+      <DependentUpon>DetailInfo_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddCompany_Form.resx">
       <DependentUpon>AddCompany_Form.cs</DependentUpon>
@@ -178,8 +198,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\SettingsControl.resx">
-      <DependentUpon>SettingsControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\Settings_Control.resx">
+      <DependentUpon>Settings_Control.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

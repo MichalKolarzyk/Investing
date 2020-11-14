@@ -15,11 +15,13 @@ namespace DataAccessTest
         {
             SqlAccess sqlAccess = Helper.GetTestSqlAccess();
 
-            Companies companies = new Companies();
-            companies.Add(new Company("KOS"));
-            companies.Add(new Company("BNTX"));
-            companies.Add(new Company("PFE"));
-            companies.Add(new Company("ANF"));
+            Companies companies = new Companies
+            {
+                new Company("KOS"),
+                new Company("BNTX"),
+                new Company("PFE"),
+                new Company("ANF")
+            };
 
             Prices prices = YahooAccess.GetPrices(companies);
             sqlAccess.Insert(prices);

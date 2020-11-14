@@ -1,6 +1,6 @@
 ﻿namespace UserControls
 {
-    partial class DetailInfoControl
+    partial class DetailInfo_Control
     {
         /// <summary> 
         /// Required designer variable.

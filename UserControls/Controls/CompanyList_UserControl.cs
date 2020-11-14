@@ -28,7 +28,7 @@ namespace UserControls
         {
             InitializeComponent();
         }
-        public void Add(Company company)
+        public void Add(ICompany company)
         {
             Company_Control company_Control = new Company_Control();
             company_Control.Dock = DockStyle.Top;
@@ -39,12 +39,12 @@ namespace UserControls
             Panel_CompaniesList.Controls.Add(companyPresenter.View as Control);
         }
 
-        public Company GetSelectedCompany()
+        public ICompany GetSelectedCompany()
         {
             return selectecCompanyControl.Company;
         }
 
-        public void Remove(Company company)
+        public void Remove(ICompany company)
         {
             foreach(Company_Control control in Panel_CompaniesList.Controls.OfType<Company_Control>())
             {
@@ -65,9 +65,16 @@ namespace UserControls
             AddCompanyDialog.ShowDialog();
             if(AddCompanyDialog.DialogResult == DialogResult.OK)
             {
-                Company newCompany = AddCompanyDialog.GetCompany();
-                Presenter.Repository.SetCompany(newCompany);
-                Add(newCompany);
+                try
+                {
+                    ICompany newCompany = AddCompanyDialog.GetCompany();
+                    Presenter.Repository.SetCompany(newCompany);
+                    Add(newCompany);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
             }
         }
 
@@ -76,7 +83,7 @@ namespace UserControls
             RemoveCompanyDialog.ShowDialog();
             if(RemoveCompanyDialog.DialogResult == DialogResult.OK)
             {
-                Company comapnyToRemove = RemoveCompanyDialog.GetCompany();
+                ICompany comapnyToRemove = RemoveCompanyDialog.GetCompany();
                 Presenter.Repository.RemoveCompany(comapnyToRemove);
                 Remove(comapnyToRemove);
             }

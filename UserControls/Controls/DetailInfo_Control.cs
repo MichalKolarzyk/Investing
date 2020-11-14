@@ -12,16 +12,16 @@ using DataAccess;
 
 namespace UserControls
 {
-    public partial class DetailInfoControl : UserControl, ICompanyView
+    public partial class DetailInfo_Control : UserControl, ICompanyView
     {
-        private Company company = new Company();
-        public DetailInfoControl()
+        private ICompany company = new Company();
+        public DetailInfo_Control()
         {
             InitializeComponent();
             Hide();
         }
 
-        public Company Company 
+        public ICompany Company 
         {
             get
             {

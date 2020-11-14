@@ -28,5 +28,21 @@ namespace DataAccess
             }
             return prices;
         }
+
+        public async static Task<ICompany> GetCompany(string companyId)
+        {
+            try 
+            {
+                var securities = await Yahoo.Symbols(companyId).Fields(Field.ShortName).QueryAsync();
+                ICompany company = new Company();
+                company.ID = securities[companyId].Symbol;
+                company.FullName = securities[companyId].ShortName;
+                return company;
+            }
+            catch(Exception)
+            {
+                throw new Exception("Not found company Id");
+            }
+        }
     }
 }

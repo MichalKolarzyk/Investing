@@ -9,34 +9,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserControls.BasicControls;
-using UserControls.View;
+using UserControls.Repository;
 
 namespace UserControls.Forms
 {
     public partial class AddCompany_Form : Dialog_OkCancel
     {
+        ICompanyOutSource CompanyOutSource { get; set; }
         public AddCompany_Form()
         {
             InitializeComponent();
+            CompanyOutSource = new CompanyYahooRepository();
         }
 
-        public Company GetCompany()
+        public ICompany GetCompany()
         {
-            Company company = new Company();
-            company.ID = textBox_CompanyID.Text;
-            return company;
-        }
-
-        private void basicButton_Ok_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
-            Close();
-        }
-
-        private void basicButton_Cancel_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            Close();
+            return Task.Run(() => CompanyOutSource.GetCompany(textBox_CompanyID.Text)).Result;
         }
     }
 }

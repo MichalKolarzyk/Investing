@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.addCompanyControl1 = new UserControls.CompanyList_UserControl();
             this.settingsControl1 = new UserControls.SettingsControl();
-            this.detailInfoControl1 = new UserControls.DetailInfoControl();
+            this.detailInfoControl1 = new UserControls.DetailInfo_Control();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +93,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private UserControls.DetailInfoControl detailInfoControl1;
+        private UserControls.DetailInfo_Control detailInfoControl1;
         private UserControls.CompanyList_UserControl addCompanyControl1;
         private UserControls.SettingsControl settingsControl1;
     }

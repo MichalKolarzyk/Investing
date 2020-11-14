@@ -22,7 +22,7 @@ namespace UserControls.Presenter
             return View.Company;
         }
 
-        public void SetCompany(Company company)
+        public void SetCompany(ICompany company)
         {
             View.Company = company;
         }

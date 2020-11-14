@@ -12,8 +12,8 @@ namespace UserControls
 {
     public class Company_Control : BasicButton, ICompanyView
     {
-        private Company company;
-        public Company Company {
+        private ICompany company;
+        public ICompany Company {
             get
             {
                 company.ID = Text.Split(':')[0];

@@ -9,7 +9,8 @@ namespace AutoUser
 {
     public class Trigger
     {
-        public string CornSchedule { get; set; } = "0 * 15-22 ? * MON-FRI";
+        //public string CornSchedule { get; set; } = "0 * 15-22 ? * MON-FRI";
+        public string CornSchedule { get; set; } = "0 * 8-22 ? * *";
         internal ITrigger BasicTrigger
         {
             get

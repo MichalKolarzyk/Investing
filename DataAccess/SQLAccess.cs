@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class SqlAccess
     {
-        private string connectionString;
+        private readonly string connectionString;
 
         public SqlAccess(string connectionString)
         {

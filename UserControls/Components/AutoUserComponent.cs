@@ -7,7 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserControls.Model;
+using UserControls.Repository;
 
 namespace UserControls
 {
@@ -30,13 +30,6 @@ namespace UserControls
             AutoJob.AddAction(() => UpdatePriceRepository());
             AutoUserManager.ScheduleJob(AutoJob, Trigger);
             AutoUserManager.Start();
-        }
-
-        public AutoUserComponent(ICompanyRepository compRep, IPricesOutSource priceSource, IPriceRepository priceRep)
-        {
-            CompanyRepository = compRep;
-            PricesOutSource = priceSource;
-            PriceRepository = priceRep;
         }
 
         public void UpdatePriceRepository()

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UserControls.BasicControls.BasicComponents
 {
-    class Colors
+    public static class Colors
     {
         public static Color Turquoise { get => Color.FromArgb(26, 188, 156); }
         public static Color Emerald { get => Color.FromArgb(46, 204, 113); }

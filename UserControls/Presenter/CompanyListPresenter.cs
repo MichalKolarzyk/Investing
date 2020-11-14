@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UserControls.Forms;
-using UserControls.Model;
+using UserControls.Repository;
 using UserControls.View;
 
 namespace UserControls.Presenter
@@ -25,17 +25,17 @@ namespace UserControls.Presenter
             View.OnSelectedCompany += (s, args) => OnSelectedCompany?.Invoke(s, args);
         }
 
-        public void Add(Company company)
+        public void Add(ICompany company)
         {
             View.Add(company);
         }
 
-        public void Remove(Company company)
+        public void Remove(ICompany company)
         {
             View.Remove(company);
         }
 
-        public Company GetSelectedCompany()
+        public ICompany GetSelectedCompany()
         {
             return View.GetSelectedCompany();
         }
@@ -44,7 +44,7 @@ namespace UserControls.Presenter
         {
             Companies companies = Repository.GetCompanies();
             View.Clear();
-            foreach (Company company in companies)
+            foreach (ICompany company in companies)
             {
                 Add(company);
             }
