@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicControls\BasicTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BasicControls\BasicComponents\DataLists.cs" />
     <Compile Include="BasicControls\BasicControl.cs">
       <SubType>UserControl</SubType>
@@ -103,6 +106,12 @@
     </Compile>
     <Compile Include="Controls\Crono_Control.Designer.cs">
       <DependentUpon>Crono_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataBase_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DataBase_Control.Designer.cs">
+      <DependentUpon>DataBase_Control.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\DetailInfo_Control.cs">
       <SubType>UserControl</SubType>
@@ -208,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Crono_Control.resx">
       <DependentUpon>Crono_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataBase_Control.resx">
+      <DependentUpon>DataBase_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DetailInfo_Control.resx">
       <DependentUpon>DetailInfo_Control.cs</DependentUpon>

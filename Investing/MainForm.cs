@@ -10,7 +10,7 @@ namespace Investing
     {
         CompanyPresenter detailPresenter { get; }
         CompanyListPresenter companyListPresenter { get; }
-        public AutoUserComponent AutoUserComponent { get; set; }
+        AutoUserComponent AutoUserComponent { get; set; }
 
         public MainForm()
         {

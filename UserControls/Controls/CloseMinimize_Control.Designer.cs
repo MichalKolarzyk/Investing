@@ -41,7 +41,8 @@
             this.iconButton2.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.iconButton2.Image = global::UserControls.Properties.Resources.outline_minimize_white_48dp;
-            this.iconButton2.Location = new System.Drawing.Point(65, 0);
+            this.iconButton2.Location = new System.Drawing.Point(71, 0);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(62, 55);
             this.iconButton2.TabIndex = 1;
@@ -58,6 +59,7 @@
             this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.iconButton1.Image = global::UserControls.Properties.Resources.outline_close_white_48dp;
             this.iconButton1.Location = new System.Drawing.Point(133, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(62, 55);
             this.iconButton1.TabIndex = 0;

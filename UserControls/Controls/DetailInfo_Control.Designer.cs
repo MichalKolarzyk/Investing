@@ -43,17 +43,24 @@
             // basicChart_Prices
             // 
             this.basicChart_Prices.BackColor = System.Drawing.Color.Transparent;
-            this.basicChart_Prices.BackSecondaryColor = System.Drawing.Color.Black;
-            this.basicChart_Prices.BorderlineColor = System.Drawing.Color.Black;
+            this.basicChart_Prices.BackSecondaryColor = System.Drawing.Color.White;
             this.basicChart_Prices.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
             this.basicChart_Prices.BorderSkin.PageColor = System.Drawing.Color.Transparent;
             chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
             chartArea1.AxisX.LineColor = System.Drawing.Color.White;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.TitleForeColor = System.Drawing.Color.White;
             chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
             chartArea1.AxisY.LineColor = System.Drawing.Color.White;
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.White;
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
             chartArea1.Name = "ChartArea1";
             this.basicChart_Prices.ChartAreas.Add(chartArea1);
             this.basicChart_Prices.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -85,7 +92,8 @@
             this.basicLabel_CurrentPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.basicLabel_CurrentPrice.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel_CurrentPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicLabel_CurrentPrice.Location = new System.Drawing.Point(154, 57);
+            this.basicLabel_CurrentPrice.Location = new System.Drawing.Point(143, 96);
+            this.basicLabel_CurrentPrice.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel_CurrentPrice.Name = "basicLabel_CurrentPrice";
             this.basicLabel_CurrentPrice.Size = new System.Drawing.Size(90, 19);
             this.basicLabel_CurrentPrice.TabIndex = 5;
@@ -98,7 +106,8 @@
             this.basicLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.basicLabel3.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicLabel3.Location = new System.Drawing.Point(3, 57);
+            this.basicLabel3.Location = new System.Drawing.Point(12, 96);
+            this.basicLabel3.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel3.Name = "basicLabel3";
             this.basicLabel3.Size = new System.Drawing.Size(90, 19);
             this.basicLabel3.TabIndex = 4;
@@ -111,7 +120,8 @@
             this.basicLabel_CompanyID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.basicLabel_CompanyID.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel_CompanyID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicLabel_CompanyID.Location = new System.Drawing.Point(154, 38);
+            this.basicLabel_CompanyID.Location = new System.Drawing.Point(143, 57);
+            this.basicLabel_CompanyID.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel_CompanyID.Name = "basicLabel_CompanyID";
             this.basicLabel_CompanyID.Size = new System.Drawing.Size(88, 19);
             this.basicLabel_CompanyID.TabIndex = 3;
@@ -124,7 +134,8 @@
             this.basicLabel_CompanyName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.basicLabel_CompanyName.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel_CompanyName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicLabel_CompanyName.Location = new System.Drawing.Point(154, 18);
+            this.basicLabel_CompanyName.Location = new System.Drawing.Point(143, 18);
+            this.basicLabel_CompanyName.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel_CompanyName.Name = "basicLabel_CompanyName";
             this.basicLabel_CompanyName.Size = new System.Drawing.Size(109, 19);
             this.basicLabel_CompanyName.TabIndex = 2;
@@ -137,7 +148,8 @@
             this.basicLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.basicLabel2.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicLabel2.Location = new System.Drawing.Point(3, 19);
+            this.basicLabel2.Location = new System.Drawing.Point(10, 18);
+            this.basicLabel2.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel2.Name = "basicLabel2";
             this.basicLabel2.Size = new System.Drawing.Size(49, 19);
             this.basicLabel2.TabIndex = 1;
@@ -150,7 +162,8 @@
             this.basicLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.basicLabel1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicLabel1.Location = new System.Drawing.Point(3, 38);
+            this.basicLabel1.Location = new System.Drawing.Point(11, 57);
+            this.basicLabel1.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel1.Name = "basicLabel1";
             this.basicLabel1.Size = new System.Drawing.Size(91, 19);
             this.basicLabel1.TabIndex = 0;

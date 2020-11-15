@@ -19,6 +19,7 @@ namespace UserControls.BasicControls
             Size = new Size(130, 30);
             ForeColor = Colors.Clouds;
             BackColor = Colors.MidnightBlue;
+            Margin = new Padding(10);
         }
     }
 }

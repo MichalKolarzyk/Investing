@@ -37,12 +37,12 @@ namespace UserControls
                 basicLabel_CompanyID.Text = value.ID;
                 basicLabel_CompanyName.Text = value.FullName;
 
-                
                 if(value.Prices.Count > 0)
                 {
                     int lastPriceIndex = value.Prices.Count - 1;
                     basicLabel_CurrentPrice.Text = value.Prices != null ? value.Prices[lastPriceIndex].Value.ToString() : "0";
                     basicChart_Prices.Series[0].Points.DataBindY(company.Prices.GetPricesValues());
+                    basicChart_Prices.ChartAreas[0].AxisY.Minimum = Math.Floor(company.Prices.GetPricesValues().Min());
                 }
                 else
                 {
