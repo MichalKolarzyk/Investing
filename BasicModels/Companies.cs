@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess
+namespace BasicModels
 {
     public class Companies : IList<ICompany>
     {

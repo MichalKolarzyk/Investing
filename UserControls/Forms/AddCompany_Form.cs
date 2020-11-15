@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UserControls.BasicControls;
 using UserControls.Repository;
+using BasicModels;
 
 namespace UserControls.Forms
 {

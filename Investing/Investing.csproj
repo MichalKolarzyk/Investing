@@ -102,6 +102,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BasicModels\BasicModels.csproj">
+      <Project>{53e57f0a-b5ed-48d5-85c9-cb554cba59fa}</Project>
+      <Name>BasicModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{83852ca3-3cee-4125-9289-c4c5223b6bc5}</Project>
       <Name>DataAccess</Name>

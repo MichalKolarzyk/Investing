@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUserTestUI", "AutoUserT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControls\UserControls.csproj", "{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicModels", "BasicModels\BasicModels.csproj", "{53E57F0A-B5ED-48D5-85C9-CB554CBA59FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E57F0A-B5ED-48D5-85C9-CB554CBA59FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E57F0A-B5ED-48D5-85C9-CB554CBA59FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E57F0A-B5ED-48D5-85C9-CB554CBA59FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E57F0A-B5ED-48D5-85C9-CB554CBA59FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

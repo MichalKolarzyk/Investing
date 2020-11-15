@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace DataAccess
+namespace BasicModels
 {
     public interface ICompany
     {

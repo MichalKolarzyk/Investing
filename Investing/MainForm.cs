@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using UserControls;
 using UserControls.Presenter;
+using BasicModels;
 
 
 namespace Investing

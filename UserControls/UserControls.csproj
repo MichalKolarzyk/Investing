@@ -265,6 +265,10 @@
       <Project>{729a3eca-9b63-403c-a043-a142fe479e06}</Project>
       <Name>AutoUser</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BasicModels\BasicModels.csproj">
+      <Project>{53e57f0a-b5ed-48d5-85c9-cb554cba59fa}</Project>
+      <Name>BasicModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{83852CA3-3CEE-4125-9289-C4C5223B6BC5}</Project>
       <Name>DataAccess</Name>
