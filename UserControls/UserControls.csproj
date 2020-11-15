@@ -51,6 +51,9 @@
     <Compile Include="BasicControls\BasicComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BasicControls\IconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Components\AutoUserComponent.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -79,6 +82,12 @@
     </Compile>
     <Compile Include="BasicControls\Dialog_OkCancel.Designer.cs">
       <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CloseMinimize_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CloseMinimize_Control.Designer.cs">
+      <DependentUpon>CloseMinimize_Control.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CompanyList_UserControl.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +133,12 @@
     </Compile>
     <Compile Include="Forms\CalendarDialog.Designer.cs">
       <DependentUpon>CalendarDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataBaseDialog.Designer.cs">
+      <DependentUpon>DataBaseDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\InfoDialog.cs">
       <SubType>Form</SubType>
@@ -185,6 +200,9 @@
     <EmbeddedResource Include="BasicControls\Dialog_OkCancel.resx">
       <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CloseMinimize_Control.resx">
+      <DependentUpon>CloseMinimize_Control.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CompanyList_UserControl.resx">
       <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CalendarDialog.resx">
       <DependentUpon>CalendarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataBaseDialog.resx">
+      <DependentUpon>DataBaseDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InfoDialog.resx">
       <DependentUpon>InfoDialog.cs</DependentUpon>
@@ -261,6 +282,14 @@
   <ItemGroup>
     <None Include="Icons\baseline_search_white_24dp.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Icons\outline_storage_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_close_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_minimize_white_48dp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

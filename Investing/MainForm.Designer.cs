@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.detailInfoControl1 = new UserControls.DetailInfo_Control();
             this.addCompanyControl1 = new UserControls.CompanyList_UserControl();
             this.settingsControl1 = new UserControls.SettingsControl();
-            this.detailInfoControl1 = new UserControls.DetailInfo_Control();
+            this.closeMinimize_Control1 = new UserControls.Controls.CloseMinimize_Control();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 652);
             this.panel1.TabIndex = 0;
+            // 
+            // detailInfoControl1
+            // 
+            this.detailInfoControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.detailInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailInfoControl1.Location = new System.Drawing.Point(322, 0);
+            this.detailInfoControl1.Name = "detailInfoControl1";
+            this.detailInfoControl1.Size = new System.Drawing.Size(612, 652);
+            this.detailInfoControl1.TabIndex = 1;
+            this.detailInfoControl1.Visible = false;
             // 
             // addCompanyControl1
             // 
@@ -64,15 +75,14 @@
             this.settingsControl1.Size = new System.Drawing.Size(322, 53);
             this.settingsControl1.TabIndex = 0;
             // 
-            // detailInfoControl1
+            // closeMinimize_Control1
             // 
-            this.detailInfoControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.detailInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.detailInfoControl1.Location = new System.Drawing.Point(322, 0);
-            this.detailInfoControl1.Name = "detailInfoControl1";
-            this.detailInfoControl1.Size = new System.Drawing.Size(612, 652);
-            this.detailInfoControl1.TabIndex = 1;
-            this.detailInfoControl1.Visible = false;
+            this.closeMinimize_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeMinimize_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.closeMinimize_Control1.Location = new System.Drawing.Point(805, 0);
+            this.closeMinimize_Control1.Name = "closeMinimize_Control1";
+            this.closeMinimize_Control1.Size = new System.Drawing.Size(129, 53);
+            this.closeMinimize_Control1.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -80,6 +90,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(934, 652);
+            this.Controls.Add(this.closeMinimize_Control1);
             this.Controls.Add(this.detailInfoControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -97,5 +108,6 @@
         private UserControls.DetailInfo_Control detailInfoControl1;
         private UserControls.CompanyList_UserControl addCompanyControl1;
         private UserControls.SettingsControl settingsControl1;
+        private UserControls.Controls.CloseMinimize_Control closeMinimize_Control1;
     }
 }

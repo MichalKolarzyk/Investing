@@ -19,6 +19,7 @@ namespace UserControls
         public BasicDialog SettingsDialog { get; set; }
         public BasicDialog SearchDialog { get; set; }
         public BasicDialog CalendarDialog { get; set; }
+        public BasicDialog DataBaseDialog { get; set; }
 
         public SettingsControl()
         {
@@ -28,6 +29,7 @@ namespace UserControls
             SettingsDialog = new SettingsDialog();
             SearchDialog = new SearchDialog();
             CalendarDialog = new CalendarDialog();
+            DataBaseDialog = new DataBaseDialog();
         }
 
         private void button_Informations_Click(object sender, EventArgs e)
@@ -48,6 +50,11 @@ namespace UserControls
         private void button_Search_Click(object sender, EventArgs e)
         {
             SearchDialog.ShowDialog();
+        }
+
+        private void button_DataBase_Click(object sender, EventArgs e)
+        {
+            DataBaseDialog.ShowDialog();
         }
     }
 }
