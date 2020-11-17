@@ -12,7 +12,8 @@ namespace UserControls.Repository
     {
         public ICompany GetCompany(string companyId)
         {
-            return YahooAccess.GetCompany(companyId).Result;
+            ICompany company = YahooAccess.GetCompany(companyId).Result;
+            return company;
         }
     }
 }

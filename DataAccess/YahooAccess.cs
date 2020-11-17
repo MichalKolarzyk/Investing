@@ -20,6 +20,10 @@ namespace DataAccess
         private async static Task<Prices> getPrices(Companies companies)
         {
             Prices prices = new Prices();
+            if (companies.Count == 0)
+            {
+                return prices;
+            }
             var securities = await Yahoo.Symbols(companies.GetIds()).Fields(Field.RegularMarketPrice).QueryAsync();
             foreach(Security security in securities.Values)
             {
@@ -32,18 +36,11 @@ namespace DataAccess
 
         public async static Task<ICompany> GetCompany(string companyId)
         {
-            try 
-            {
-                var securities = await Yahoo.Symbols(companyId).Fields(Field.ShortName).QueryAsync();
-                ICompany company = new Company();
-                company.ID = securities[companyId].Symbol;
-                company.FullName = securities[companyId].ShortName;
-                return company;
-            }
-            catch(Exception)
-            {
-                throw new Exception("Not found company Id");
-            }
+            var securities = await Yahoo.Symbols(companyId).Fields(Field.ShortName).QueryAsync();
+            ICompany company = new Company();
+            company.ID = securities[companyId].Symbol;
+            company.FullName = securities[companyId].ShortName;
+            return company;
         }
     }
 }

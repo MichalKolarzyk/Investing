@@ -19,7 +19,7 @@ namespace UserControls.Presenter
 
         public CompanyListPresenter(ICompanyListView view)
         {
-            Repository = new CompanySqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = Investing; Trusted_Connection = True;");
+            Repository = new CompanySqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True;");
             View = view;
             View.Presenter = this;
 

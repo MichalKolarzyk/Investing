@@ -17,17 +17,24 @@ namespace Investing
         {
             InitializeComponent();
 
-            detailPresenter = new CompanyPresenter(detailInfoControl1);
+            try
+            {
+                detailPresenter = new CompanyPresenter(detailInfoControl1);
 
-            companyListPresenter = new CompanyListPresenter(addCompanyControl1);
-            companyListPresenter.Update();
-            companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
+                companyListPresenter = new CompanyListPresenter(addCompanyControl1);
+                companyListPresenter.Update();
+                companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
 
-            AutoUserComponent = new AutoUserComponent();
-            AutoUserComponent.OnUpdate += (obj, args) => Invoke(new Action(delegate ()
+                AutoUserComponent = new AutoUserComponent();
+                AutoUserComponent.OnUpdate += (obj, args) => Invoke(new Action(delegate ()
                 {
                     companyListPresenter.Update();
                 }));
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
 
         }
 
