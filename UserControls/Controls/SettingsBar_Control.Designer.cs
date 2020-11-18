@@ -1,6 +1,6 @@
 ﻿namespace UserControls
 {
-    partial class SettingsControl
+    partial class SettingsBarControl
     {
         /// <summary> 
         /// Required designer variable.

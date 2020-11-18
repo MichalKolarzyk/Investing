@@ -130,6 +130,15 @@ namespace DataAccess
             }
         }
 
+        public void ClearData()
+        {
+            using (IDbConnection connection = GetConnection(connectionString))
+            {
+                string storedProcedure = $"dbo.ClearDatabase";
+                connection.Execute(storedProcedure);
+            }
+        }
+
         private IDbConnection GetConnection(string connectionString)
         {
             return new System.Data.SqlClient.SqlConnection(connectionString);

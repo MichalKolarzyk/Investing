@@ -175,12 +175,14 @@
     </Compile>
     <Compile Include="Model\CronoExpression.cs" />
     <Compile Include="Presenter\CronoPresenter.cs" />
+    <Compile Include="Presenter\DataBasePresenter.cs" />
     <Compile Include="Repository\CompanySqlRepository.cs" />
     <Compile Include="Repository\CompanyYahooRepository.cs" />
     <Compile Include="Repository\ICompanyOutSource.cs" />
     <Compile Include="Repository\ICompanyRepository.cs" />
     <Compile Include="Repository\IPriceRepository.cs" />
     <Compile Include="Repository\IPricesOutSource.cs" />
+    <Compile Include="Repository\IDataBaseManager.cs" />
     <Compile Include="Repository\PricesSqlRepository.cs" />
     <Compile Include="Repository\PriceYahooRepository.cs" />
     <Compile Include="Presenter\CompanyListPresenter.cs" />
@@ -191,16 +193,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Settings_Control.cs">
+    <Compile Include="Controls\SettingsBar_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Settings_Control.Designer.cs">
-      <DependentUpon>Settings_Control.cs</DependentUpon>
+    <Compile Include="Controls\SettingsBar_Control.Designer.cs">
+      <DependentUpon>SettingsBar_Control.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\SqlDataBaseManager.cs" />
     <Compile Include="View\ICompanyListView.cs" />
     <Compile Include="View\ICompanyView.cs" />
     <Compile Include="View\ICronoExpressionView.cs" />
-    <Compile Include="View\ISettingsView.cs" />
+    <Compile Include="View\IDataBaseView.cs" />
+    <Compile Include="View\ISettingsBarView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BasicControls\BasicDialog.resx">
@@ -256,8 +260,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Settings_Control.resx">
-      <DependentUpon>Settings_Control.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\SettingsBar_Control.resx">
+      <DependentUpon>SettingsBar_Control.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

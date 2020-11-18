@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.basicTextBox1 = new UserControls.BasicControls.BasicComponents.BasicTextBox();
+            this.basicTextBox_ConnectionString = new UserControls.BasicControls.BasicComponents.BasicTextBox();
             this.basicLabel1 = new UserControls.BasicControls.BasicLabel();
-            this.basicButton1 = new UserControls.BasicControls.BasicButton();
-            this.basicButton2 = new UserControls.BasicControls.BasicButton();
-            this.basicButton3 = new UserControls.BasicControls.BasicButton();
+            this.basicButton_CleanDatabase = new UserControls.BasicControls.BasicButton();
+            this.basicButton_CreateDatabase = new UserControls.BasicControls.BasicButton();
+            this.basicButton_DeleteDatabase = new UserControls.BasicControls.BasicButton();
             this.basicLabel2 = new UserControls.BasicControls.BasicLabel();
-            this.basicTextBox2 = new UserControls.BasicControls.BasicComponents.BasicTextBox();
+            this.basicTextBox_Password = new UserControls.BasicControls.BasicComponents.BasicTextBox();
             this.SuspendLayout();
             // 
-            // basicTextBox1
+            // basicTextBox_ConnectionString
             // 
-            this.basicTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.basicTextBox1.Location = new System.Drawing.Point(147, 10);
-            this.basicTextBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.basicTextBox1.Name = "basicTextBox1";
-            this.basicTextBox1.Size = new System.Drawing.Size(562, 26);
-            this.basicTextBox1.TabIndex = 0;
+            this.basicTextBox_ConnectionString.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicTextBox_ConnectionString.Location = new System.Drawing.Point(147, 10);
+            this.basicTextBox_ConnectionString.Margin = new System.Windows.Forms.Padding(10);
+            this.basicTextBox_ConnectionString.Name = "basicTextBox_ConnectionString";
+            this.basicTextBox_ConnectionString.Size = new System.Drawing.Size(562, 26);
+            this.basicTextBox_ConnectionString.TabIndex = 0;
             // 
             // basicLabel1
             // 
@@ -60,47 +60,50 @@
             this.basicLabel1.TabIndex = 1;
             this.basicLabel1.Text = "Connection String";
             // 
-            // basicButton1
+            // basicButton_CleanDatabase
             // 
-            this.basicButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.basicButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.basicButton1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.basicButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicButton1.Location = new System.Drawing.Point(10, 265);
-            this.basicButton1.Margin = new System.Windows.Forms.Padding(10);
-            this.basicButton1.Name = "basicButton1";
-            this.basicButton1.Size = new System.Drawing.Size(130, 30);
-            this.basicButton1.TabIndex = 2;
-            this.basicButton1.Text = "Clear Data";
-            this.basicButton1.UseVisualStyleBackColor = false;
+            this.basicButton_CleanDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.basicButton_CleanDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.basicButton_CleanDatabase.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicButton_CleanDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.basicButton_CleanDatabase.Location = new System.Drawing.Point(10, 265);
+            this.basicButton_CleanDatabase.Margin = new System.Windows.Forms.Padding(10);
+            this.basicButton_CleanDatabase.Name = "basicButton_CleanDatabase";
+            this.basicButton_CleanDatabase.Size = new System.Drawing.Size(130, 30);
+            this.basicButton_CleanDatabase.TabIndex = 2;
+            this.basicButton_CleanDatabase.Text = "Clear Data";
+            this.basicButton_CleanDatabase.UseVisualStyleBackColor = false;
+            this.basicButton_CleanDatabase.Click += new System.EventHandler(this.basicButton_CleanDatabase_Click);
             // 
-            // basicButton2
+            // basicButton_CreateDatabase
             // 
-            this.basicButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.basicButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.basicButton2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.basicButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicButton2.Location = new System.Drawing.Point(10, 165);
-            this.basicButton2.Margin = new System.Windows.Forms.Padding(10);
-            this.basicButton2.Name = "basicButton2";
-            this.basicButton2.Size = new System.Drawing.Size(130, 30);
-            this.basicButton2.TabIndex = 3;
-            this.basicButton2.Text = "Create Database";
-            this.basicButton2.UseVisualStyleBackColor = false;
+            this.basicButton_CreateDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.basicButton_CreateDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.basicButton_CreateDatabase.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicButton_CreateDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.basicButton_CreateDatabase.Location = new System.Drawing.Point(10, 165);
+            this.basicButton_CreateDatabase.Margin = new System.Windows.Forms.Padding(10);
+            this.basicButton_CreateDatabase.Name = "basicButton_CreateDatabase";
+            this.basicButton_CreateDatabase.Size = new System.Drawing.Size(130, 30);
+            this.basicButton_CreateDatabase.TabIndex = 3;
+            this.basicButton_CreateDatabase.Text = "Create Database";
+            this.basicButton_CreateDatabase.UseVisualStyleBackColor = false;
+            this.basicButton_CreateDatabase.Click += new System.EventHandler(this.basicButton_CreateDatabase_Click);
             // 
-            // basicButton3
+            // basicButton_DeleteDatabase
             // 
-            this.basicButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.basicButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.basicButton3.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.basicButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicButton3.Location = new System.Drawing.Point(10, 215);
-            this.basicButton3.Margin = new System.Windows.Forms.Padding(10);
-            this.basicButton3.Name = "basicButton3";
-            this.basicButton3.Size = new System.Drawing.Size(130, 30);
-            this.basicButton3.TabIndex = 4;
-            this.basicButton3.Text = "Delete Database";
-            this.basicButton3.UseVisualStyleBackColor = false;
+            this.basicButton_DeleteDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.basicButton_DeleteDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.basicButton_DeleteDatabase.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicButton_DeleteDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.basicButton_DeleteDatabase.Location = new System.Drawing.Point(10, 215);
+            this.basicButton_DeleteDatabase.Margin = new System.Windows.Forms.Padding(10);
+            this.basicButton_DeleteDatabase.Name = "basicButton_DeleteDatabase";
+            this.basicButton_DeleteDatabase.Size = new System.Drawing.Size(130, 30);
+            this.basicButton_DeleteDatabase.TabIndex = 4;
+            this.basicButton_DeleteDatabase.Text = "Delete Database";
+            this.basicButton_DeleteDatabase.UseVisualStyleBackColor = false;
+            this.basicButton_DeleteDatabase.Click += new System.EventHandler(this.basicButton_DeleteDatabase_Click);
             // 
             // basicLabel2
             // 
@@ -116,27 +119,27 @@
             this.basicLabel2.TabIndex = 5;
             this.basicLabel2.Text = "Password";
             // 
-            // basicTextBox2
+            // basicTextBox_Password
             // 
-            this.basicTextBox2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.basicTextBox2.Location = new System.Drawing.Point(147, 56);
-            this.basicTextBox2.Margin = new System.Windows.Forms.Padding(10);
-            this.basicTextBox2.Name = "basicTextBox2";
-            this.basicTextBox2.PasswordChar = '*';
-            this.basicTextBox2.Size = new System.Drawing.Size(136, 26);
-            this.basicTextBox2.TabIndex = 6;
+            this.basicTextBox_Password.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicTextBox_Password.Location = new System.Drawing.Point(147, 56);
+            this.basicTextBox_Password.Margin = new System.Windows.Forms.Padding(10);
+            this.basicTextBox_Password.Name = "basicTextBox_Password";
+            this.basicTextBox_Password.PasswordChar = '*';
+            this.basicTextBox_Password.Size = new System.Drawing.Size(136, 26);
+            this.basicTextBox_Password.TabIndex = 6;
             // 
             // DataBase_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.basicTextBox2);
+            this.Controls.Add(this.basicTextBox_Password);
             this.Controls.Add(this.basicLabel2);
-            this.Controls.Add(this.basicButton3);
-            this.Controls.Add(this.basicButton2);
-            this.Controls.Add(this.basicButton1);
+            this.Controls.Add(this.basicButton_DeleteDatabase);
+            this.Controls.Add(this.basicButton_CreateDatabase);
+            this.Controls.Add(this.basicButton_CleanDatabase);
             this.Controls.Add(this.basicLabel1);
-            this.Controls.Add(this.basicTextBox1);
+            this.Controls.Add(this.basicTextBox_ConnectionString);
             this.Name = "DataBase_Control";
             this.Size = new System.Drawing.Size(736, 305);
             this.ResumeLayout(false);
@@ -146,12 +149,12 @@
 
         #endregion
 
-        private BasicControls.BasicComponents.BasicTextBox basicTextBox1;
+        private BasicControls.BasicComponents.BasicTextBox basicTextBox_ConnectionString;
         private BasicControls.BasicLabel basicLabel1;
-        private BasicControls.BasicButton basicButton1;
-        private BasicControls.BasicButton basicButton2;
-        private BasicControls.BasicButton basicButton3;
+        private BasicControls.BasicButton basicButton_CleanDatabase;
+        private BasicControls.BasicButton basicButton_CreateDatabase;
+        private BasicControls.BasicButton basicButton_DeleteDatabase;
         private BasicControls.BasicLabel basicLabel2;
-        private BasicControls.BasicComponents.BasicTextBox basicTextBox2;
+        private BasicControls.BasicComponents.BasicTextBox basicTextBox_Password;
     }
 }

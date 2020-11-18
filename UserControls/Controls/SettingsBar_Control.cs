@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using UserControls.View;
 using UserControls.BasicControls;
 using UserControls.Forms;
+using UserControls.Presenter;
 
 namespace UserControls
 {
-    public partial class SettingsControl : UserControl, ISettingsView
+    public partial class SettingsBarControl : UserControl, ISettingsBarView
     {
         public BasicDialog InformationDialog { get; set; }
         public BasicDialog SettingsDialog { get; set; }
@@ -21,7 +22,9 @@ namespace UserControls
         public BasicDialog CalendarDialog { get; set; }
         public BasicDialog DataBaseDialog { get; set; }
 
-        public SettingsControl()
+        public DataBasePresenter DataBasePresenter;
+
+        public SettingsBarControl()
         {
             InitializeComponent();
 

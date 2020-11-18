@@ -74,5 +74,6 @@
     <Build Include="dbo\Stored Procedures\Companies_Get.sql" />
     <Build Include="dbo\Stored Procedures\Companies_Remove.sql" />
     <Build Include="dbo\Stored Procedures\Companies_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\ClearDatabase.sql" />
   </ItemGroup>
 </Project>
