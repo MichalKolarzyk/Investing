@@ -110,6 +110,10 @@
       <Project>{83852ca3-3cee-4125-9289-c4c5223b6bc5}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Miscellaneous\Miscellaneous.csproj">
+      <Project>{b3f18ef5-2850-4905-97b2-6f4c4c10b204}</Project>
+      <Name>Miscellaneous</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserControls\UserControls.csproj">
       <Project>{11C3EDF3-17F0-4265-88A3-6AB51B2D2489}</Project>
       <Name>UserControls</Name>

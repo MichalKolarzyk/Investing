@@ -12,6 +12,7 @@ using UserControls.View;
 using UserControls.Presenter;
 using UserControls.Forms;
 using BasicModels;
+using Miscellaneous;
 
 namespace UserControls
 {
@@ -74,7 +75,7 @@ namespace UserControls
                 }
                 catch (Exception exception)
                 {
-                    MessageBox.Show(exception.Message);
+                    ExceptionMessageHandler.ShowError(exception);
                 }
             }
         }

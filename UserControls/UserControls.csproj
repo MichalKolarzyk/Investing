@@ -292,6 +292,10 @@
       <Project>{83852CA3-3CEE-4125-9289-C4C5223B6BC5}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Miscellaneous\Miscellaneous.csproj">
+      <Project>{b3f18ef5-2850-4905-97b2-6f4c4c10b204}</Project>
+      <Name>Miscellaneous</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

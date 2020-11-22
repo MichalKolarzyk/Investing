@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using UserControls;
 using UserControls.Presenter;
 using BasicModels;
+using Miscellaneous;
 
 
 namespace Investing
@@ -33,7 +34,7 @@ namespace Investing
             }
             catch(Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                ExceptionMessageHandler.ShowError(exception);
             }
 
         }
