@@ -52,6 +52,7 @@
             this.basicComboBox_StartDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicComboBox_StartDay.FormattingEnabled = true;
             this.basicComboBox_StartDay.Location = new System.Drawing.Point(140, 64);
+            this.basicComboBox_StartDay.Margin = new System.Windows.Forms.Padding(10);
             this.basicComboBox_StartDay.Name = "basicComboBox_StartDay";
             this.basicComboBox_StartDay.Size = new System.Drawing.Size(121, 27);
             this.basicComboBox_StartDay.TabIndex = 0;
@@ -64,6 +65,7 @@
             this.basicLabel1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicLabel1.Location = new System.Drawing.Point(14, 67);
+            this.basicLabel1.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel1.Name = "basicLabel1";
             this.basicLabel1.Size = new System.Drawing.Size(67, 19);
             this.basicLabel1.TabIndex = 1;
@@ -77,6 +79,7 @@
             this.basicLabel2.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicLabel2.Location = new System.Drawing.Point(19, 99);
+            this.basicLabel2.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel2.Name = "basicLabel2";
             this.basicLabel2.Size = new System.Drawing.Size(62, 19);
             this.basicLabel2.TabIndex = 2;
@@ -91,6 +94,7 @@
             this.basicComboBox_EndDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicComboBox_EndDay.FormattingEnabled = true;
             this.basicComboBox_EndDay.Location = new System.Drawing.Point(140, 96);
+            this.basicComboBox_EndDay.Margin = new System.Windows.Forms.Padding(10);
             this.basicComboBox_EndDay.Name = "basicComboBox_EndDay";
             this.basicComboBox_EndDay.Size = new System.Drawing.Size(121, 27);
             this.basicComboBox_EndDay.TabIndex = 3;
@@ -103,6 +107,7 @@
             this.basicLabel4.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicLabel4.Location = new System.Drawing.Point(14, 11);
+            this.basicLabel4.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel4.Name = "basicLabel4";
             this.basicLabel4.Size = new System.Drawing.Size(103, 19);
             this.basicLabel4.TabIndex = 5;
@@ -117,6 +122,7 @@
             this.basicComboBox_EndHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicComboBox_EndHour.FormattingEnabled = true;
             this.basicComboBox_EndHour.Location = new System.Drawing.Point(140, 190);
+            this.basicComboBox_EndHour.Margin = new System.Windows.Forms.Padding(10);
             this.basicComboBox_EndHour.Name = "basicComboBox_EndHour";
             this.basicComboBox_EndHour.Size = new System.Drawing.Size(121, 27);
             this.basicComboBox_EndHour.TabIndex = 10;
@@ -129,6 +135,7 @@
             this.basicLabel3.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicLabel3.Location = new System.Drawing.Point(19, 190);
+            this.basicLabel3.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel3.Name = "basicLabel3";
             this.basicLabel3.Size = new System.Drawing.Size(68, 19);
             this.basicLabel3.TabIndex = 9;
@@ -142,6 +149,7 @@
             this.basicLabel5.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicLabel5.Location = new System.Drawing.Point(14, 158);
+            this.basicLabel5.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel5.Name = "basicLabel5";
             this.basicLabel5.Size = new System.Drawing.Size(73, 19);
             this.basicLabel5.TabIndex = 8;
@@ -156,6 +164,7 @@
             this.basicComboBox_StartHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicComboBox_StartHour.FormattingEnabled = true;
             this.basicComboBox_StartHour.Location = new System.Drawing.Point(140, 155);
+            this.basicComboBox_StartHour.Margin = new System.Windows.Forms.Padding(10);
             this.basicComboBox_StartHour.Name = "basicComboBox_StartHour";
             this.basicComboBox_StartHour.Size = new System.Drawing.Size(121, 27);
             this.basicComboBox_StartHour.TabIndex = 7;
@@ -167,7 +176,8 @@
             this.basicLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.basicLabel8.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.basicLabel8.Location = new System.Drawing.Point(269, 193);
+            this.basicLabel8.Location = new System.Drawing.Point(267, 193);
+            this.basicLabel8.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel8.Name = "basicLabel8";
             this.basicLabel8.Size = new System.Drawing.Size(28, 19);
             this.basicLabel8.TabIndex = 14;
@@ -181,6 +191,7 @@
             this.basicLabel7.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicLabel7.Location = new System.Drawing.Point(267, 158);
+            this.basicLabel7.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel7.Name = "basicLabel7";
             this.basicLabel7.Size = new System.Drawing.Size(28, 19);
             this.basicLabel7.TabIndex = 13;
@@ -194,6 +205,7 @@
             this.basicLabel6.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicLabel6.Location = new System.Drawing.Point(267, 11);
+            this.basicLabel6.Margin = new System.Windows.Forms.Padding(10);
             this.basicLabel6.Name = "basicLabel6";
             this.basicLabel6.Size = new System.Drawing.Size(30, 19);
             this.basicLabel6.TabIndex = 12;
@@ -208,6 +220,7 @@
             this.basicComboBox_UpdateInterval.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.basicComboBox_UpdateInterval.FormattingEnabled = true;
             this.basicComboBox_UpdateInterval.Location = new System.Drawing.Point(140, 8);
+            this.basicComboBox_UpdateInterval.Margin = new System.Windows.Forms.Padding(10);
             this.basicComboBox_UpdateInterval.Name = "basicComboBox_UpdateInterval";
             this.basicComboBox_UpdateInterval.Size = new System.Drawing.Size(121, 27);
             this.basicComboBox_UpdateInterval.TabIndex = 11;

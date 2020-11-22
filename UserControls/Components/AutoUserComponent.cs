@@ -25,9 +25,9 @@ namespace UserControls
 
         public AutoUserComponent()
         {
-            CompanyRepository = new CompanySqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True;");
+            CompanyRepository = new CompanySqlRepository(Properties.Settings.Default.ConnectionString);
             PricesOutSource = new PriceYahooRepository();
-            PriceRepository = new PricesSqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True;");
+            PriceRepository = new PricesSqlRepository(Properties.Settings.Default.ConnectionString);
             AutoJob.AddAction(() => UpdatePriceRepository());
             AutoUserManager.ScheduleJob(AutoJob, Trigger);
             AutoUserManager.Start();

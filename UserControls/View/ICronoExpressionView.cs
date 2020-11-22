@@ -10,9 +10,11 @@ namespace UserControls.View
     {
         string Seconds { get; set; }
         string Minutes { get; set; }
-        string Days { get; set; }
-        string Hours { get; set; }
+        string StartHour { get; set; }
+        string EndHour { get; set; }
+        string StartDay { get; set; }
+        string EndDay { get; set; }
         string Months { get; set; }
-        string WeekDays { get; set; }
+        string Days { get; set; }
     }
 }

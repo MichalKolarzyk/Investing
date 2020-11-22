@@ -11,7 +11,5 @@ namespace UserControls.View
         EventHandler OnDataBaseCreate { get; set; }
         EventHandler OnDataBaseDelete { get; set; }
         EventHandler OnDataBaseClean { get; set; }
-        string ConnectionString { get; set; }
-        string Password { get; set; }
     }
 }

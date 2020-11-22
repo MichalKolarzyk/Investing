@@ -37,7 +37,7 @@
             this.crono_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.crono_Control1.Days = "?";
             this.crono_Control1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.crono_Control1.Hours = "0-0";
+            this.crono_Control1.StartHour = "0-0";
             this.crono_Control1.Location = new System.Drawing.Point(0, 0);
             this.crono_Control1.Minutes = "*";
             this.crono_Control1.Months = "*";
@@ -45,7 +45,6 @@
             this.crono_Control1.Seconds = "0";
             this.crono_Control1.Size = new System.Drawing.Size(800, 397);
             this.crono_Control1.TabIndex = 0;
-            this.crono_Control1.WeekDays = "Mon-Mon";
             // 
             // okCancel_Control1
             // 

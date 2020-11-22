@@ -22,16 +22,6 @@ namespace UserControls.Controls
         public EventHandler OnDataBaseCreate { get; set; }
         public EventHandler OnDataBaseDelete { get; set; }
         public EventHandler OnDataBaseClean { get; set; }
-        public string ConnectionString
-        {
-            get { return basicTextBox_ConnectionString.Text; }
-            set { basicTextBox_ConnectionString.Text = value; }
-        }
-        public string Password
-        {
-            get { return basicTextBox_Password.Text; }
-            set { basicTextBox_Password.Text = value; }
-        }
 
         private void basicButton_CreateDatabase_Click(object sender, EventArgs e)
         {

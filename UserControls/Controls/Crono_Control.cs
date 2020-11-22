@@ -29,38 +29,26 @@ namespace UserControls.Controls
         public string Seconds { get => "0"; set { } }
         public string Minutes { get => "*" ; set { } }
         public string Days { get => "?"; set { } }
-        public string Hours
+        public string StartHour
         {
-            get
-            {
-                string value = 
-                    $"{basicComboBox_StartHour.Text}" +
-                    $"-" +
-                    $"{basicComboBox_EndHour.Text}";
-                return value;
-            }
-            set
-            {
-                basicComboBox_StartHour.Text = value.Split('-')[0];
-                basicComboBox_EndHour.Text = value.Split('-')[1];
-            }
+            get { return basicComboBox_StartHour.Text; }
+            set{ basicComboBox_StartHour.Text = value; }
+        }
+        public string EndHour
+        {
+            get { return basicComboBox_EndHour.Text; }
+            set { basicComboBox_EndHour.Text = value; }
         }
         public string Months { get => "*"; set { } }
-        public string WeekDays
+        public string StartDay
         {
-            get
-            {
-                string value =
-                    $"{basicComboBox_StartDay.Text}" +
-                    $"-" +
-                    $"{basicComboBox_EndDay.Text}";
-                return value;
-            }
-            set
-            {
-                basicComboBox_StartDay.Text = value.Split('-')[0];
-                basicComboBox_EndDay.Text = value.Split('-')[1];
-            }
+            get { return basicComboBox_StartDay.Text; }
+            set { basicComboBox_StartDay.Text = value; }
+        }
+        public string EndDay
+        {
+            get { return basicComboBox_EndDay.Text; }
+            set { basicComboBox_EndDay.Text = value; }
         }
     }
 }

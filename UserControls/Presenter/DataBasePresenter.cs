@@ -29,7 +29,8 @@ namespace UserControls.Presenter
 
         private void cleanDatabase(object sender, EventArgs eventArgs)
         {
-            dataBaseManager = new SqlDataBaseManager(view.ConnectionString);
+            string connectionString = Properties.Settings.Default.ConnectionString;
+            dataBaseManager = new SqlDataBaseManager(connectionString);
             dataBaseManager.Clear();
         }
 

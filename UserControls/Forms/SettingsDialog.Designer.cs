@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.okCancel_Control1 = new UserControls.Controls.OkCancel_Control();
+            this.dataBaseSettings_Control1 = new UserControls.Controls.DataBaseSettings_Control();
             this.SuspendLayout();
             // 
             // okCancel_Control1
@@ -40,11 +41,22 @@
             this.okCancel_Control1.Size = new System.Drawing.Size(800, 88);
             this.okCancel_Control1.TabIndex = 0;
             // 
+            // dataBaseSettings_Control1
+            // 
+            this.dataBaseSettings_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.dataBaseSettings_Control1.ConnectionString = null;
+            this.dataBaseSettings_Control1.Location = new System.Drawing.Point(12, 12);
+            this.dataBaseSettings_Control1.Name = "dataBaseSettings_Control1";
+            this.dataBaseSettings_Control1.Password = null;
+            this.dataBaseSettings_Control1.Size = new System.Drawing.Size(776, 114);
+            this.dataBaseSettings_Control1.TabIndex = 1;
+            // 
             // SettingsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataBaseSettings_Control1);
             this.Controls.Add(this.okCancel_Control1);
             this.Name = "SettingsDialog";
             this.Text = "SettingsDialog";
@@ -55,5 +67,6 @@
         #endregion
 
         private Controls.OkCancel_Control okCancel_Control1;
+        private Controls.DataBaseSettings_Control dataBaseSettings_Control1;
     }
 }

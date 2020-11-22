@@ -14,6 +14,8 @@ namespace UserControls.Controls
 {
     public partial class OkCancel_Control : BasicControl
     {
+        public EventHandler OnOk_Click;
+        public EventHandler OnCancel_Click;
         public OkCancel_Control()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace UserControls.Controls
 
         private void basicButton_Ok_Click(object sender, EventArgs e)
         {
+            OnOk_Click?.Invoke(sender, e);
             Form form = (Form)Parent;
             form.DialogResult = DialogResult.OK;
             form.Close();
@@ -28,6 +31,7 @@ namespace UserControls.Controls
 
         private void basicButton_Cancel_Click(object sender, EventArgs e)
         {
+            OnCancel_Click?.Invoke(sender, e);
             Form form = (Form)Parent;
             form.DialogResult = DialogResult.Cancel;
             form.Close();

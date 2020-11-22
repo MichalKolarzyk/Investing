@@ -19,11 +19,12 @@ namespace UserControls.Forms
         {
             InitializeComponent();
             CronoPresenter = new CronoPresenter(crono_Control1);
+            okCancel_Control1.OnOk_Click += saveSettings;
         }
 
-        public string GetCronoExpresion()
+        private void saveSettings(object sender, EventArgs eventArgs)
         {
-            return CronoPresenter.GetCronoExpression().ToString();
+            Properties.Settings.Default.CronoExpression = CronoPresenter.GetCronoExpression();
         }
     }
 }

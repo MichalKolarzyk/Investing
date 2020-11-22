@@ -19,16 +19,15 @@ namespace UserControls.Presenter
             Model = new CronoExpression();
         }
 
-        public CronoExpression GetCronoExpression()
+        public string GetCronoExpression()
         {
             Model.Seconds = View.Seconds;
             Model.Minutes = View.Minutes;
-            Model.Hours = View.Hours;
+            Model.Hours = View.StartHour;
             Model.Days = View.Days;
             Model.Months = View.Months;
-            Model.WeekDays = View.WeekDays;
-            return Model;
+            return Model.ToString();
         }
-
+        
     }
 }
