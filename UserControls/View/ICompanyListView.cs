@@ -11,14 +11,10 @@ namespace UserControls.View
 {
     public interface ICompanyListView
     {
-        void Add(ICompany company);
-        void Remove(ICompany company);
-        void Clear();
-        ICompany GetSelectedCompany();
-        Presenter.CompanyListPresenter Presenter { set; }
-
-        event EventHandler OnSelectedCompany;
-
-
+        ICompany SelectedCompany { get; set; }
+        EventHandler OnCompanySelected { get; set; }
+        EventHandler OnCompanyRemove { get; set; }
+        EventHandler OnCompanyAdd { get; set; }
+        Companies Companies { get; set; }
     }
 }

@@ -62,7 +62,6 @@
             this.addCompanyControl1.Location = new System.Drawing.Point(0, 53);
             this.addCompanyControl1.Margin = new System.Windows.Forms.Padding(0);
             this.addCompanyControl1.Name = "addCompanyControl1";
-            this.addCompanyControl1.Presenter = null;
             this.addCompanyControl1.Size = new System.Drawing.Size(322, 599);
             this.addCompanyControl1.TabIndex = 1;
             // 

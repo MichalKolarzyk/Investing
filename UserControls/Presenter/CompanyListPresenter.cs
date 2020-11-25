@@ -8,6 +8,8 @@ using UserControls.Forms;
 using UserControls.Repository;
 using UserControls.View;
 using BasicModels;
+using System.Windows.Forms;
+using Miscellaneous;
 
 namespace UserControls.Presenter
 {
@@ -15,40 +17,56 @@ namespace UserControls.Presenter
     {
         ICompanyListView View { get; }
         public ICompanyRepository Repository { get; private set; }
-        public event EventHandler OnSelectedCompany;
+        public EventHandler OnSelectedCompany { get; set; }
+        AddCompany_Form AddCompanyDialog { get; } = new AddCompany_Form();
+        RemoveCompany_Form RemoveCompanyDialog { get; } = new RemoveCompany_Form();
 
-        public CompanyListPresenter(ICompanyListView view)
+        public CompanyListPresenter(ICompanyListView view, ICompanyRepository companyRepository)
         {
-            Repository = new CompanySqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True;");
+            Repository = companyRepository;
             View = view;
-            View.Presenter = this;
 
-            View.OnSelectedCompany += (s, args) => OnSelectedCompany?.Invoke(s, args);
+            View.OnCompanySelected += (args, e) => OnSelectedCompany?.Invoke(args, e);
+            View.OnCompanyRemove += onCompanyRemove;
+            View.OnCompanyAdd += onCompanyAdd;
         }
 
-        public void Add(ICompany company)
+        private void onCompanyRemove(object sender, EventArgs eventArgs)
         {
-            View.Add(company);
+            RemoveCompanyDialog.ShowDialog();
+            if (RemoveCompanyDialog.DialogResult == DialogResult.OK)
+            {
+                ICompany comapnyToRemove = RemoveCompanyDialog.GetCompany();
+                Repository.RemoveCompany(comapnyToRemove);
+                View.Companies = Repository.GetCompanies();
+            }
         }
 
-        public void Remove(ICompany company)
+        private void onCompanyAdd(object sender, EventArgs eventArgs)
         {
-            View.Remove(company);
+            AddCompanyDialog.ShowDialog();
+            if (AddCompanyDialog.DialogResult == DialogResult.OK)
+            {
+                try
+                {
+                    ICompany newCompany = AddCompanyDialog.GetCompany();
+                    Repository.SetCompany(newCompany);
+                    View.Companies = Repository.GetCompanies();
+                }
+                catch (Exception exception)
+                {
+                    ExceptionMessageHandler.ShowError(exception);
+                }
+            }
         }
 
         public ICompany GetSelectedCompany()
         {
-            return View.GetSelectedCompany();
+            return View.SelectedCompany;
         }
-
         public void Update()
         {
-            Companies companies = Repository.GetCompanies();
-            View.Clear();
-            foreach (ICompany company in companies)
-            {
-                Add(company);
-            }
+            View.Companies = Repository.GetCompanies();
         }
     }
 }

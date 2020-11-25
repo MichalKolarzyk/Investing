@@ -18,43 +18,38 @@ namespace UserControls
 {
     public partial class CompanyList_UserControl : UserControl, ICompanyListView
     {
-        public event EventHandler OnSelectedCompany;
+        public EventHandler OnCompanyAdd { get; set; }
+        public EventHandler OnCompanySelected { get; set; }
+        public EventHandler OnCompanyRemove { get; set; }
+        private Companies companies { get; set; } = new Companies();
+        public Companies Companies
+        {
+            get
+            {
+                return companies;
+            }
+            set
+            {
+                companies = value;
+                Panel_CompaniesList.Controls.Clear();
+                foreach (ICompany company in companies)
+                {
+                    Company_Control company_Control = new Company_Control();
+                    company_Control.Dock = DockStyle.Top;
+                    company_Control.Click += selectedCompanyUpdate_Click;
 
-        AddCompany_Form AddCompanyDialog { get; } = new AddCompany_Form();
-        RemoveCompany_Form RemoveCompanyDialog { get; } = new RemoveCompany_Form();
-        Company_Control selectecCompanyControl;
+                    CompanyPresenter companyPresenter = new CompanyPresenter(company_Control);
+                    companyPresenter.SetCompany(company);
+                    Panel_CompaniesList.Controls.Add(companyPresenter.View as Control);
+                }
+            }
+        }
 
-        public CompanyListPresenter Presenter { get; set; }
+        public ICompany SelectedCompany { get; set; }
 
         public CompanyList_UserControl()
         {
             InitializeComponent();
-        }
-        public void Add(ICompany company)
-        {
-            Company_Control company_Control = new Company_Control();
-            company_Control.Dock = DockStyle.Top;
-            company_Control.Click += selectedCompanyUpdate_Click;
-
-            CompanyPresenter companyPresenter = new CompanyPresenter(company_Control);
-            companyPresenter.SetCompany(company);
-            Panel_CompaniesList.Controls.Add(companyPresenter.View as Control);
-        }
-
-        public ICompany GetSelectedCompany()
-        {
-            return selectecCompanyControl.Company;
-        }
-
-        public void Remove(ICompany company)
-        {
-            foreach(Company_Control control in Panel_CompaniesList.Controls.OfType<Company_Control>())
-            {
-                if(control.Company == company)
-                {
-                    Panel_CompaniesList.Controls.Remove(control);
-                }
-            }
         }
 
         public void Clear()
@@ -64,37 +59,19 @@ namespace UserControls
 
         private void customButton_AddCompany_Click(object sender, EventArgs e)
         {
-            AddCompanyDialog.ShowDialog();
-            if(AddCompanyDialog.DialogResult == DialogResult.OK)
-            {
-                try
-                {
-                    ICompany newCompany = AddCompanyDialog.GetCompany();
-                    Presenter.Repository.SetCompany(newCompany);
-                    Add(newCompany);
-                }
-                catch (Exception exception)
-                {
-                    ExceptionMessageHandler.ShowError(exception);
-                }
-            }
+            OnCompanyAdd?.Invoke(this, EventArgs.Empty);
         }
 
         private void customButton_RemoveCompany_Click(object sender, EventArgs e)
         {
-            RemoveCompanyDialog.ShowDialog();
-            if(RemoveCompanyDialog.DialogResult == DialogResult.OK)
-            {
-                ICompany comapnyToRemove = RemoveCompanyDialog.GetCompany();
-                Presenter.Repository.RemoveCompany(comapnyToRemove);
-                Remove(comapnyToRemove);
-            }
+            OnCompanyRemove?.Invoke(this, EventArgs.Empty);
         }
 
         private void selectedCompanyUpdate_Click(object sender, EventArgs e)
         {
-            selectecCompanyControl = (Company_Control)sender;
-            OnSelectedCompany?.Invoke(sender, e);
+            Company_Control companyControl = (Company_Control)sender;
+            SelectedCompany = companyControl.Company;
+            OnCompanySelected?.Invoke(sender, e);
         }
     }
 }

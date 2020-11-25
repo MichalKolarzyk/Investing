@@ -4,5 +4,5 @@ CREATE PROCEDURE [dbo].[Prices_GetByCompanyId]
 AS
 BEGIN
 	SET NOCOUNT ON;
-	SELECT * FROM Prices WHERE CompanyID = @CompanyId ORDER BY Date DESC
+	SELECT * FROM Prices WHERE CompanyID = @CompanyId ORDER BY Date ASC
 END

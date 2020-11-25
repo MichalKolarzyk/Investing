@@ -4,7 +4,7 @@ using UserControls;
 using UserControls.Presenter;
 using BasicModels;
 using Miscellaneous;
-
+using UserControls.Repository;
 
 namespace Investing
 {
@@ -13,6 +13,7 @@ namespace Investing
         CompanyPresenter detailPresenter { get; }
         CompanyListPresenter companyListPresenter { get; }
         AutoUserComponent AutoUserComponent { get; set; }
+        ICompanyRepository CompanyRepository { get; set; }
 
         public MainForm()
         {
@@ -20,9 +21,11 @@ namespace Investing
 
             try
             {
+                CompanyRepository = new CompanySqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True");
+
                 detailPresenter = new CompanyPresenter(detailInfoControl1);
 
-                companyListPresenter = new CompanyListPresenter(addCompanyControl1);
+                companyListPresenter = new CompanyListPresenter(addCompanyControl1, CompanyRepository);
                 companyListPresenter.Update();
                 companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
 
@@ -31,6 +34,7 @@ namespace Investing
                 {
                     companyListPresenter.Update();
                 }));
+
             }
             catch(Exception exception)
             {

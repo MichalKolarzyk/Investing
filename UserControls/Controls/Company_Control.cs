@@ -28,7 +28,6 @@ namespace UserControls
                     IPrice lastPrice = value.Prices[value.Prices.Count - 1];
                     Text += $": {lastPrice.Value}";
                 }
-
                 company = value;
             }
         }
