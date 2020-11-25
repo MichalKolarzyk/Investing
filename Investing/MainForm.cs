@@ -14,14 +14,15 @@ namespace Investing
         CompanyListPresenter companyListPresenter { get; }
         AutoUserComponent AutoUserComponent { get; set; }
         ICompanyRepository CompanyRepository { get; set; }
-
+        IPriceRepository PriceRepository { get; set; }
+        IPricesOutSource PricesOutSource { get; set; }
         public MainForm()
         {
             InitializeComponent();
 
             try
             {
-                CompanyRepository = new CompanySqlRepository(@"Server = DESKTOP-LPG7P5E\COROPLUS; Database = InvestingTest; Trusted_Connection = True");
+                CompanyRepository = new CompanySqlRepository(Properties.Settings.Default.ConnectionString);
 
                 detailPresenter = new CompanyPresenter(detailInfoControl1);
 
@@ -34,7 +35,6 @@ namespace Investing
                 {
                     companyListPresenter.Update();
                 }));
-
             }
             catch(Exception exception)
             {
