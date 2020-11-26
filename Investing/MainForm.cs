@@ -4,7 +4,8 @@ using UserControls;
 using UserControls.Presenter;
 using BasicModels;
 using Miscellaneous;
-using UserControls.Repository;
+using Repositories.Interfaces;
+using Repositories.Sql;
 
 namespace Investing
 {

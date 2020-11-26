@@ -7,8 +7,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UserControls.Repository;
 using BasicModels;
+using Repositories.Interfaces;
+using Repositories.Sql;
+using Repositories.Yahoo;
 
 namespace UserControls
 {

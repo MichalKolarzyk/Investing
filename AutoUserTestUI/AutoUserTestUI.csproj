@@ -98,9 +98,9 @@
       <Project>{729a3eca-9b63-403c-a043-a142fe479e06}</Project>
       <Name>AutoUser</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+    <ProjectReference Include="..\DataAccess\SqlDataAccess.csproj">
       <Project>{83852ca3-3cee-4125-9289-c4c5223b6bc5}</Project>
-      <Name>DataAccess</Name>
+      <Name>SqlDataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

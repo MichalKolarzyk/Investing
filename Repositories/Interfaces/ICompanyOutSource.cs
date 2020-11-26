@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DataAccess;
 using BasicModels;
 
-namespace UserControls.Repository
+namespace Repositories.Interfaces 
 {
     public interface ICompanyOutSource
     {

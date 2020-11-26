@@ -26,8 +26,8 @@ namespace UserControls
         {
             get
             {
-                company.ID = basicLabel_CompanyID.Text;
-                company.FullName = basicLabel_CompanyName.Text;
+                //company.ID = basicLabel_CompanyID.Text;
+                //company.FullName = basicLabel_CompanyName.Text;
                 return company;
 
             }

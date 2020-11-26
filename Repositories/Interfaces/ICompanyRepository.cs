@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BasicModels;
 
-namespace UserControls.Repository
+namespace Repositories.Interfaces
 {
     public interface ICompanyRepository
     {

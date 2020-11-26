@@ -179,7 +179,6 @@
     <Compile Include="Forms\SettingsDialog.Designer.cs">
       <DependentUpon>SettingsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CronoExpression.cs" />
     <Compile Include="Presenter\CronoPresenter.cs" />
     <Compile Include="Presenter\DataBasePresenter.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -187,15 +186,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Repository\CompanySqlRepository.cs" />
-    <Compile Include="Repository\CompanyYahooRepository.cs" />
-    <Compile Include="Repository\ICompanyOutSource.cs" />
-    <Compile Include="Repository\ICompanyRepository.cs" />
-    <Compile Include="Repository\IPriceRepository.cs" />
-    <Compile Include="Repository\IPricesOutSource.cs" />
-    <Compile Include="Repository\IDataBaseManager.cs" />
-    <Compile Include="Repository\PricesSqlRepository.cs" />
-    <Compile Include="Repository\PriceYahooRepository.cs" />
     <Compile Include="Presenter\CompanyListPresenter.cs" />
     <Compile Include="Presenter\CompanyPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,7 +200,6 @@
     <Compile Include="Controls\SettingsBar_Control.Designer.cs">
       <DependentUpon>SettingsBar_Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="Repository\SqlDataBaseManager.cs" />
     <Compile Include="View\ICompanyListView.cs" />
     <Compile Include="View\ICompanyView.cs" />
     <Compile Include="View\ICronoExpressionView.cs" />
@@ -288,13 +277,17 @@
       <Project>{53e57f0a-b5ed-48d5-85c9-cb554cba59fa}</Project>
       <Name>BasicModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+    <ProjectReference Include="..\DataAccess\SqlDataAccess.csproj">
       <Project>{83852CA3-3CEE-4125-9289-C4C5223B6BC5}</Project>
-      <Name>DataAccess</Name>
+      <Name>SqlDataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Miscellaneous\Miscellaneous.csproj">
       <Project>{b3f18ef5-2850-4905-97b2-6f4c4c10b204}</Project>
       <Name>Miscellaneous</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
+      <Project>{7b17beea-ab13-48fe-b83a-62bf06c2ca96}</Project>
+      <Name>Repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

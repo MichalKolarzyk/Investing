@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
+using Repositories.Interfaces;
 
-namespace UserControls.Repository
+namespace Repositories.Sql
 {
-    class SqlDataBaseManager : IDataBaseManager
+    public class SqlDataBaseManager : IDataBaseManager
     {
         private SqlAccess sqlAccess;
         public SqlDataBaseManager(string connectionString)

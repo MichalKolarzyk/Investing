@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BasicModels;
+using Repositories.Interfaces;
 
-namespace UserControls.Repository
+namespace Repositories.Yahoo
 {
     public class PriceYahooRepository : IPricesOutSource
     {

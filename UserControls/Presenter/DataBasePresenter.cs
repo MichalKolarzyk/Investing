@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Repositories.Interfaces;
+using Repositories.Sql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UserControls.View;
-using UserControls.Repository;
 
 
 namespace UserControls.Presenter
