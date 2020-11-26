@@ -31,9 +31,15 @@ namespace UserControls
             set
             {
                 companies = value;
+                string serach = basicTextBox_Search.Text;
+
                 Panel_CompaniesList.Controls.Clear();
                 foreach (ICompany company in companies)
                 {
+                    if (company.ID.Contains(serach) == false)
+                    {
+                        continue;
+                    }
                     Company_Control company_Control = new Company_Control();
                     company_Control.Dock = DockStyle.Top;
                     company_Control.Click += selectedCompanyUpdate_Click;
@@ -72,6 +78,11 @@ namespace UserControls
             Company_Control companyControl = (Company_Control)sender;
             SelectedCompany = companyControl.Company;
             OnCompanySelected?.Invoke(sender, e);
+        }
+
+        private void basicTextBox_Search_TextChanged(object sender, EventArgs e)
+        {
+            Companies = companies;
         }
     }
 }

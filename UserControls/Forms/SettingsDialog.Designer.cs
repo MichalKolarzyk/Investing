@@ -44,11 +44,12 @@
             // dataBaseSettings_Control1
             // 
             this.dataBaseSettings_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dataBaseSettings_Control1.ConnectionString = null;
-            this.dataBaseSettings_Control1.Location = new System.Drawing.Point(12, 12);
+            this.dataBaseSettings_Control1.ConnectionString = "";
+            this.dataBaseSettings_Control1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataBaseSettings_Control1.Location = new System.Drawing.Point(0, 0);
             this.dataBaseSettings_Control1.Name = "dataBaseSettings_Control1";
-            this.dataBaseSettings_Control1.Password = null;
-            this.dataBaseSettings_Control1.Size = new System.Drawing.Size(776, 114);
+            this.dataBaseSettings_Control1.Password = "";
+            this.dataBaseSettings_Control1.Size = new System.Drawing.Size(800, 114);
             this.dataBaseSettings_Control1.TabIndex = 1;
             // 
             // SettingsDialog

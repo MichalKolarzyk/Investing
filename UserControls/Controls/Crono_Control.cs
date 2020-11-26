@@ -50,5 +50,10 @@ namespace UserControls.Controls
             get { return basicComboBox_EndDay.Text; }
             set { basicComboBox_EndDay.Text = value; }
         }
+
+        public string Preview { 
+            get{ return basicLabel_Preview.Text; }
+            set { basicLabel_Preview.Text = value; }
+        }
     }
 }

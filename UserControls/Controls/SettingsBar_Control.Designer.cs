@@ -28,25 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_Search = new System.Windows.Forms.Button();
             this.button_Calendar = new System.Windows.Forms.Button();
             this.button_Informations = new System.Windows.Forms.Button();
             this.button_Settings = new System.Windows.Forms.Button();
             this.button_DataBase = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button_Search
-            // 
-            this.button_Search.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_Search.FlatAppearance.BorderSize = 0;
-            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Search.Image = global::UserControls.Properties.Resources.outline_search_white_48dp;
-            this.button_Search.Location = new System.Drawing.Point(130, 0);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(62, 55);
-            this.button_Search.TabIndex = 5;
-            this.button_Search.UseVisualStyleBackColor = true;
-            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // button_Calendar
             // 
@@ -93,24 +79,23 @@
             this.button_DataBase.FlatAppearance.BorderSize = 0;
             this.button_DataBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DataBase.Image = global::UserControls.Properties.Resources.outline_storage_white_48dp;
-            this.button_DataBase.Location = new System.Drawing.Point(68, 0);
+            this.button_DataBase.Location = new System.Drawing.Point(130, 0);
             this.button_DataBase.Name = "button_DataBase";
             this.button_DataBase.Size = new System.Drawing.Size(62, 55);
             this.button_DataBase.TabIndex = 6;
             this.button_DataBase.UseVisualStyleBackColor = true;
             this.button_DataBase.Click += new System.EventHandler(this.button_DataBase_Click);
             // 
-            // SettingsControl
+            // SettingsBarControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.Controls.Add(this.button_DataBase);
-            this.Controls.Add(this.button_Search);
             this.Controls.Add(this.button_Calendar);
             this.Controls.Add(this.button_Informations);
             this.Controls.Add(this.button_Settings);
-            this.Name = "SettingsControl";
+            this.Name = "SettingsBarControl";
             this.Size = new System.Drawing.Size(378, 55);
             this.ResumeLayout(false);
 
@@ -120,7 +105,6 @@
         private System.Windows.Forms.Button button_Settings;
         private System.Windows.Forms.Button button_Informations;
         private System.Windows.Forms.Button button_Calendar;
-        private System.Windows.Forms.Button button_Search;
         private System.Windows.Forms.Button button_DataBase;
     }
 }

@@ -16,5 +16,6 @@ namespace UserControls.View
         string EndDay { get; set; }
         string Months { get; set; }
         string Days { get; set; }
+        string Preview { get; set; }
     }
 }

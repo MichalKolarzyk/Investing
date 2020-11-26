@@ -30,11 +30,15 @@
         {
             this.GroupBox_Companies = new UserControls.BasicControls.BasicGroupBox();
             this.Panel_CompaniesList = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Buttons = new System.Windows.Forms.Panel();
             this.customButton_RemoveCompany = new UserControls.BasicControls.BasicButton();
             this.customButton_AddCompany = new UserControls.BasicControls.BasicButton();
             this.panel_CompanyList = new System.Windows.Forms.Panel();
+            this.iconButton1 = new UserControls.BasicControls.IconButton();
+            this.basicTextBox_Search = new UserControls.BasicControls.BasicComponents.BasicTextBox();
             this.GroupBox_Companies.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel_Buttons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +46,7 @@
             // 
             this.GroupBox_Companies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.GroupBox_Companies.Controls.Add(this.Panel_CompaniesList);
+            this.GroupBox_Companies.Controls.Add(this.panel1);
             this.GroupBox_Companies.Controls.Add(this.panel_Buttons);
             this.GroupBox_Companies.Controls.Add(this.panel_CompanyList);
             this.GroupBox_Companies.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -57,14 +62,23 @@
             // 
             // Panel_CompaniesList
             // 
-            this.Panel_CompaniesList.AutoScroll = true;
-            this.Panel_CompaniesList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.Panel_CompaniesList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_CompaniesList.Location = new System.Drawing.Point(3, 22);
-            this.Panel_CompaniesList.Margin = new System.Windows.Forms.Padding(0);
+            this.Panel_CompaniesList.Location = new System.Drawing.Point(3, 49);
             this.Panel_CompaniesList.Name = "Panel_CompaniesList";
-            this.Panel_CompaniesList.Size = new System.Drawing.Size(295, 512);
-            this.Panel_CompaniesList.TabIndex = 7;
+            this.Panel_CompaniesList.Size = new System.Drawing.Size(295, 485);
+            this.Panel_CompaniesList.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.basicTextBox_Search);
+            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 22);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(295, 27);
+            this.panel1.TabIndex = 7;
             // 
             // panel_Buttons
             // 
@@ -87,6 +101,7 @@
             this.customButton_RemoveCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.customButton_RemoveCompany.Image = global::UserControls.Properties.Resources.outline_remove_white_48dp;
             this.customButton_RemoveCompany.Location = new System.Drawing.Point(185, 0);
+            this.customButton_RemoveCompany.Margin = new System.Windows.Forms.Padding(10);
             this.customButton_RemoveCompany.Name = "customButton_RemoveCompany";
             this.customButton_RemoveCompany.Size = new System.Drawing.Size(55, 44);
             this.customButton_RemoveCompany.TabIndex = 3;
@@ -104,6 +119,7 @@
             this.customButton_AddCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.customButton_AddCompany.Image = global::UserControls.Properties.Resources.outline_add_white_48dp;
             this.customButton_AddCompany.Location = new System.Drawing.Point(240, 0);
+            this.customButton_AddCompany.Margin = new System.Windows.Forms.Padding(10);
             this.customButton_AddCompany.Name = "customButton_AddCompany";
             this.customButton_AddCompany.Size = new System.Drawing.Size(55, 44);
             this.customButton_AddCompany.TabIndex = 1;
@@ -121,6 +137,33 @@
             this.panel_CompanyList.Size = new System.Drawing.Size(0, 0);
             this.panel_CompanyList.TabIndex = 4;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.iconButton1.Image = global::UserControls.Properties.Resources.baseline_search_white_24dp1;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(10);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(30, 27);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // basicTextBox_Search
+            // 
+            this.basicTextBox_Search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.basicTextBox_Search.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicTextBox_Search.Location = new System.Drawing.Point(30, 0);
+            this.basicTextBox_Search.Margin = new System.Windows.Forms.Padding(10);
+            this.basicTextBox_Search.Name = "basicTextBox_Search";
+            this.basicTextBox_Search.Size = new System.Drawing.Size(265, 26);
+            this.basicTextBox_Search.TabIndex = 3;
+            this.basicTextBox_Search.TextChanged += new System.EventHandler(this.basicTextBox_Search_TextChanged);
+            // 
             // CompanyList_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +174,8 @@
             this.Size = new System.Drawing.Size(301, 581);
             this.GroupBox_Companies.ResumeLayout(false);
             this.GroupBox_Companies.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel_Buttons.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -140,9 +185,12 @@
 
         private BasicControls.BasicGroupBox GroupBox_Companies;
         private System.Windows.Forms.Panel panel_CompanyList;
-        private System.Windows.Forms.Panel Panel_CompaniesList;
         private System.Windows.Forms.Panel panel_Buttons;
         private BasicControls.BasicButton customButton_RemoveCompany;
         private BasicControls.BasicButton customButton_AddCompany;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Panel_CompaniesList;
+        private BasicControls.BasicComponents.BasicTextBox basicTextBox_Search;
+        private BasicControls.IconButton iconButton1;
     }
 }

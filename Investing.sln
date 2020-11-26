@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessTest", "DataAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlDataAccess", "DataAccess\SqlDataAccess.csproj", "{83852CA3-3CEE-4125-9289-C4C5223B6BC5}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{CD27730B-7AEF-450E-B1FB-136F6328C2E6}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SqlDatabase", "Database\SqlDatabase.sqlproj", "{CD27730B-7AEF-450E-B1FB-136F6328C2E6}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseTest", "DatabaseTest\DatabaseTest.sqlproj", "{288AD857-A0A1-49A6-B02A-F71954041193}"
 EndProject
