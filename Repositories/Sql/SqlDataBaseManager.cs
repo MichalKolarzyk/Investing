@@ -19,12 +19,10 @@ namespace Repositories.Sql
         {
             sqlAccess.ClearData();
         }
-
         public void Create()
         {
             throw new NotImplementedException();
         }
-
         public void Delete()
         {
             throw new NotImplementedException();

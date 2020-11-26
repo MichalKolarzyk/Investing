@@ -31,12 +31,12 @@
             this.GroupBox_Companies = new UserControls.BasicControls.BasicGroupBox();
             this.Panel_CompaniesList = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.basicTextBox_Search = new UserControls.BasicControls.BasicComponents.BasicTextBox();
+            this.iconButton1 = new UserControls.BasicControls.IconButton();
             this.panel_Buttons = new System.Windows.Forms.Panel();
             this.customButton_RemoveCompany = new UserControls.BasicControls.BasicButton();
             this.customButton_AddCompany = new UserControls.BasicControls.BasicButton();
             this.panel_CompanyList = new System.Windows.Forms.Panel();
-            this.iconButton1 = new UserControls.BasicControls.IconButton();
-            this.basicTextBox_Search = new UserControls.BasicControls.BasicComponents.BasicTextBox();
             this.GroupBox_Companies.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_Buttons.SuspendLayout();
@@ -79,6 +79,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 27);
             this.panel1.TabIndex = 7;
+            // 
+            // basicTextBox_Search
+            // 
+            this.basicTextBox_Search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.basicTextBox_Search.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicTextBox_Search.Location = new System.Drawing.Point(30, 0);
+            this.basicTextBox_Search.Margin = new System.Windows.Forms.Padding(10);
+            this.basicTextBox_Search.Name = "basicTextBox_Search";
+            this.basicTextBox_Search.Size = new System.Drawing.Size(265, 26);
+            this.basicTextBox_Search.TabIndex = 3;
+            this.basicTextBox_Search.TextChanged += new System.EventHandler(this.basicTextBox_Search_TextChanged);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.iconButton1.Image = global::UserControls.Properties.Resources.baseline_search_white_24dp1;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(10);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(30, 27);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // panel_Buttons
             // 
@@ -136,33 +163,6 @@
             this.panel_CompanyList.Name = "panel_CompanyList";
             this.panel_CompanyList.Size = new System.Drawing.Size(0, 0);
             this.panel_CompanyList.TabIndex = 4;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.iconButton1.Image = global::UserControls.Properties.Resources.baseline_search_white_24dp1;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(10);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(30, 27);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // basicTextBox_Search
-            // 
-            this.basicTextBox_Search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.basicTextBox_Search.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.basicTextBox_Search.Location = new System.Drawing.Point(30, 0);
-            this.basicTextBox_Search.Margin = new System.Windows.Forms.Padding(10);
-            this.basicTextBox_Search.Name = "basicTextBox_Search";
-            this.basicTextBox_Search.Size = new System.Drawing.Size(265, 26);
-            this.basicTextBox_Search.TabIndex = 3;
-            this.basicTextBox_Search.TextChanged += new System.EventHandler(this.basicTextBox_Search_TextChanged);
             // 
             // CompanyList_UserControl
             // 

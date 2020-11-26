@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccess;
 using UserControls.View;
 using UserControls.Presenter;
 using UserControls.Forms;
@@ -57,29 +56,20 @@ namespace UserControls
         {
             InitializeComponent();
         }
-
-        public void Clear()
-        {
-            Panel_CompaniesList.Controls.Clear();
-        }
-
         private void customButton_AddCompany_Click(object sender, EventArgs e)
         {
             OnCompanyAdd?.Invoke(this, EventArgs.Empty);
         }
-
         private void customButton_RemoveCompany_Click(object sender, EventArgs e)
         {
             OnCompanyRemove?.Invoke(this, EventArgs.Empty);
         }
-
         private void selectedCompanyUpdate_Click(object sender, EventArgs e)
         {
             Company_Control companyControl = (Company_Control)sender;
             SelectedCompany = companyControl.Company;
             OnCompanySelected?.Invoke(sender, e);
         }
-
         private void basicTextBox_Search_TextChanged(object sender, EventArgs e)
         {
             Companies = companies;
