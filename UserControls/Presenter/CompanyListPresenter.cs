@@ -47,16 +47,16 @@ namespace UserControls.Presenter
             AddCompanyDialog.ShowDialog();
             if (AddCompanyDialog.DialogResult == DialogResult.OK)
             {
-                //try
-                //{
+                try
+                {
                     ICompany newCompany = AddCompanyDialog.GetCompany();
                     Repository.InsertCompany(newCompany);
                     View.Companies = Repository.GetCompanies();
-                //}
-                //catch (Exception exception)
-                //{
-                //    ExceptionMessageHandler.ShowError(exception);
-                //}
+                }
+                catch (Exception exception)
+                {
+                    ExceptionMessageHandler.ShowError(exception);
+                }
             }
         }
 

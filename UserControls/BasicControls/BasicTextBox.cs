@@ -14,6 +14,7 @@ namespace UserControls.BasicControls.BasicComponents
         {
             Font = Fonts.NewTimesRoman;
             Margin = new Padding(10);
+            CharacterCasing = CharacterCasing.Upper;
         }
     }
 }

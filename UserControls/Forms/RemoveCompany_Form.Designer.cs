@@ -28,48 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_CompanyID = new System.Windows.Forms.TextBox();
-            this.label1 = new UserControls.BasicControls.BasicLabel();
+            this.textBox_CompanyID = new UserControls.BasicControls.BasicComponents.BasicTextBox();
+            this.basicLabel1 = new UserControls.BasicControls.BasicLabel();
             this.SuspendLayout();
             // 
             // textBox_CompanyID
             // 
-            this.textBox_CompanyID.Location = new System.Drawing.Point(99, 10);
+            this.textBox_CompanyID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox_CompanyID.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.textBox_CompanyID.Location = new System.Drawing.Point(100, 5);
+            this.textBox_CompanyID.Margin = new System.Windows.Forms.Padding(10);
             this.textBox_CompanyID.Name = "textBox_CompanyID";
-            this.textBox_CompanyID.Size = new System.Drawing.Size(139, 20);
+            this.textBox_CompanyID.Size = new System.Drawing.Size(180, 26);
             this.textBox_CompanyID.TabIndex = 5;
             // 
-            // label1
+            // basicLabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label1.Location = new System.Drawing.Point(8, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 19);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Company Id";
+            this.basicLabel1.AutoSize = true;
+            this.basicLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.basicLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.basicLabel1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.basicLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.basicLabel1.Location = new System.Drawing.Point(8, 8);
+            this.basicLabel1.Margin = new System.Windows.Forms.Padding(10);
+            this.basicLabel1.Name = "basicLabel1";
+            this.basicLabel1.Size = new System.Drawing.Size(85, 19);
+            this.basicLabel1.TabIndex = 6;
+            this.basicLabel1.Text = "Company Id";
             // 
             // RemoveCompany_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 134);
+            this.Controls.Add(this.basicLabel1);
             this.Controls.Add(this.textBox_CompanyID);
-            this.Controls.Add(this.label1);
             this.Name = "RemoveCompany_Form";
             this.Text = "Remove Company";
-            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.textBox_CompanyID, 0);
+            this.Controls.SetChildIndex(this.basicLabel1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox_CompanyID;
-        private BasicControls.BasicLabel label1;
+        private BasicControls.BasicComponents.BasicTextBox textBox_CompanyID;
+        private BasicControls.BasicLabel basicLabel1;
     }
 }

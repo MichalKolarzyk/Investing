@@ -72,7 +72,7 @@ namespace SqLiteDataAccess
         {
             using (IDbConnection connection = new SQLiteConnection(ConnectionString))
             {
-                connection.Execute($"DELETE FROM Prices WHERE CompanyID = @CompanyID AND Date = @Date", company);
+                connection.Execute($"DELETE FROM Prices WHERE CompanyId = @ID", company);
             }
         }
     }

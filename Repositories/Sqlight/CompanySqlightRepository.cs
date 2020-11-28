@@ -30,6 +30,7 @@ namespace Repositories.Sqlight
         public void RemoveCompany(ICompany company)
         {
             sqlightAccess.RemoveCompany(company);
+            sqlightAccess.RemovePrice(company);
         }
 
         public void InsertCompany(ICompany company)
