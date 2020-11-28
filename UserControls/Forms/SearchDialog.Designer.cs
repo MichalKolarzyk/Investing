@@ -48,6 +48,7 @@
             this.Controls.Add(this.okCancel_Control1);
             this.Name = "SearchDialog";
             this.Text = "SearchDialog";
+            this.Controls.SetChildIndex(this.okCancel_Control1, 0);
             this.ResumeLayout(false);
 
         }

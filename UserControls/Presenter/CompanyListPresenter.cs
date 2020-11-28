@@ -47,22 +47,26 @@ namespace UserControls.Presenter
             AddCompanyDialog.ShowDialog();
             if (AddCompanyDialog.DialogResult == DialogResult.OK)
             {
-                try
-                {
+                //try
+                //{
                     ICompany newCompany = AddCompanyDialog.GetCompany();
-                    Repository.SetCompany(newCompany);
+                    Repository.InsertCompany(newCompany);
                     View.Companies = Repository.GetCompanies();
-                }
-                catch (Exception exception)
-                {
-                    ExceptionMessageHandler.ShowError(exception);
-                }
+                //}
+                //catch (Exception exception)
+                //{
+                //    ExceptionMessageHandler.ShowError(exception);
+                //}
             }
         }
 
         public ICompany GetSelectedCompany()
         {
-            return View.Companies[View.SelectedIndex];
+            if(View.Companies.Count > 0)
+            {
+                return View.Companies[View.SelectedIndex];
+            }
+            return new Company();
         }
         public void Update()
         {

@@ -36,9 +36,9 @@
             // 
             this.okCancel_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.okCancel_Control1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.okCancel_Control1.Location = new System.Drawing.Point(0, 362);
+            this.okCancel_Control1.Location = new System.Drawing.Point(0, 369);
             this.okCancel_Control1.Name = "okCancel_Control1";
-            this.okCancel_Control1.Size = new System.Drawing.Size(800, 88);
+            this.okCancel_Control1.Size = new System.Drawing.Size(800, 81);
             this.okCancel_Control1.TabIndex = 0;
             // 
             // dataBaseSettings_Control1
@@ -61,6 +61,8 @@
             this.Controls.Add(this.okCancel_Control1);
             this.Name = "SettingsDialog";
             this.Text = "SettingsDialog";
+            this.Controls.SetChildIndex(this.okCancel_Control1, 0);
+            this.Controls.SetChildIndex(this.dataBaseSettings_Control1, 0);
             this.ResumeLayout(false);
 
         }

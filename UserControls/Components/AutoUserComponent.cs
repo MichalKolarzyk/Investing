@@ -34,6 +34,15 @@ namespace UserControls
             AutoUserManager.ScheduleJob(AutoJob, Trigger);
             AutoUserManager.Start();
         }
+        public AutoUserComponent(ICompanyRepository cr, IPriceRepository pr, IPricesOutSource po)
+        {
+            CompanyRepository = cr;
+            PricesOutSource = po;
+            PriceRepository = pr;
+            AutoJob.AddAction(() => UpdatePriceRepository());
+            AutoUserManager.ScheduleJob(AutoJob, Trigger);
+            AutoUserManager.Start();
+        }
 
         public void UpdatePriceRepository()
         {

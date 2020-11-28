@@ -25,16 +25,7 @@ namespace Repositories.Sql
             }
             return companies;
         }
-
-        public ICompany GetCompany(string companyId)
-        {
-            ICompany company = sqlAccess.Get<Company>(companyId).FirstOrDefault();
-            company.Prices = sqlAccess.Get<Price>(company);
-            return company;
-
-        }
-
-        public void SetCompany(ICompany company)
+        public void InsertCompany(ICompany company)
         {
             sqlAccess.Insert(company);
         }

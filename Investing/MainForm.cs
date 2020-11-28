@@ -6,6 +6,8 @@ using BasicModels;
 using Miscellaneous;
 using Repositories.Interfaces;
 using Repositories.Sql;
+using Repositories.Sqlight;
+using Repositories.Yahoo;
 
 namespace Investing
 {
@@ -21,9 +23,12 @@ namespace Investing
         {
             InitializeComponent();
 
-            try
-            {
-                CompanyRepository = new CompanySqlRepository(Properties.Settings.Default.ConnectionString);
+            //try
+            //{
+                //CompanyRepository = new CompanySqlRepository(Properties.Settings.Default.ConnectionString);
+                CompanyRepository = new CompanySqlightRepository();
+                PriceRepository = new PricesSqlightRepository();
+                PricesOutSource = new PriceYahooRepository();
 
                 detailPresenter = new CompanyPresenter(detailInfoControl1);
 
@@ -31,17 +36,18 @@ namespace Investing
                 companyListPresenter.Update();
                 companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
 
-                AutoUserComponent = new AutoUserComponent();
+                AutoUserComponent = new AutoUserComponent(CompanyRepository, PriceRepository, PricesOutSource);
+
                 AutoUserComponent.OnUpdate += (obj, args) => Invoke(new Action(delegate ()
                 {
                     companyListPresenter.Update();
                     changeViewOndetailPresenter_Event(obj, args);
                 }));
-            }
-            catch(Exception exception)
-            {
-                ExceptionMessageHandler.ShowError(exception);
-            }
+            //}
+            //catch(Exception exception)
+            //{
+            //    ExceptionMessageHandler.ShowError(exception);
+            //}
 
         }
 

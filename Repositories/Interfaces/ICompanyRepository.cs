@@ -11,8 +11,7 @@ namespace Repositories.Interfaces
     public interface ICompanyRepository
     {
         Companies GetCompanies();
-        ICompany GetCompany(string companyId);
-        void SetCompany(ICompany company);
+        void InsertCompany(ICompany company);
         void RemoveCompany(ICompany company);
     }
 }
