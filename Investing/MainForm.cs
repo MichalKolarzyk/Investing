@@ -35,6 +35,7 @@ namespace Investing
                 AutoUserComponent.OnUpdate += (obj, args) => Invoke(new Action(delegate ()
                 {
                     companyListPresenter.Update();
+                    changeViewOndetailPresenter_Event(obj, args);
                 }));
             }
             catch(Exception exception)

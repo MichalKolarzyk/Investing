@@ -62,7 +62,7 @@ namespace UserControls.Presenter
 
         public ICompany GetSelectedCompany()
         {
-            return View.SelectedCompany;
+            return View.Companies[View.SelectedIndex];
         }
         public void Update()
         {

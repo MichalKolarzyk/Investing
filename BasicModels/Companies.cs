@@ -28,7 +28,7 @@ namespace BasicModels
 
         public bool IsReadOnly => false;
 
-        public ICompany this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public ICompany this[int index] { get => ListOfCompanies[index]; set=> ListOfCompanies[index]=value; }
 
         public string[] GetIds()
         {

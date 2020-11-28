@@ -50,7 +50,7 @@ namespace UserControls
             }
         }
 
-        public ICompany SelectedCompany { get; set; }
+        public int SelectedIndex { get; private set; }
 
         public CompanyList_UserControl()
         {
@@ -67,7 +67,7 @@ namespace UserControls
         private void selectedCompanyUpdate_Click(object sender, EventArgs e)
         {
             Company_Control companyControl = (Company_Control)sender;
-            SelectedCompany = companyControl.Company;
+            SelectedIndex = Panel_CompaniesList.Controls.GetChildIndex(companyControl);
             OnCompanySelected?.Invoke(sender, e);
         }
         private void basicTextBox_Search_TextChanged(object sender, EventArgs e)
