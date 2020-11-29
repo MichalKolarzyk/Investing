@@ -8,6 +8,7 @@ using Repositories.Interfaces;
 using Repositories.Sql;
 using Repositories.Sqlight;
 using Repositories.Yahoo;
+using System.IO;
 
 namespace Investing
 {
@@ -23,11 +24,13 @@ namespace Investing
         {
             InitializeComponent();
 
-            //try
-            //{
-                //CompanyRepository = new CompanySqlRepository(Properties.Settings.Default.ConnectionString);
-                CompanyRepository = new CompanySqlightRepository();
-                PriceRepository = new PricesSqlightRepository();
+            try
+            {
+                CompanyRepository = new CompanySqlRepository(Properties.Settings.Default.ConnectionString);
+
+                string databasePath = Path.Combine(Directory.GetCurrentDirectory(), "Database.db");
+                CompanyRepository = new CompanySqlightRepository(databasePath);
+                PriceRepository = new PricesSqlightRepository(databasePath);
                 PricesOutSource = new PriceYahooRepository();
 
                 detailPresenter = new CompanyPresenter(detailInfoControl1);
@@ -43,13 +46,13 @@ namespace Investing
                     companyListPresenter.Update();
                     changeViewOndetailPresenter_Event(obj, args);
                 }));
-            //}
-            //catch(Exception exception)
-            //{
-            //    ExceptionMessageHandler.ShowError(exception);
-            //}
-
         }
+            catch (Exception exception)
+            {
+                ExceptionMessageHandler.ShowError(exception);
+            }
+
+}
 
         private void changeViewOndetailPresenter_Event(object sender, EventArgs e)
         {

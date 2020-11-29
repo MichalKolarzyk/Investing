@@ -12,9 +12,9 @@ namespace Repositories.Sqlight
     public class PricesSqlightRepository : IPriceRepository
     {
         SqLiteAccess sqlightAccess;
-        public PricesSqlightRepository()
+        public PricesSqlightRepository(string databasePath)
         {
-            sqlightAccess = new SqLiteAccess();
+            sqlightAccess = new SqLiteAccess(databasePath);
         }
         public Prices GetPrices(ICompany company)
         {

@@ -14,9 +14,9 @@ namespace SqLiteDataAccess
     {
         public string ConnectionString { get; set; }
 
-        public SqLiteAccess(string connectionString)
+        public SqLiteAccess(string databasePath)
         {
-            ConnectionString = connectionString;
+            ConnectionString = $"Data Source={databasePath};Version=3;";
         }
         public SqLiteAccess()
         {
