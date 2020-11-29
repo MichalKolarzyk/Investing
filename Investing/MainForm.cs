@@ -46,7 +46,7 @@ namespace Investing
                     companyListPresenter.Update();
                     changeViewOndetailPresenter_Event(obj, args);
                 }));
-        }
+            }
             catch (Exception exception)
             {
                 ExceptionMessageHandler.ShowError(exception);
