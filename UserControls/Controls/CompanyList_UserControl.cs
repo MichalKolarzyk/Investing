@@ -33,8 +33,9 @@ namespace UserControls
                 string serach = basicTextBox_Search.Text;
 
                 Panel_CompaniesList.Controls.Clear();
-                foreach (ICompany company in companies)
+                for(int i = 0;i < companies.Count; i++)
                 {
+                    ICompany company = companies[i];
                     if (company.ID.Contains(serach) == false)
                     {
                         continue;
@@ -42,6 +43,7 @@ namespace UserControls
                     Company_Control company_Control = new Company_Control();
                     company_Control.Dock = DockStyle.Top;
                     company_Control.Click += selectedCompanyUpdate_Click;
+                    company_Control.TabIndex = companies.Count - i;
 
                     CompanyPresenter companyPresenter = new CompanyPresenter(company_Control);
                     companyPresenter.SetCompany(company);

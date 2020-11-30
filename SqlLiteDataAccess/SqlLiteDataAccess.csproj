@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Database.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
