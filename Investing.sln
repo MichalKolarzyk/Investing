@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YahooDataAccess", "YahooDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlLiteDataAccess", "SqlLiteDataAccess\SqlLiteDataAccess.csproj", "{7517C319-EAE2-4466-91DD-410FDCA0D982}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settings", "Settings\Settings.csproj", "{7EF34C05-24EF-4D60-9AD8-CB46C96F5E94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{7517C319-EAE2-4466-91DD-410FDCA0D982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7517C319-EAE2-4466-91DD-410FDCA0D982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7517C319-EAE2-4466-91DD-410FDCA0D982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF34C05-24EF-4D60-9AD8-CB46C96F5E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF34C05-24EF-4D60-9AD8-CB46C96F5E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF34C05-24EF-4D60-9AD8-CB46C96F5E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF34C05-24EF-4D60-9AD8-CB46C96F5E94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
