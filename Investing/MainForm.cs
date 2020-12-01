@@ -9,54 +9,56 @@ using Repositories.Sql;
 using Repositories.Sqlight;
 using Repositories.Yahoo;
 using System.IO;
+using Settings;
 
 namespace Investing
 {
     public partial class MainForm : Form
     {
-        CompanyPresenter detailPresenter { get; }
-        CompanyListPresenter companyListPresenter { get; }
+        CompanyPresenter DetailPresenter { get; }
+        CompanyListPresenter CompanyListPresenter { get; }
         AutoUserComponent AutoUserComponent { get; set; }
         ICompanyRepository CompanyRepository { get; set; }
         IPriceRepository PriceRepository { get; set; }
         IPricesOutSource PricesOutSource { get; set; }
+        IAppSettings AppSettings { get; set; }
         public MainForm()
         {
             InitializeComponent();
 
             try
             {
-                CompanyRepository = new CompanySqlRepository(Properties.Settings.Default.ConnectionString);
-
-                string databasePath = Path.Combine(Directory.GetCurrentDirectory(), "Database.db");
-                CompanyRepository = new CompanySqlightRepository(databasePath);
-                PriceRepository = new PricesSqlightRepository(databasePath);
+                AppSettings = SettingsAppManager.GetAppSettings();
+                
+                CompanyRepository = new CompanySqlightRepository(AppSettings.DataBasePath);
+                
+                PriceRepository = new PricesSqlightRepository(AppSettings.DataBasePath);
+                
                 PricesOutSource = new PriceYahooRepository();
-
-                detailPresenter = new CompanyPresenter(detailInfoControl1);
-
-                companyListPresenter = new CompanyListPresenter(addCompanyControl1, CompanyRepository);
-                companyListPresenter.Update();
-                companyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
-
+                
+                DetailPresenter = new CompanyPresenter(detailInfoControl1);
+                
+                CompanyListPresenter = new CompanyListPresenter(addCompanyControl1, CompanyRepository);
+                CompanyListPresenter.OnSelectedCompany += changeViewOndetailPresenter_Event;
+                
                 AutoUserComponent = new AutoUserComponent(CompanyRepository, PriceRepository, PricesOutSource);
-
                 AutoUserComponent.OnUpdate += (obj, args) => Invoke(new Action(delegate ()
                 {
-                    companyListPresenter.Update();
+                    CompanyListPresenter.Update();
                     changeViewOndetailPresenter_Event(obj, args);
                 }));
+
+                CompanyListPresenter.Update();
             }
             catch (Exception exception)
             {
                 ExceptionMessageHandler.ShowError(exception);
             }
-
-}
+        }
 
         private void changeViewOndetailPresenter_Event(object sender, EventArgs e)
         {
-            detailPresenter.SetCompany(companyListPresenter.GetSelectedCompany());
+            DetailPresenter.SetCompany(CompanyListPresenter.GetSelectedCompany());
         }
     }
 }

@@ -8,17 +8,19 @@ using System.IO;
 
 namespace Settings
 {
-    public class SettingsAppManager
+    public static class SettingsAppManager
     {
-        public IAppSettings GetAppSettings()
+        static readonly string AppConfigFilename = "AppConfig.json";
+        public static IAppSettings GetAppSettings()
         {
-            string jsonString = File.ReadAllText("AppConfig.json");
-            return JsonSerializer.Deserialize<IAppSettings>(jsonString);
+            string jsonString = File.ReadAllText(AppConfigFilename);
+            return JsonSerializer.Deserialize<BasicAppSettings>(jsonString);
         }
 
-        public void SaveAppSettings(IAppSettings appSettings)
+        public static void SaveAppSettings(IAppSettings appSettings)
         {
-            JsonSerializer.Serialize(appSettings);
+            string jsonString = JsonSerializer.Serialize(appSettings);
+            File.WriteAllText(AppConfigFilename, jsonString);
         }
     }
 }

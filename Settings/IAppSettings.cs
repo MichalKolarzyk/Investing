@@ -10,5 +10,6 @@ namespace Settings
     {
         string DataBasePath { get; set; }
         string CronoExpression { get; set; }
+        string UserName { get; set; }
     }
 }

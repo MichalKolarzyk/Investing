@@ -1,4 +1,5 @@
 ﻿{
   "DataBasePath": "Database.db",
-  "CronoExpresion": "0 * 15-22 ? * MON-FRI"
+  "CronoExpresion": "0 * 15-22 ? * MON-FRI",
+  "UserName": "Michal"
 }

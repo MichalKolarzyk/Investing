@@ -82,6 +82,7 @@
             // 
             // basicTextBox_Search
             // 
+            this.basicTextBox_Search.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.basicTextBox_Search.Dock = System.Windows.Forms.DockStyle.Fill;
             this.basicTextBox_Search.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.basicTextBox_Search.Location = new System.Drawing.Point(30, 0);

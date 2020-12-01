@@ -36,14 +36,16 @@ namespace UserControls
                 for(int i = 0;i < companies.Count; i++)
                 {
                     ICompany company = companies[i];
-                    if (company.ID.Contains(serach) == false)
-                    {
-                        continue;
-                    }
+
                     Company_Control company_Control = new Company_Control();
                     company_Control.Dock = DockStyle.Top;
                     company_Control.Click += selectedCompanyUpdate_Click;
                     company_Control.TabIndex = companies.Count - i;
+
+                    if (company.ID.Contains(serach) == false)
+                    {
+                        company_Control.Visible = false;
+                    }
 
                     CompanyPresenter companyPresenter = new CompanyPresenter(company_Control);
                     companyPresenter.SetCompany(company);

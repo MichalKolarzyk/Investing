@@ -9,7 +9,8 @@ namespace Settings
 {
     class DefaultAppSettings : IAppSettings
     {
-        public string DataBasePath { get; set; }
-        public string CronoExpression { get; set; }
+        public string DataBasePath { get; set; } = "Database.db";
+        public string CronoExpression { get; set; } = "0 * 15-22 ? * MON-FRI";
+        public string UserName { get; set; } = "NotKnowUser";
     }
 }

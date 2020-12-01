@@ -31,5 +31,6 @@ namespace UserControls
                 company = value;
             }
         }
+
     }
 }

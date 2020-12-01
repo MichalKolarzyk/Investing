@@ -123,6 +123,10 @@
       <Project>{7b17beea-ab13-48fe-b83a-62bf06c2ca96}</Project>
       <Name>Repositories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Settings\Settings.csproj">
+      <Project>{7ef34c05-24ef-4d60-9ad8-cb46c96f5e94}</Project>
+      <Name>Settings</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SqlLiteDataAccess\SqlLiteDataAccess.csproj">
       <Project>{7517c319-eae2-4466-91dd-410fdca0d982}</Project>
       <Name>SqlLiteDataAccess</Name>
