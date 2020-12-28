@@ -1,5 +1,4 @@
-﻿using DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,11 +26,11 @@ namespace UserControls.Presenter
             View = view;
 
             View.OnCompanySelected += (args, e) => OnSelectedCompany?.Invoke(args, e);
-            View.OnCompanyRemove += onCompanyRemove;
-            View.OnCompanyAdd += onCompanyAdd;
+            View.OnCompanyRemove += OnCompanyRemove;
+            View.OnCompanyAdd += OnCompanyAdd;
         }
 
-        private void onCompanyRemove(object sender, EventArgs eventArgs)
+        private void OnCompanyRemove(object sender, EventArgs eventArgs)
         {
             RemoveCompanyDialog.ShowDialog();
             if (RemoveCompanyDialog.DialogResult == DialogResult.OK)
@@ -42,7 +41,7 @@ namespace UserControls.Presenter
             }
         }
 
-        private void onCompanyAdd(object sender, EventArgs eventArgs)
+        private void OnCompanyAdd(object sender, EventArgs eventArgs)
         {
             AddCompanyDialog.ShowDialog();
             if (AddCompanyDialog.DialogResult == DialogResult.OK)

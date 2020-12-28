@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            BasicModels.Company company2 = new BasicModels.Company();
+            BasicModels.Prices prices2 = new BasicModels.Prices();
+            BasicModels.Companies companies2 = new BasicModels.Companies();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.closeMinimize_Control1 = new UserControls.Controls.CloseMinimize_Control();
             this.detailInfoControl1 = new UserControls.DetailInfo_Control();
             this.addCompanyControl1 = new UserControls.CompanyList_UserControl();
             this.settingsControl1 = new UserControls.SettingsBarControl();
-            this.closeMinimize_Control1 = new UserControls.Controls.CloseMinimize_Control();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,9 +50,22 @@
             this.panel1.Size = new System.Drawing.Size(322, 652);
             this.panel1.TabIndex = 0;
             // 
+            // closeMinimize_Control1
+            // 
+            this.closeMinimize_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeMinimize_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.closeMinimize_Control1.Location = new System.Drawing.Point(805, 0);
+            this.closeMinimize_Control1.Name = "closeMinimize_Control1";
+            this.closeMinimize_Control1.Size = new System.Drawing.Size(129, 53);
+            this.closeMinimize_Control1.TabIndex = 2;
+            // 
             // detailInfoControl1
             // 
             this.detailInfoControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            company2.FullName = null;
+            company2.ID = null;
+            company2.Prices = prices2;
+            this.detailInfoControl1.Company = company2;
             this.detailInfoControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.detailInfoControl1.Location = new System.Drawing.Point(322, 0);
             this.detailInfoControl1.Name = "detailInfoControl1";
@@ -58,10 +75,15 @@
             // 
             // addCompanyControl1
             // 
+            companies2.ListOfCompanies = ((System.Collections.Generic.List<BasicModels.ICompany>)(resources.GetObject("companies2.ListOfCompanies")));
+            this.addCompanyControl1.Companies = companies2;
             this.addCompanyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addCompanyControl1.Location = new System.Drawing.Point(0, 53);
             this.addCompanyControl1.Margin = new System.Windows.Forms.Padding(0);
             this.addCompanyControl1.Name = "addCompanyControl1";
+            this.addCompanyControl1.OnCompanyAdd = null;
+            this.addCompanyControl1.OnCompanyRemove = null;
+            this.addCompanyControl1.OnCompanySelected = null;
             this.addCompanyControl1.Size = new System.Drawing.Size(322, 599);
             this.addCompanyControl1.TabIndex = 1;
             // 
@@ -73,15 +95,6 @@
             this.settingsControl1.Name = "settingsControl1";
             this.settingsControl1.Size = new System.Drawing.Size(322, 53);
             this.settingsControl1.TabIndex = 0;
-            // 
-            // closeMinimize_Control1
-            // 
-            this.closeMinimize_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeMinimize_Control1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.closeMinimize_Control1.Location = new System.Drawing.Point(805, 0);
-            this.closeMinimize_Control1.Name = "closeMinimize_Control1";
-            this.closeMinimize_Control1.Size = new System.Drawing.Size(129, 53);
-            this.closeMinimize_Control1.TabIndex = 2;
             // 
             // MainForm
             // 

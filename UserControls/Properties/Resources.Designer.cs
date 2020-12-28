@@ -63,6 +63,16 @@ namespace UserControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_live_help_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_live_help_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_search_white_24dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_search_white_24dp", resourceCulture);
@@ -76,6 +86,26 @@ namespace UserControls.Properties {
         internal static System.Drawing.Bitmap baseline_search_white_24dp1 {
             get {
                 object obj = ResourceManager.GetObject("baseline_search_white_24dp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_toggle_off_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_toggle_off_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_toggle_on_white_48dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_toggle_on_white_48dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +206,36 @@ namespace UserControls.Properties {
         internal static System.Drawing.Bitmap outline_storage_white_48dp {
             get {
                 object obj = ResourceManager.GetObject("outline_storage_white_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToggleOnGreen_1_48 {
+            get {
+                object obj = ResourceManager.GetObject("ToggleOnGreen_1_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToggleOnGreen_2_48 {
+            get {
+                object obj = ResourceManager.GetObject("ToggleOnGreen_2_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ToggleOnGreen_3_48 {
+            get {
+                object obj = ResourceManager.GetObject("ToggleOnGreen_3_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

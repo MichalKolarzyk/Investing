@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BasicModels;
 
-namespace UserControls.View
+namespace Algorithm
 {
-    public interface ICompanyView
+    public interface IAlgorithmResult
     {
-        ICompany Company { get; set; }
+        float Result { get; set; }
     }
 }

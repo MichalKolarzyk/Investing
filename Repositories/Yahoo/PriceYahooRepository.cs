@@ -1,11 +1,11 @@
-﻿using DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BasicModels;
 using Repositories.Interfaces;
+using Repositories.Yahoo.Api;
 
 namespace Repositories.Yahoo
 {

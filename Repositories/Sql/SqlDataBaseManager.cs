@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess;
+using Repositories.Sql.Api;
 using Repositories.Interfaces;
 
 namespace Repositories.Sql
 {
     public class SqlDataBaseManager : IDataBaseManager
     {
-        private SqlAccess sqlAccess;
+        private readonly SqlAccess sqlAccess;
         public SqlDataBaseManager(string connectionString)
         {
             sqlAccess = new SqlAccess(connectionString);

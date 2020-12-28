@@ -10,11 +10,19 @@ namespace Settings
 {
     public static class SettingsAppManager
     {
-        static readonly string AppConfigFilename = "AppConfig.json";
+        const string AppConfigFilename = "AppConfig.json";
         public static IAppSettings GetAppSettings()
         {
-            string jsonString = File.ReadAllText(AppConfigFilename);
-            return JsonSerializer.Deserialize<BasicAppSettings>(jsonString);
+            try
+            {
+                string jsonString = File.ReadAllText(AppConfigFilename);
+                return JsonSerializer.Deserialize<BasicAppSettings>(jsonString);
+            }
+            catch
+            {
+                return new DefaultAppSettings();
+            }
+
         }
 
         public static void SaveAppSettings(IAppSettings appSettings)

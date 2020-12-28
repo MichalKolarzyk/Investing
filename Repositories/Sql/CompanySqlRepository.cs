@@ -1,4 +1,4 @@
-﻿using DataAccess;
+﻿using Repositories.Sql.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,28 +11,28 @@ namespace Repositories.Sql
 {
     public class CompanySqlRepository : ICompanyRepository
     {
-        private SqlAccess sqlAccess { get; set; }
+        private SqlAccess _sqlAccess { get; set; }
         public CompanySqlRepository(string connectionString)
         {
-            sqlAccess = new SqlAccess(connectionString);
+            _sqlAccess = new SqlAccess(connectionString);
         }
         public Companies GetCompanies()
         {
-            Companies companies = sqlAccess.Get<Company>();
+            Companies companies = _sqlAccess.Get<Company>();
             foreach(ICompany company in companies)
             {
-                company.Prices = sqlAccess.Get<Price>(company);
+                company.Prices = _sqlAccess.Get<Price>(company);
             }
             return companies;
         }
         public void InsertCompany(ICompany company)
         {
-            sqlAccess.Insert(company);
+            _sqlAccess.Insert(company);
         }
 
         public void RemoveCompany(ICompany company)
         {
-            sqlAccess.Remove(company);
+            _sqlAccess.Remove(company);
         }
     }
 }

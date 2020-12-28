@@ -1,5 +1,4 @@
-﻿using DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,8 +22,10 @@ namespace UserControls.Forms
 
         public Company GetCompany()
         {
-            Company company = new Company();
-            company.ID = textBox_CompanyID.Text;
+            Company company = new Company
+            {
+                ID = textBox_CompanyID.Text
+            };
             return company;
         }
     }

@@ -54,6 +54,12 @@
     <Compile Include="BasicControls\BasicComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BasicControls\BasicToggle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicToggle.Designer.cs">
+      <DependentUpon>BasicToggle.cs</DependentUpon>
+    </Compile>
     <Compile Include="BasicControls\IconButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="BasicControls\Dialog_OkCancel.Designer.cs">
       <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Algorithm_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Algorithm_Control.Designer.cs">
+      <DependentUpon>Algorithm_Control.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CloseMinimize_Control.cs">
       <SubType>UserControl</SubType>
@@ -211,8 +223,14 @@
     <EmbeddedResource Include="BasicControls\BasicDialog.resx">
       <DependentUpon>BasicDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BasicControls\BasicToggle.resx">
+      <DependentUpon>BasicToggle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BasicControls\Dialog_OkCancel.resx">
       <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Algorithm_Control.resx">
+      <DependentUpon>Algorithm_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CloseMinimize_Control.resx">
       <DependentUpon>CloseMinimize_Control.cs</DependentUpon>
@@ -277,13 +295,9 @@
       <Project>{53e57f0a-b5ed-48d5-85c9-cb554cba59fa}</Project>
       <Name>BasicModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess\SqlDataAccess.csproj">
-      <Project>{83852CA3-3CEE-4125-9289-C4C5223B6BC5}</Project>
-      <Name>SqlDataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Miscellaneous\Miscellaneous.csproj">
+    <ProjectReference Include="..\Miscellaneous\MessageHandler.csproj">
       <Project>{b3f18ef5-2850-4905-97b2-6f4c4c10b204}</Project>
-      <Name>Miscellaneous</Name>
+      <Name>MessageHandler</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repositories\Repositories.csproj">
       <Project>{7b17beea-ab13-48fe-b83a-62bf06c2ca96}</Project>
@@ -327,6 +341,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\outline_minimize_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_toggle_off_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_toggle_on_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_live_help_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ToggleOnGreen_1_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ToggleOnGreen_2_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ToggleOnGreen_3_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
