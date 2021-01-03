@@ -10,10 +10,11 @@ using Repositories.SqLite;
 using Repositories.Yahoo;
 using System.IO;
 using Settings;
+using UserControls.View;
 
 namespace Investing
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IMainView
     {
         CompanyPresenter DetailPresenter { get; }
         CompanyListPresenter CompanyListPresenter { get; }
@@ -22,12 +23,20 @@ namespace Investing
         IPriceRepository PriceRepository { get; set; }
         IPricesOutSource PricesOutSource { get; set; }
         IAppSettings AppSettings { get; set; }
+
+
+        public ICompanyView DetailCompanyView => detailInfoControl1;
+        public ICompanyListView CompanyListView => addCompanyControl1;
+        public ISettingsBarView SettingBarView => settingsControl1;
+        public MainPresenter Presenter { get; set; }
+
+        
         public MainForm()
         {
             InitializeComponent();
 
-            //try
-            //{
+            try
+            {
                 AppSettings = SettingsAppManager.GetAppSettings();
 
                 CompanyRepository = new CompanySqlightRepository(AppSettings.DataBasePath);
@@ -49,12 +58,12 @@ namespace Investing
                 }));
 
                 CompanyListPresenter.Update();
-            //}
-            //catch (Exception exception)
-            //{
-            //    ExceptionMessageHandler.ShowError(exception);
-            //}
-        }
+            }
+            catch (Exception exception)
+            {
+                ExceptionMessageHandler.ShowError(exception);
+            }
+}
 
         private void ChangeViewOndetailPresenter_Event(object sender, EventArgs e)
         {

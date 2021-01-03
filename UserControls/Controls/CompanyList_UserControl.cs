@@ -55,7 +55,6 @@ namespace UserControls
         }
 
         public int SelectedIndex { get; private set; }
-
         public CompanyList_UserControl()
         {
             InitializeComponent();

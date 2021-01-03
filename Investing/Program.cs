@@ -1,9 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Investing.Factories;
+using Repositories.SqLite;
+using Repositories.Yahoo;
+using Settings;
+using System;
 using System.Windows.Forms;
 using UserControls;
+using UserControls.Presenter;
+using UserControls.View;
 
 namespace Investing
 {
@@ -15,9 +18,12 @@ namespace Investing
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            MainForm mainForm = new MainForm();
+            IMainView mainForm = ViewsFactory.CreateMainForm();
 
-            Application.Run(mainForm);
+            var presenter = PresentersFactory.CreateMainPresenter();
+            presenter.View = mainForm;
+
+            Application.Run(mainForm as Form);
         }
     }
 }

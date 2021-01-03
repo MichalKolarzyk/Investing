@@ -193,6 +193,9 @@
     </Compile>
     <Compile Include="Presenter\CronoPresenter.cs" />
     <Compile Include="Presenter\DataBasePresenter.cs" />
+    <Compile Include="Presenter\SettingBarPresenter.cs" />
+    <Compile Include="View\IMainView.cs" />
+    <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -302,6 +305,10 @@
     <ProjectReference Include="..\Repositories\Repositories.csproj">
       <Project>{7b17beea-ab13-48fe-b83a-62bf06c2ca96}</Project>
       <Name>Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings\Settings.csproj">
+      <Project>{7EF34C05-24EF-4D60-9AD8-CB46C96F5E94}</Project>
+      <Name>Settings</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

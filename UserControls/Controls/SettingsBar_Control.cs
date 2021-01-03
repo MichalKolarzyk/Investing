@@ -20,6 +20,7 @@ namespace UserControls
         public BasicDialog SettingsDialog { get; set; }
         public BasicDialog CalendarDialog { get; set; }
         public BasicDialog DataBaseDialog { get; set; }
+        public SettingBarPresenter _presenter { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public DataBasePresenter DataBasePresenter;
 

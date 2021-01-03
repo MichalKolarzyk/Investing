@@ -11,9 +11,9 @@ namespace UserControls.View
     public interface ICompanyListView
     {
         int SelectedIndex { get; }
+        Companies Companies { get; set; }
         EventHandler OnCompanySelected { get; set; }
         EventHandler OnCompanyRemove { get; set; }
         EventHandler OnCompanyAdd { get; set; }
-        Companies Companies { get; set; }
     }
 }
