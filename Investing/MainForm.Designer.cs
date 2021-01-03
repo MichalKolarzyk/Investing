@@ -33,10 +33,10 @@
             BasicModels.Companies companies2 = new BasicModels.Companies();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.closeMinimize_Control1 = new UserControls.Controls.CloseMinimize_Control();
-            this.detailInfoControl1 = new UserControls.DetailInfo_Control();
-            this.addCompanyControl1 = new UserControls.CompanyList_UserControl();
-            this.settingsControl1 = new UserControls.SettingsBarControl();
+            this.closeMinimize_Control1 = new Investing.Controls.CloseMinimize_Control();
+            this.detailInfoControl1 = new Investing.DetailInfo_Control();
+            this.addCompanyControl1 = new Investing.CompanyList_UserControl();
+            this.settingsControl1 = new Investing.SettingsBarControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,9 +117,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private UserControls.DetailInfo_Control detailInfoControl1;
-        private UserControls.CompanyList_UserControl addCompanyControl1;
-        private UserControls.SettingsBarControl settingsControl1;
-        private UserControls.Controls.CloseMinimize_Control closeMinimize_Control1;
+        private Investing.DetailInfo_Control detailInfoControl1;
+        private Investing.CompanyList_UserControl addCompanyControl1;
+        private Investing.SettingsBarControl settingsControl1;
+        private Investing.Controls.CloseMinimize_Control closeMinimize_Control1;
     }
 }

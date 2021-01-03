@@ -71,17 +71,242 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factories\PresentersFactory.cs" />
+    <Compile Include="BasicControls\BasicButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicComponents\Colors.cs" />
+    <Compile Include="BasicControls\BasicComponents\DataLists.cs" />
+    <Compile Include="BasicControls\BasicComponents\Fonts.cs" />
+    <Compile Include="BasicControls\BasicControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicDialog.Designer.cs">
+      <DependentUpon>BasicDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicControls\BasicGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicToggle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BasicControls\BasicToggle.Designer.cs">
+      <DependentUpon>BasicToggle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicControls\Dialog_OkCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicControls\Dialog_OkCancel.Designer.cs">
+      <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicControls\IconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\AutoUserComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Algorithm_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Algorithm_Control.Designer.cs">
+      <DependentUpon>Algorithm_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CloseMinimize_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CloseMinimize_Control.Designer.cs">
+      <DependentUpon>CloseMinimize_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CompanyList_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CompanyList_UserControl.Designer.cs">
+      <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Company_Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Crono_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Crono_Control.Designer.cs">
+      <DependentUpon>Crono_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataBaseSettings_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DataBaseSettings_Control.Designer.cs">
+      <DependentUpon>DataBaseSettings_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataBase_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DataBase_Control.Designer.cs">
+      <DependentUpon>DataBase_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DetailInfo_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DetailInfo_Control.Designer.cs">
+      <DependentUpon>DetailInfo_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OkCancel_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OkCancel_Control.Designer.cs">
+      <DependentUpon>OkCancel_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Ok_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Ok_Control.Designer.cs">
+      <DependentUpon>Ok_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SettingsBar_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SettingsBar_Control.Designer.cs">
+      <DependentUpon>SettingsBar_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factories\RepositoryFactory.cs" />
-    <Compile Include="Factories\ViewsFactory.cs" />
+    <Compile Include="Forms\AddCompany_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCompany_Form.Designer.cs">
+      <DependentUpon>AddCompany_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CalendarDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CalendarDialog.Designer.cs">
+      <DependentUpon>CalendarDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataBaseDialog.Designer.cs">
+      <DependentUpon>DataBaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InfoDialog.Designer.cs">
+      <DependentUpon>InfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RemoveCompany_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RemoveCompany_Form.Designer.cs">
+      <DependentUpon>RemoveCompany_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchDialog.Designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presenter\CompanyListPresenter.cs" />
+    <Compile Include="Presenter\CompanyPresenter.cs" />
+    <Compile Include="Presenter\CronoPresenter.cs" />
+    <Compile Include="Presenter\DataBasePresenter.cs" />
+    <Compile Include="Presenter\IPresenter.cs" />
+    <Compile Include="Presenter\MainPresenter.cs" />
+    <Compile Include="Presenter\SettingBarPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ICompanyListView.cs" />
+    <Compile Include="View\ICompanyView.cs" />
+    <Compile Include="View\ICronoExpressionView.cs" />
+    <Compile Include="View\IDataBaseSettingsView.cs" />
+    <Compile Include="View\IDataBaseView.cs" />
+    <Compile Include="View\IMainView.cs" />
+    <Compile Include="View\ISettingsBarView.cs" />
+    <EmbeddedResource Include="BasicControls\BasicDialog.resx">
+      <DependentUpon>BasicDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicControls\BasicToggle.resx">
+      <DependentUpon>BasicToggle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicControls\Dialog_OkCancel.resx">
+      <DependentUpon>Dialog_OkCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Algorithm_Control.resx">
+      <DependentUpon>Algorithm_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CloseMinimize_Control.resx">
+      <DependentUpon>CloseMinimize_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CompanyList_UserControl.resx">
+      <DependentUpon>CompanyList_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Crono_Control.resx">
+      <DependentUpon>Crono_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataBaseSettings_Control.resx">
+      <DependentUpon>DataBaseSettings_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataBase_Control.resx">
+      <DependentUpon>DataBase_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DetailInfo_Control.resx">
+      <DependentUpon>DetailInfo_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OkCancel_Control.resx">
+      <DependentUpon>OkCancel_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Ok_Control.resx">
+      <DependentUpon>Ok_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SettingsBar_Control.resx">
+      <DependentUpon>SettingsBar_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCompany_Form.resx">
+      <DependentUpon>AddCompany_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CalendarDialog.resx">
+      <DependentUpon>CalendarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataBaseDialog.resx">
+      <DependentUpon>DataBaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InfoDialog.resx">
+      <DependentUpon>InfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoveCompany_Form.resx">
+      <DependentUpon>RemoveCompany_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchDialog.resx">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +335,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoUser\AutoUser.csproj">
+      <Project>{729A3ECA-9B63-403C-A043-A142FE479E06}</Project>
+      <Name>AutoUser</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BasicModels\BasicModels.csproj">
       <Project>{53e57f0a-b5ed-48d5-85c9-cb554cba59fa}</Project>
       <Name>BasicModels</Name>
@@ -133,6 +362,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\outline_close_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_live_help_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_search_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_toggle_off_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\baseline_toggle_on_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_add_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_calendar_today_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_close_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_info_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_minimize_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_remove_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_schedule_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_search_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_settings_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\outline_storage_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ToggleOnGreen_1_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ToggleOnGreen_2_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ToggleOnGreen_3_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

@@ -1,4 +1,5 @@
 ﻿using Repositories.Interfaces;
+using Repositories.SqLite;
 using Settings;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,11 @@ namespace Investing.Factories
         static RepositoryFactory()
         {
             _appSettings = SettingsAppManager.GetAppSettings();
+        }
+
+        public static ICompanyRepository CreateCompanyRepository()
+        {
+            return new CompanySqlightRepository(_appSettings.DataBasePath);
         }
 
     }

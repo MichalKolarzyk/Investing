@@ -1,12 +1,12 @@
 ﻿using Investing.Factories;
+using Investing.Presenter;
+using Investing.View;
 using Repositories.SqLite;
 using Repositories.Yahoo;
 using Settings;
 using System;
 using System.Windows.Forms;
 using UserControls;
-using UserControls.Presenter;
-using UserControls.View;
 
 namespace Investing
 {
@@ -18,9 +18,11 @@ namespace Investing
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            IMainView mainForm = ViewsFactory.CreateMainForm();
+            IMainView mainForm = new MainForm();
+            IAppSettings appSettings = SettingsAppManager.GetAppSettings();
 
-            var presenter = PresentersFactory.CreateMainPresenter();
+            IPresenter<IMainView> presenter = new MainPresenter(mainForm, appSettings);
+
             presenter.View = mainForm;
 
             Application.Run(mainForm as Form);

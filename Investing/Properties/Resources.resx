@@ -118,7 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="baseline_live_help_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\baseline_live_help_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_search_white_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\baseline_search_white_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_toggle_off_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\baseline_toggle_off_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_toggle_on_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\baseline_toggle_on_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_add_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_add_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_calendar_today_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_calendar_today_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="outline_close_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outline_close_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_close_white_48dp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_close_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_info_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_info_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_minimize_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_minimize_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_remove_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_remove_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_schedule_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_schedule_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_search_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_search_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_settings_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_settings_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_storage_white_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\outline_storage_white_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToggleOnGreen_1_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\toggleongreen_1_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToggleOnGreen_2_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\toggleongreen_2_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToggleOnGreen_3_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icons\toggleongreen_3_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
